@@ -1,10 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import Navbar from './componentes/estaticos/navbar/Navbar';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
  return (
-  <h1>hello</h1>
+  <>
+      <Router> {/* Satélite */}
+          <Navbar />
+          
+      </Router>
+          
+      </>
  );
 }
 
