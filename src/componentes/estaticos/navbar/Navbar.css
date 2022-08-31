@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+}
+
+:root {
+  /*colors*/
+  --first--color: hsl(207, 10%, 49%);
+
+  --text: hsl(0, 0%, 100%);
+}
+
+.cursor {
+  cursor: pointer;
+  color: white;
+}
+
+.appBar {
+  background-color: var(--first--color) !important;
+  padding: 0.25rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-menu {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: 3;
+}
