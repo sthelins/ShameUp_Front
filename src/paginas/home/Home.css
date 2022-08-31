@@ -1,0 +1,21 @@
+.caixa {
+    background: linear-gradient(90deg, rgba(58,155,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    font: small-caps bold 24px/1 sans-serif;
+}
+
+.titulo {
+    color: white !important;
+    font: small-caps bold 24px/1 sans-serif;
+}
+
+.botao {
+    border-color: white !important;
+    background-color: #3F51B5;
+    color: white !important;
+    font: small-caps bold 24px/1 sans-serif;
+}
+
+.postagens {
+    background-color: white;
+    font: small-caps bold 24px/1 sans-serif;
+}
