@@ -19,15 +19,39 @@
   padding: 0.25rem;
 }
 
-.content {
-  display: flex;
-  justify-content: space-between;
-}
-
-.icon-menu {
+.options {
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  position: absolute;
-  z-index: 3;
 }
+
+.icon-menu {
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  /*overflow-x: hidden;*/
+}
+
+@media (min-width: 900px) {
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .options {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .icon-menu {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: 3;
+  }
+}
+
+/*arrumar responsividade em dispositivos menores*/

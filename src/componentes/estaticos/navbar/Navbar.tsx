@@ -13,13 +13,13 @@ function Navbar() {
           <AppBar position="static" className='appBar'>
                 <Toolbar variant="dense" className='content'>
                   
-                  <div>
+                  
                     <Box className='cursor' >
                         <Typography variant="h5" color="inherit">
                             ShameUp
                         </Typography>
                     </Box>
-                    </div>
+
                     
                     <div className='options'>
                     <Box display="flex" justifyContent="end">
@@ -39,6 +39,11 @@ function Navbar() {
                                 </Typography>
                             </Box>
                     </Box>
+                    </div>
+                    <div className="icon-menu">
+                    <IconButton  className='cursor' edge="start" color="inherit" aria-label="menu">
+                      <MenuIcon />
+                    </IconButton>
                     </div>
 
                 </Toolbar>
