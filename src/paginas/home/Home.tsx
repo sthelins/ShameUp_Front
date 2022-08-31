@@ -16,7 +16,7 @@ function Home() {
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
             <Grid alignItems="center" item xs={12}>
               <Box>
-              <img src="https://media.discordapp.net/attachments/988429116711772190/1014536579433369630/SHAME_up.png" alt="Logo do Projeto Integrador Shame Up" width="20" height="60" />
+              <img src="https://media.discordapp.net/attachments/988429116711772190/1014536579433369630/SHAME_up.png" alt="Logo do Projeto Integrador Shame Up" width="20" height="100" />
               </Box>
             </Grid>
                 <Grid alignItems="center" item xs={6}>
