@@ -21,7 +21,7 @@ function Navbar() {
           <div className="options">
             <Box display="flex" justifyContent="end">
               <Box mx={2} className="cursor">
-                <Link to="/home" className="text-decorator-none">
+                <Link to="/home" className="text-decorator">
                   <Typography variant="h6" color="inherit">
                     Home
                   </Typography>
@@ -29,7 +29,7 @@ function Navbar() {
               </Box>
 
               <Box mx={2} className="cursor">
-                <Link to="/sobre" className="text-decorator-none">
+                <Link to="/sobre" className="text-decorator">
                   <Typography variant="h6" color="inherit">
                     Sobre
                   </Typography>
@@ -37,7 +37,15 @@ function Navbar() {
               </Box>
 
               <Box mx={2} className="cursor">
-                <Link to="/login" className="text-decorator-none">
+                <Link to="/cadastrousuario" className="text-decorator">
+                  <Typography variant="h6" color="inherit">
+                    Cadastro
+                  </Typography>
+                </Link>
+              </Box>
+
+              <Box mx={2} className="cursor">
+                <Link to="/login" className="text-decorator">
                   <Typography variant="h6" color="inherit">
                     logout
                   </Typography>
