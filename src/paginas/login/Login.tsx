@@ -61,21 +61,15 @@ function Login() {
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid alignItems='center' sm={6}>
                 <Box paddingX={20}>
-                    <form action="">
+                    <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom
                             color='textPrimary' component='h3'
                             align='center' className='textos1'
                         >
                             Entrar
                         </Typography>
-                        <TextField id='usuario' label='usuário'
-                            variant='outlined' name='usuario'
-                            type={'email'} margin='normal'
-                            fullWidth />
-                        <TextField id='senha' label='senha'
-                            variant='outlined' name='usuario'
-                            type={'password'} margin='normal'
-                            fullWidth />
+                        <TextField value={userLogin.email} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='email' label='e-mail' name='email' variant='outlined' margin='normal' fullWidth />
+                        <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' name='senha' variant='outlined' margin='normal' type='password' fullWidth />
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/home' className='text-decorator-none'>
                                 <Button type='submit' variant='contained' color='primary'>
