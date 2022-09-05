@@ -1,10 +1,11 @@
 import React , {useState, useEffect, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import User from '../../models/User';
-//import { cadastroUsuario } from '../../services/Service';
+import { cadastroUsuario } from '../../services/Service';
 import { Grid, Box, Typography, Button, TextField } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
+
 
 function CadastroUsuario() {
 
@@ -63,7 +64,7 @@ function CadastroUsuario() {
         if (confirmarSenha === user.senha && user.senha.length >= 8) {
           //Tenta executar o cadastro
           try {
-            //await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
+            await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
             alert("Usuário cadastrado com sucesso");
     
             //Se houver erro, pegue o Erro e retorna uma msg
