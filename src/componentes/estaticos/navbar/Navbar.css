@@ -1,3 +1,4 @@
+/* Geral*/
 * {
   margin: 0;
 }
@@ -9,10 +10,18 @@
   --text: hsl(0, 0%, 100%);
 }
 
-.text-decorator-none {
+/* navbar*/
+.text-decorator {
   text-decoration: none;
   color: white;
 }
+
+/* 
+.text-decorator:hover {
+  text-decoration: underline;
+  transition: 2ms;
+  padin
+}  */
 
 .cursor {
   cursor: pointer;
@@ -21,7 +30,7 @@
 
 .appBar {
   background-color: var(--first--color) !important;
-  padding: 0.25rem;
+  padding: 0.3rem;
 }
 
 .options {
@@ -34,8 +43,14 @@
   display: flex;
   justify-content: space-between;
   /*overflow-x: hidden;*/
+  overflow: hidden;
 }
 
+/*.icon-menu {
+  background-color: aqua !important;
+}*/
+
+/* responsividade */
 @media (min-width: 900px) {
   .content {
     display: flex;
