@@ -88,11 +88,9 @@ function Login() {
               fullWidth
             />
             <Box marginTop={2} textAlign="center">
-              <Link to="/home" className="text-decorator-none">
-                <Button type="submit" variant="contained" color="primary">
-                  Logar
-                </Button>
-              </Link>
+              <Button type="submit" variant="contained" color="primary">
+                Logar
+              </Button>
             </Box>
           </form>
           <Box display="flex" justifyContent={'center'} marginTop={2}>
