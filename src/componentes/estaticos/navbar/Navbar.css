@@ -43,7 +43,7 @@
   display: flex;
   justify-content: space-between;
   /*overflow-x: hidden;*/
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 /*.icon-menu {
