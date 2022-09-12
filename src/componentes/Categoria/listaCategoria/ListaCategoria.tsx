@@ -21,7 +21,7 @@ function ListaCategoria() {
     }, [token])
 
     async function getCategorias() {
-        await busca("/temas", setCategorias, {
+        await busca("/categorias", setCategorias, {
             headers: {
                 'Authorization': token
             }
@@ -49,14 +49,14 @@ function ListaCategoria() {
                             </CardContent>
                             <CardActions>
                                 <Box display="flex" justifyContent="center" mb={1.5} >
-                                    <Link to={`/formularioTema/${categoria.id}`} className="text-decorator-none">
+                                    <Link to={`/formularioCategoria/${categoria.id}`} className="text-decorator-none">
                                         <Box mx={1}>
                                             <Button variant="contained" className="marginLeft" size='small' color="primary">
                                                 atualizar
                                             </Button>
                                         </Box>
                                     </Link>
-                                    <Link to={`/deletarTema/${categoria.id}`} className="text-decorator-none">
+                                    <Link to={`/deletarCategoria/${categoria.id}`} className="text-decorator-none">
                                         <Box mx={1}>
                                             <Button variant="contained" size='small' color="secondary">
                                                 deletar
