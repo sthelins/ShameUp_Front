@@ -77,10 +77,10 @@ function CadastroUsuario() {
   const [dataNascimento, setDataNascimento] = useState('')
 
   function getDate(e: ChangeEvent<HTMLInputElement>) {
-    setDataNascimento(e.target.value)
+    setDataNascimento(e.target.value) 
   }
 
-  console.log(dataNascimento)
+  user.data_nascimento = dataNascimento + " 00:00:00"
 
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
