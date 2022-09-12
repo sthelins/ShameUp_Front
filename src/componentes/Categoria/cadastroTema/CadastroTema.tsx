@@ -52,7 +52,7 @@ function CadastroCategoria() {
     
         if (id !== undefined) {
             try {
-              await put(`/temas`, categoria, setCategoria, {
+              await put(`/categorias`, categoria, setCategoria, {
                 headers: {
                     'Authorization': token
                 }
