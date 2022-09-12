@@ -7,7 +7,9 @@ import Sobrenos from './paginas/sobrenos/Sobrenos';
 import Footer from './componentes/estaticos/footer/Footer';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
-
+import ListaCategoria from './componentes/Categoria/listaCategoria/ListaCategoria';
+import CadastroCategoria from './componentes/Categoria/cadastroCategoria/CadastroCategoria';
+import DeletarCategoria from './componentes/Categoria/deletarCadastro/DeletarCategoria';
 
 
 function App() {
@@ -17,10 +19,18 @@ function App() {
         <div style={{minHeight: '100vh'}} >
         <Routes>
           <Route path= '/home' element={<Home />}  />
+          <Route path="/Categoria" element={<ListaCategoria />} />
           <Route path= '/' element={<Login />}  />
           <Route path='/cadastrousuario' element={<CadastroUsuario />} />
           <Route path= '/login' element={<Login />}  />
           <Route path= '/sobre' element={<Sobrenos />}  />
+          <Route path="/formularioCategoria" element={<CadastroCategoria />} />
+
+
+<Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+
+<Route path="/deletarTema/:id" element={<DeletarCategoria />} />
+
         </Routes>
         </div>
       <Footer />
