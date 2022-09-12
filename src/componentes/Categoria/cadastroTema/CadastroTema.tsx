@@ -70,7 +70,7 @@ function CadastroCategoria() {
                     'Authorization': token
                 }
             })
-            alert('Tema cadastrado com sucesso!');
+            alert('Categoria cadastrado com sucesso!');
         } catch (error) {
           console.log(`Error: ${error}`)
           alert("Erro, por favor verifique a quantidade mínima de caracteres.")
