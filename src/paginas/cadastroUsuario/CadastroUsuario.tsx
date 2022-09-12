@@ -74,14 +74,20 @@ function CadastroUsuario() {
     }
   }
 
-  console.log(user.data_nascimento)
+  const [dataNascimento, setDataNascimento] = useState('')
+
+  function getDate(e: ChangeEvent<HTMLInputElement>) {
+    setDataNascimento(e.target.value)
+  }
+
+  console.log(dataNascimento)
 
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
       <Grid item xs={6} className="imagem2"></Grid>
       <Grid item xs={6} alignItems="center">
         <Box paddingX={10}>
-          <form onSubmit={cadastrar}>
+          <form onSubmit={cadastrar} noValidate autoComplete="off">
             <Typography
               variant="h3"
               gutterBottom
@@ -114,15 +120,18 @@ function CadastroUsuario() {
               fullWidth
             />
             <TextField
-              value={user.data_nascimento}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="data_nascimento"
-              label=""
+              value={dataNascimento}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => getDate(e)}
+              id="dataNascimento"
+              label="Data de nascimento"
+              placeholder="Digite sua Data de nascimento"
               variant="outlined"
-              name="data_nascimento"
+              name="dataNascimento"
               margin="normal"
-              type="datetime-local"
+              type="date"
+              InputLabelProps={{ shrink: true }}
               fullWidth
+              required
             />
 
             <TextField
