@@ -1,24 +1,37 @@
-import React from "react";
-import {Grid, Box, Paper, Button, Typography} from '@mui/material';
+import React, { useEffect } from "react";
+import { Grid, Box, Paper, Button, Typography } from '@mui/material';
 
 
-import'./Home.css';
+import './Home.css';
+import useLocalStorage from "react-use-localstorage";
+import { useNavigate } from "react-router-dom";
 
 
 
 function Home() {
 
-    
+    let navigate = useNavigate();
 
-    return(
+    const [token, setToken] = useLocalStorage('token');
+
+    useEffect(() => {
+        if (token == "") {
+            alert("Você precisa estar logado")
+            navigate("/login")
+
+        }
+    }, [token])
+
+
+    return (
         <>
-    
+
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
-            <Grid alignItems="center" item xs={12}>
-              <Box>
-              <img src="https://media.discordapp.net/attachments/988429116711772190/1014536579433369630/SHAME_up.png" alt="Logo do Projeto Integrador Shame Up" width="20" height="100" />
-              </Box>
-            </Grid>
+                <Grid alignItems="center" item xs={12}>
+                    <Box>
+                        <img src="https://media.discordapp.net/attachments/988429116711772190/1014536579433369630/SHAME_up.png" alt="Logo do Projeto Integrador Shame Up" width="20" height="100" />
+                    </Box>
+                </Grid>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
                         <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Olá!</Typography>
@@ -34,7 +47,7 @@ function Home() {
                     <img src="https://media.discordapp.net/attachments/988429116711772190/1014536579433369630/SHAME_up.png" alt="Logo do Projeto Integrador Shame Up" width="100%" height="100%" />
                 </Grid>
 
-                
+
                 <Grid xs={12} className='postagens'>
                 </Grid>
             </Grid>
