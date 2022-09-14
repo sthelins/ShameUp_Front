@@ -10,9 +10,9 @@ import CadastroUsuario from "./paginas/cadastroUsuario/CadastroUsuario";
 import ListaCategoria from "./componentes/categoria/listaCategoria/ListaCategoria";
 import CadastroCategoria from "./componentes/categoria/cadastroCategoria/CadastroCategoria";
 import DeletarCategoria from "./componentes/categoria/deletarCategoria/DeletarCategoria";
-import CadastroPostagem from "./componentes/categoria/cadastroPostagem/CadastroPostagem";
-import ListarPostagem from "./componentes/categoria/listarPostagem/ListarPostagem";
-import DeletarPostagem from "./componentes/categoria/deletarPostagem/DeletarPostagem";
+import CadastroPostagem from "./componentes/postagens/cadastroPostagem/CadastroPostagem";
+import ListarPostagem from "./componentes/postagens/listarPostagem/ListarPostagem";
+import DeletarPostagem from "./componentes/postagens/deletarPostagem/DeletarPostagem";
 
 function App() {
   return (
