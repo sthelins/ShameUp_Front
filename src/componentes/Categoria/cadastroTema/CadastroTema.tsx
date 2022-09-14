@@ -1,4 +1,4 @@
-import "./CadastroTema.css";
+import "./CadastroCategoria.css";
 import useLocalStorage from "react-use-localstorage";
 import { useNavigate, useParams } from "react-router-dom";
 import { buscaId, post, put } from "../../../services/Service";
