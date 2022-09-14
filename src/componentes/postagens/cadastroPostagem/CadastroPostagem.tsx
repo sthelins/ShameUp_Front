@@ -22,6 +22,7 @@ function CadastroPostagem() {
   let navigate = useNavigate()
   const { id } = useParams<{ id: string }>()
   const [categorias, setCategorias] = useState<Categoria[]>([])
+
   const [token, setToken] = useLocalStorage('token')
 
   useEffect(() => {
@@ -46,7 +47,7 @@ function CadastroPostagem() {
     data: '',
     titulo: '',
     categoria: null,
-    user: {
+    usuario: {
       id: 1,
       nome: '',
       data_nascimento: '',
