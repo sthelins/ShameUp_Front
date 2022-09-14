@@ -50,6 +50,7 @@ function DeletarCategoria() {
       });
 
       alert("Categoria deletada com sucesso");
+      navigate("/categorias")
     } catch (error) {
       alert("Erro ao deletar");
     }
