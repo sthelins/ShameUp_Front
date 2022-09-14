@@ -12,6 +12,7 @@ import CadastroCategoria from "./componentes/categoria/cadastroCategoria/Cadastr
 import DeletarCategoria from "./componentes/categoria/deletarCategoria/DeletarCategoria";
 import CadastroPostagem from "./componentes/categoria/cadastroPostagem/CadastroPostagem";
 import ListarPostagem from "./componentes/categoria/listarPostagem/ListarPostagem";
+import DeletarPostagem from "./componentes/categoria/deletarPostagem/DeletarPostagem";
 
 function App() {
   return (
@@ -25,12 +26,13 @@ function App() {
           <Route path="/cadastrousuario" element={<CadastroUsuario />} />
           <Route path="/login" element={<Login />} />
           <Route path="/sobre" element={<Sobrenos />} />
-          <Route path="/posts" element={<ListarPostagem />} />
+          <Route path="/postagens" element={<ListarPostagem />} />
           <Route path="/formularioPostagem" element={<CadastroPostagem />} />
           <Route path="/formularioPostagem/:id" element={<CadastroPostagem />} />
           <Route path="/formularioCategoria" element={<CadastroCategoria />} />
           <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
           <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+          <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
         </Routes>
       </div>
       <Footer />
