@@ -45,7 +45,17 @@ function CadastroPostagem() {
     data: null,
     titulo: '',
     categoria: null,
-    user: null
+    user: {
+      id: 1,
+      nome: '',
+      data_nascimento: '',
+      cpf: '',
+      email: '',
+      foto: '',
+      cnpj: '',
+      senha: '',
+      tipo: ''
+    }
   })
 
   useEffect(() => {
@@ -56,13 +66,13 @@ function CadastroPostagem() {
   }, [categoria])
 
   useEffect(() => {
-    getTemas()
+    getCategorias()
     if (id !== undefined) {
       findByIdPostagem(id)
     }
   }, [id])
 
-  async function getTemas() {
+  async function getCategorias() {
     await busca('/categorias', setCategorias, {
       headers: {
         Authorization: token
@@ -88,6 +98,7 @@ function CadastroPostagem() {
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
+    console.log(postagem)
 
     // Se o ID for diferente de indefinido tente Atualizar
     if (id !== undefined) {
