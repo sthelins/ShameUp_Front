@@ -167,6 +167,7 @@ function CadastroPostagem() {
         />
         <TextField
           value={postagem.texto}
+          multiline
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
           id="texto"
           label="texto"

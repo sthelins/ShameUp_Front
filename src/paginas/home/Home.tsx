@@ -65,7 +65,7 @@ function Home() {
             </Box>
             <Link to="/postagens" className="text-decorator-none">
               <Button variant="outlined" className="botao">
-                fale aqui
+                Ver Postagens
               </Button>
             </Link>
           </Box>
