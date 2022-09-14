@@ -1,21 +1,24 @@
-import React, { useEffect } from 'react'
-import { Grid, Box, Paper, Button, Typography } from '@mui/material'
-import { Link, useNavigate } from 'react-router-dom'
-import './Home.css'
-import useLocalStorage from 'react-use-localstorage'
-import ModalPostagem from '../../componentes/postagens/modalPostagem/ModalPostagem'
+import React, { useEffect } from "react";
+import { Grid, Box, Paper, Button, Typography } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
+import "./Home.css";
+import ModalPostagem from "../../componentes/postagens/modalPostagem/ModalPostagem";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
 
 function Home() {
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
-  const [token, setToken] = useLocalStorage('token')
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
 
   useEffect(() => {
-    if (token == '') {
-      alert('Você precisa estar logado')
-      navigate('/login')
+    if (token == "") {
+      alert("Você precisa estar logado");
+      navigate("/login");
     }
-  }, [token])
+  }, [token]);
 
   return (
     <>
@@ -82,7 +85,7 @@ function Home() {
         <Grid xs={12} className="postagens"></Grid>
       </Grid>
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;

@@ -1,53 +1,54 @@
-import React, { useState, useEffect, ChangeEvent } from 'react'
-
-import { Button, Grid, TextField, Typography } from '@material-ui/core'
-import { Box } from '@mui/material'
-import { Link, useNavigate } from 'react-router-dom'
-import useLocalStorage from 'react-use-localstorage'
-
-import { login } from '../../services/Service'
-import UserLogin from '../../models/UserLogin'
-
-import './Login.css'
+import React, { useState, useEffect, ChangeEvent } from "react";
+import { Button, Grid, TextField, Typography } from "@material-ui/core";
+import { Box } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
+import useLocalStorage from "react-use-localstorage";
+import { login } from "../../services/Service";
+import UserLogin from "../../models/UserLogin";
+import "./Login.css";
+import { useDispatch } from "react-redux";
+import { addToken } from "../../store/tokens/actions";
 
 function Login() {
-  let history = useNavigate()
-  const [token, setToken] = useLocalStorage('token')
+  let history = useNavigate();
+  const dispatch = useDispatch();
+  const [token, setToken] = useLocalStorage("token");
 
   const [userLogin, setUserLogin] = useState<UserLogin>({
     id: 0,
-    nome: '',
-    data_nascimento: '',
-    cpf: '',
-    email: '',
-    foto: '',
-    cnpj: '',
-    senha: '',
-    tipo: '',
-    token: ''
-  })
+    nome: "",
+    data_nascimento: "",
+    cpf: "",
+    email: "",
+    foto: "",
+    cnpj: "",
+    senha: "",
+    tipo: "",
+    token: "",
+  });
 
   function updatedModel(e: ChangeEvent<HTMLInputElement>) {
     setUserLogin({
       ...userLogin,
-      [e.target.name]: e.target.value
-    })
+      [e.target.name]: e.target.value,
+    });
   }
 
   useEffect(() => {
-    if (token != '') {
-      history('/home')
+    if (token != "") {
+      dispatch(addToken(token));
+      history("/home");
     }
-  }, [token])
+  }, [token]);
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-    e.preventDefault()
+    e.preventDefault();
     try {
-      await login(`/usuarios/logar`, userLogin, setToken)
+      await login(`/usuarios/logar`, userLogin, setToken);
 
-      alert('Usuário logado com sucesso!')
+      alert("Usuário logado com sucesso!");
     } catch (error) {
-      alert('Dados do usuário inconsistentes. Erro ao logar!')
+      alert("Dados do usuário inconsistentes. Erro ao logar!");
     }
   }
 
@@ -93,7 +94,7 @@ function Login() {
               </Button>
             </Box>
           </form>
-          <Box display="flex" justifyContent={'center'} marginTop={2}>
+          <Box display="flex" justifyContent={"center"} marginTop={2}>
             <Box marginRight={1}>
               <Typography variant="subtitle1" gutterBottom align="center">
                 Não tem conta?
@@ -114,7 +115,7 @@ function Login() {
       </Grid>
       <Grid sm={6} className="imagem"></Grid>
     </Grid>
-  )
+  );
 }
 
-export default Login
+export default Login;

@@ -1,24 +1,27 @@
-import React from 'react'
-import './Navbar.css'
+import React from "react";
+import "./Navbar.css";
 
-import { AppBar, Toolbar, Typography, Button } from '@material-ui/core'
-import { Link, useNavigate } from 'react-router-dom'
-import Box from '@mui/material/Box'
-import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
-import useLocalStorage from 'react-use-localstorage'
+import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
+import { Link, useNavigate } from "react-router-dom";
+import Box from "@mui/material/Box";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import { useDispatch, useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/tokensReducer";
+import { addToken } from "../../../store/tokens/actions";
 
 function Navbar() {
-
-  const [token, setToken] = useLocalStorage('token')
-  let navigate = useNavigate()
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+  let navigate = useNavigate();
+  const dispatch = useDispatch();
 
   function goLogout() {
-    setToken('')
-    alert("Usuário deslogado")
-    navigate('/login')
+    dispatch(addToken(""));
+    alert("Usuário deslogado");
+    navigate("/login");
   }
-
 
   return (
     <>
@@ -94,7 +97,7 @@ function Navbar() {
         </Toolbar>
       </AppBar>
     </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
