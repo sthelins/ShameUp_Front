@@ -8,6 +8,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import { addToken } from "../../../store/tokens/actions";
+import { toast } from "react-toastify";
 
 function Navbar() {
   const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -17,9 +18,17 @@ function Navbar() {
   const dispatch = useDispatch();
 
   function goLogout() {
-    console.log("passando pelo gologout");
     dispatch(addToken(""));
-    alert("Usuário deslogado");
+    toast.info("Usuário deslogado.", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      theme: "dark",
+      progress: undefined,
+    });
     navigate("/login");
   }
 

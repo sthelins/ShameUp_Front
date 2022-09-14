@@ -6,6 +6,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { Container, Typography, TextField, Button } from "@material-ui/core";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
+import { toast } from "react-toastify";
 
 function CadastroCategoria() {
   let navigate = useNavigate();
@@ -21,7 +22,16 @@ function CadastroCategoria() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado!");
+      toast.info("Você precisa estar logado!", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        theme: "dark",
+        progress: undefined,
+      });
       navigate("/login");
     }
   }, [token]);
@@ -57,11 +67,30 @@ function CadastroCategoria() {
             Authorization: token,
           },
         });
-        alert("Categoria atualizada com sucesso!");
+        toast.success("Categoria atualizada com sucesso!", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          theme: "dark",
+          progress: undefined,
+        });
+
         back();
       } catch (error) {
         console.log(`Error: ${error}`);
-        alert("Erro, por favor verifique a quantidade mínima de caracteres.");
+        toast.error("Por favor verifique a quantidade mínima de caracteres.", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          theme: "dark",
+          progress: undefined,
+        });
       }
     } else {
       try {
@@ -70,11 +99,30 @@ function CadastroCategoria() {
             Authorization: token,
           },
         });
-        alert("Categoria cadastrado com sucesso!");
+        toast.success("Categoria cadastrada com sucesso!", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          theme: "dark",
+          progress: undefined,
+        });
+
         back();
       } catch (error) {
         console.log(`Error: ${error}`);
-        alert("Erro, por favor verifique a quantidade mínima de caracteres.");
+        toast.error("Por favor verifique a quantidade mínima de caracteres.", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          theme: "dark",
+          progress: undefined,
+        });
       }
     }
   }
