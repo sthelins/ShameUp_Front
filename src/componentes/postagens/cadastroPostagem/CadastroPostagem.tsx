@@ -41,6 +41,7 @@ function CadastroPostagem() {
   const [postagem, setPostagem] = useState<Postagem>({
     id: 0,
     anonimo: true,
+    texto: '',
     data: null,
     titulo: '',
     categoria: null,
