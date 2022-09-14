@@ -1,5 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import './CadastroPostagem.css'
+import Categoria from '../../../models/Categoria'
+import Postagem from '../../../models/Postagem'
 
 import {
   Container,
@@ -15,7 +17,6 @@ import {
 import { useNavigate, useParams } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage'
 import { busca, buscaId, post, put } from '../../../services/Service'
-import Categoria from '../../categoria/'
 
 function CadastroPostagem() {
   let navigate = useNavigate()
@@ -39,15 +40,11 @@ function CadastroPostagem() {
   /*efetuar o cadastro das postagens*/
   const [postagem, setPostagem] = useState<Postagem>({
     id: 0,
+    anonimo: true,
+    data: null,
     titulo: '',
-    texto: '',
-    tema: null,
-    usuario: {
-      id: 1,
-      nome: '',
-      usuario: '',
-      senha: ''
-    }
+    categoria: null,
+    user: null
   })
 
   useEffect(() => {
