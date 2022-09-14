@@ -1,7 +1,7 @@
-import React, { ChangeEvent, useEffect, useState } from 'react'
-import './CadastroPostagem.css'
-import Categoria from '../../../models/Categoria'
-import Postagem from '../../../models/Postagem'
+import React, { ChangeEvent, useEffect, useState } from "react";
+import "./CadastroPostagem.css";
+import Categoria from "../../../models/Categoria";
+import Postagem from "../../../models/Postagem";
 
 import {
   Container,
@@ -12,95 +12,98 @@ import {
   InputLabel,
   MenuItem,
   FormControl,
-  FormHelperText
-} from '@material-ui/core'
-import { useNavigate, useParams } from 'react-router-dom'
-import useLocalStorage from 'react-use-localstorage'
-import { busca, buscaId, post, put } from '../../../services/Service'
+  FormHelperText,
+} from "@material-ui/core";
+import { useNavigate, useParams } from "react-router-dom";
+import { busca, buscaId, post, put } from "../../../services/Service";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/tokensReducer";
 
 function CadastroPostagem() {
-  let navigate = useNavigate()
-  const { id } = useParams<{ id: string }>()
-  const [categorias, setCategorias] = useState<Categoria[]>([])
+  let navigate = useNavigate();
+  const { id } = useParams<{ id: string }>();
+  const [categorias, setCategorias] = useState<Categoria[]>([]);
 
-  const [token, setToken] = useLocalStorage('token')
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
 
   useEffect(() => {
-    if (token == '') {
-      alert('Você precisa estar logado')
-      navigate('/login')
+    if (token == "") {
+      alert("Você precisa estar logado");
+      navigate("/login");
     }
-  }, [token])
+  }, [token]);
 
   /* armazernar um categoria especifico*/
   const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
-    nome: '',
-    descricao: ''
-  })
+    nome: "",
+    descricao: "",
+  });
 
   /*efetuar o cadastro das postagens*/
   const [postagem, setPostagem] = useState<Postagem>({
     id: 0,
     anonimo: true,
-    texto: '',
-    data: '',
-    titulo: '',
+    texto: "",
+    data: "",
+    titulo: "",
     categoria: null,
     usuario: {
       id: 1,
-      nome: '',
-      data_nascimento: '',
-      cpf: '',
-      email: '',
-      foto: '',
-      cnpj: '',
-      senha: '',
-      tipo: ''
-    }
-  })
+      nome: "",
+      data_nascimento: "",
+      cpf: "",
+      email: "",
+      foto: "",
+      cnpj: "",
+      senha: "",
+      tipo: "",
+    },
+  });
 
   useEffect(() => {
     setPostagem({
       ...postagem,
-      categoria: categoria
-    })
-  }, [categoria])
+      categoria: categoria,
+    });
+  }, [categoria]);
 
   useEffect(() => {
-    getCategorias()
+    getCategorias();
     if (id !== undefined) {
-      findByIdPostagem(id)
+      findByIdPostagem(id);
     }
-  }, [id])
+  }, [id]);
 
   async function getCategorias() {
-    await busca('/categorias', setCategorias, {
+    await busca("/categorias", setCategorias, {
       headers: {
-        Authorization: token
-      }
-    })
+        Authorization: token,
+      },
+    });
   }
 
   async function findByIdPostagem(id: string) {
     await buscaId(`postagens/${id}`, setPostagem, {
       headers: {
-        Authorization: token
-      }
-    })
+        Authorization: token,
+      },
+    });
   }
 
   function updatedPostagem(e: ChangeEvent<HTMLInputElement>) {
     setPostagem({
       ...postagem,
       [e.target.name]: e.target.value,
-      categoria: categoria
-    })
+      categoria: categoria,
+    });
   }
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-    e.preventDefault()
-    console.log(postagem)
+    e.preventDefault();
+    console.log(postagem);
 
     // Se o ID for diferente de indefinido tente Atualizar
     if (id !== undefined) {
@@ -108,15 +111,15 @@ function CadastroPostagem() {
       try {
         await put(`/postagens`, postagem, setPostagem, {
           headers: {
-            Authorization: token
-          }
-        })
-        alert('Postagem atualizada com sucesso')
+            Authorization: token,
+          },
+        });
+        alert("Postagem atualizada com sucesso");
 
         // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
       } catch (error) {
-        console.log(`Error: ${error}`)
-        alert('Erro, por favor verifique a quantidade minima de caracteres')
+        console.log(`Error: ${error}`);
+        alert("Erro, por favor verifique a quantidade minima de caracteres");
       }
 
       // Se o ID for indefinido, tente Cadastrar
@@ -125,23 +128,23 @@ function CadastroPostagem() {
       try {
         await post(`/postagens`, postagem, setPostagem, {
           headers: {
-            Authorization: token
-          }
-        })
-        alert('Postagem cadastrada com sucesso')
+            Authorization: token,
+          },
+        });
+        alert("Postagem cadastrada com sucesso");
 
         // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
       } catch (error) {
-        console.log(`Error: ${error}`)
-        alert('Erro, por favor verifique a quantidade minima de caracteres')
+        console.log(`Error: ${error}`);
+        alert("Erro, por favor verifique a quantidade minima de caracteres");
       }
     }
 
-    back()
+    back();
   }
 
   function back() {
-    navigate('/postagens')
+    navigate("/postagens");
   }
 
   return (
@@ -179,20 +182,20 @@ function CadastroPostagem() {
 
         <FormControl>
           <InputLabel id="demo-simple-select-helper-label">
-            Categoria{' '}
+            Categoria{" "}
           </InputLabel>
           <Select
             labelId="demo-simple-select-helper-label"
             id="demo-simple-select-helper"
-            onChange={e =>
+            onChange={(e) =>
               buscaId(`/categorias/${e.target.value}`, setCategoria, {
                 headers: {
-                  Authorization: token
-                }
+                  Authorization: token,
+                },
               })
             }
           >
-            {categorias.map(categoria => (
+            {categorias.map((categoria) => (
               <MenuItem value={categoria.id}>{categoria.descricao}</MenuItem>
             ))}
           </Select>
@@ -203,6 +206,6 @@ function CadastroPostagem() {
         </FormControl>
       </form>
     </Container>
-  )
+  );
 }
-export default CadastroPostagem
+export default CadastroPostagem;
