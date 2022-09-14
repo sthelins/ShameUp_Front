@@ -11,6 +11,7 @@ import ListaCategoria from "./componentes/categoria/listaCategoria/ListaCategori
 import CadastroCategoria from "./componentes/categoria/cadastroCategoria/CadastroCategoria";
 import DeletarCategoria from "./componentes/categoria/deletarCategoria/DeletarCategoria";
 import CadastroPostagem from "./componentes/categoria/cadastroPostagem/CadastroPostagem";
+import ListarPostagem from "./componentes/categoria/listarPostagem/ListarPostagem";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/cadastrousuario" element={<CadastroUsuario />} />
           <Route path="/login" element={<Login />} />
           <Route path="/sobre" element={<Sobrenos />} />
+          <Route path="/posts" element={<ListarPostagem />} />
           <Route path="/formularioPostagem" element={<CadastroPostagem />} />
           <Route path="/formularioPostagem/:id" element={<CadastroPostagem />} />
           <Route path="/formularioCategoria" element={<CadastroCategoria />} />
