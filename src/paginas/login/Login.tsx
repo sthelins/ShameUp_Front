@@ -2,7 +2,6 @@ import React, { useState, useEffect, ChangeEvent } from "react";
 import { Button, Grid, TextField, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
 import { login } from "../../services/Service";
 import UserLogin from "../../models/UserLogin";
 import "./Login.css";
@@ -12,7 +11,7 @@ import { addToken } from "../../store/tokens/actions";
 function Login() {
   let history = useNavigate();
   const dispatch = useDispatch();
-  const [token, setToken] = useLocalStorage("token");
+  const [token, setToken] = useState("");
 
   const [userLogin, setUserLogin] = useState<UserLogin>({
     id: 0,
