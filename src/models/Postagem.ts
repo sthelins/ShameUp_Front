@@ -5,6 +5,7 @@ interface Postagem {
 
     id: number;
     anonimo: boolean;
+    texto: string;
     data?: string|null;
     titulo: string;
     categoria?: Categoria|null;
