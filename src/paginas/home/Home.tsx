@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
 import { Grid, Box, Paper, Button, Typography } from '@mui/material';
-
-
+import { Link, useNavigate } from 'react-router-dom';
 import './Home.css';
 import useLocalStorage from "react-use-localstorage";
-import { useNavigate } from "react-router-dom";
-
 
 
 function Home() {
@@ -40,7 +37,9 @@ function Home() {
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
                         </Box>
+                        <Link to='/postagens' className="text-decorator-none">
                         <Button variant="outlined" className='botao'>fale aqui</Button>
+                        </Link>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
