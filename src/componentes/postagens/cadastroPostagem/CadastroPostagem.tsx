@@ -18,6 +18,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { busca, buscaId, post, put } from "../../../services/Service";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
+import { toast } from "react-toastify";
 
 function CadastroPostagem() {
   let navigate = useNavigate();
@@ -30,7 +31,16 @@ function CadastroPostagem() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado");
+      toast.info("Você precisa estar logado!", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        theme: "dark",
+        progress: undefined,
+      });
       navigate("/login");
     }
   }, [token]);
@@ -114,12 +124,30 @@ function CadastroPostagem() {
             Authorization: token,
           },
         });
-        alert("Postagem atualizada com sucesso");
+        toast.success("Postagem atualizada com sucesso!", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          theme: "dark",
+          progress: undefined,
+        });
 
         // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
       } catch (error) {
         console.log(`Error: ${error}`);
-        alert("Erro, por favor verifique a quantidade minima de caracteres");
+        toast.error("Por favor verifique a quantidade mínima de caracteres.", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          theme: "dark",
+          progress: undefined,
+        });
       }
 
       // Se o ID for indefinido, tente Cadastrar
@@ -131,12 +159,31 @@ function CadastroPostagem() {
             Authorization: token,
           },
         });
-        alert("Postagem cadastrada com sucesso");
+        toast.success("Postagem cadastrada com sucesso!", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          theme: "dark",
+          progress: undefined,
+        });
 
         // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
       } catch (error) {
         console.log(`Error: ${error}`);
-        alert("Erro, por favor verifique a quantidade minima de caracteres");
+        toast.error("Por favor verifique a quantidade mínima de caracteres.", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          theme: "dark",
+          progress: undefined,
+        });
+        //alert("Erro, por favor verifique a quantidade minima de caracteres");
       }
     }
 
