@@ -31,18 +31,19 @@ function CadastroPostagem() {
     }
   }, [token])
 
-  /* armazernar um tema especifico*/
+  /* armazernar um categoria especifico*/
   const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
     nome: '',
     descricao: ''
   })
+
   /*efetuar o cadastro das postagens*/
   const [postagem, setPostagem] = useState<Postagem>({
     id: 0,
     anonimo: true,
     texto: '',
-    data: null,
+    data: '',
     titulo: '',
     categoria: null,
     user: {
@@ -182,7 +183,7 @@ function CadastroPostagem() {
             labelId="demo-simple-select-helper-label"
             id="demo-simple-select-helper"
             onChange={e =>
-              buscaId(`/tema/${e.target.value}`, setCategoria, {
+              buscaId(`/categorias/${e.target.value}`, setCategoria, {
                 headers: {
                   Authorization: token
                 }
@@ -193,7 +194,7 @@ function CadastroPostagem() {
               <MenuItem value={categoria.id}>{categoria.descricao}</MenuItem>
             ))}
           </Select>
-          <FormHelperText>Escolha um tema para a postagem</FormHelperText>
+          <FormHelperText>Escolha uma Categoria para a postagem</FormHelperText>
           <Button type="submit" variant="contained" color="primary">
             Finalizar
           </Button>
