@@ -9,7 +9,7 @@ interface Postagem {
     data?: string|null;
     titulo: string;
     categoria?: Categoria|null;
-    user?: User|null;
+    usuario?: User|null;
 
 }
 
