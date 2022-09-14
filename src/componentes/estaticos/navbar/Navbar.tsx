@@ -1,6 +1,5 @@
 import React from "react";
 import "./Navbar.css";
-
 import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 import { Link, useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
@@ -18,13 +17,15 @@ function Navbar() {
   const dispatch = useDispatch();
 
   function goLogout() {
+    console.log("passando pelo gologout");
     dispatch(addToken(""));
     alert("Usuário deslogado");
     navigate("/login");
   }
 
-  return (
-    <>
+  var navBarComponent;
+  if (token !== "") {
+    navBarComponent = (
       <AppBar position="static" className="appBar">
         <Toolbar variant="dense" className="content">
           <Box className="cursor">
@@ -96,8 +97,10 @@ function Navbar() {
           </div>
         </Toolbar>
       </AppBar>
-    </>
-  );
+    );
+  }
+
+  return <>{navBarComponent}</>;
 }
 
 export default Navbar;
