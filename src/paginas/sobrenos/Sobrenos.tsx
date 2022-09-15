@@ -1,47 +1,72 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Typography, Grid } from "@material-ui/core";
 import "./Sobrenos.css";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function Sobrenos() {
+  let navigate = useNavigate();
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+
+  useEffect(() => {
+    if (token == "") {
+      toast.info("Você precisa estar logado!", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        theme: "dark",
+        progress: undefined,
+      });
+      navigate("/login");
+    }
+  }, [token]);
   return (
     <>
-      <Typography
-        variant="h3"
-        gutterBottom
-        color="textPrimary"
-        component="h3"
-        align="center"
-        className="titulo"
-      >
-        Sobre nós
-      </Typography>
-      <Grid className="container" alignItems="center">
-        <Grid item xs={6} className="texto">
+      <Grid className="cordefundo">
+        <Grid>
           <Typography
-            variant="h6"
-            gutterBottom
+            variant="h3"
             color="textPrimary"
-            component="h6"
-            align="left"
+            component="h3"
+            align="center"
+            className="fontesobre"
           >
-            Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um
-            leite divinis, qui tem lupuliz, matis, aguis e fermentis.Admodum
-            accumsan disputationi eu sit. Vide electram sadipscing et
-            per.Detraxit consequat et quo num tendi nada.Viva Forevis aptent
-            taciti sociosqu ad litora torquent. Diuretics paradis num copo é
-            motivis de denguis.Mais vale um bebadis conhecidiss, que um
-            alcoolatra anonimis.Quem num gosta di mim que vai caçá sua
-            turmis!Atirei o pau no gatis, per gatis num morreus.
+            Sobre nós
           </Typography>
         </Grid>
-        <Grid item xs={6} className="gridimagem">
-          <img
-            className="br-50 wh-300 p-30"
-            src="https://media.discordapp.net/attachments/988429116711772190/1014536579433369630/SHAME_up.png"
-            alt="Logo do Projeto Integrador Shame Up"
-            width="500%"
-            height="100%"
-          />
+        <Grid className="containersobre" alignItems="center">
+          <Grid item xs={6} className="textosobre">
+            <Typography
+              variant="h6"
+              color="textPrimary"
+              component="h6"
+              align="left"
+              className="alinhar"
+            >
+              Como Projeto Integrador da Generation Brasil, criamos uma Rede
+              Social para os usuários compartilharem suas experiências
+              relacionadas a injustiças, racismo e injurias durante
+              atendimentos. Nosso objetivo é que as instituições tornem-se mais
+              eficazes, transparentes e humanas. Também esperamos que essa
+              plataforma seja uma ótima fonte para consultas comportamentais.
+            </Typography>
+          </Grid>
+          <Grid item xs={6} className="gridimagem">
+            <img
+              className="br-50 wh-300 p-30"
+              src="https://cdn.discordapp.com/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png"
+              alt="Logo do Projeto Integrador Shame Up"
+              width="500%"
+              height="100%"
+            />
+          </Grid>
         </Grid>
       </Grid>
     </>

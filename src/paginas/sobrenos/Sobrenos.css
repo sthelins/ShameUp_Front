@@ -1,9 +1,33 @@
-.container {
+.containersobre {
   display: flex !important;
+  background: linear-gradient(
+    45deg,
+    rgba(60, 0, 97, 1) 0%,
+    rgba(118, 44, 173, 1) 50%,
+    rgba(136, 67, 171, 1) 100%
+  );
+  margin-top: 0% !important;
+  margin-bottom: 0px !important;
+  width: 100% !important;
 }
+
 .titulo {
-  margin-top: 50px !important;
   color: #000 !important;
+  background: linear-gradient(
+    45deg,
+    rgba(60, 0, 97, 1) 0%,
+    rgba(118, 44, 173, 1) 50%,
+    rgba(136, 67, 171, 1) 100%
+  );
+  margin-bottom: 0px !important;
+  margin-top: 0% !important;
+  padding-top: 50px !important;
+}
+
+.fontesobre {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 400% !important;
+  color: #fff !important;
 }
 
 .imagem {
@@ -14,7 +38,7 @@
 }
 .gridimagem {
   justify-content: right !important;
-  padding-left: 120px;
+  padding-left: 50px !important;
 }
 
 .p-30 {
@@ -26,10 +50,26 @@
 }
 
 .wh-300 {
-  width: 400px !important;
-  height: 400px !important;
+  width: 500px !important;
+  height: 250px !important;
 }
 
-.texto {
-  padding: 100px !important;
+.textosobre {
+  margin-top: 0% !important;
+  padding: 130px !important;
+}
+
+.alinhar {
+  color: #fff !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.cordefundo {
+  background: linear-gradient(
+    45deg,
+    rgba(60, 0, 97, 1) 0%,
+    rgba(118, 44, 173, 1) 50%,
+    rgba(136, 67, 171, 1) 100%
+  );
+  padding-top: 2% !important;
 }
