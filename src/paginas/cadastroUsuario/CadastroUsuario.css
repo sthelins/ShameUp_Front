@@ -15,3 +15,20 @@
 .btnCancelar{
     margin-right: 20px !important;
 }
+
+.fisica{
+  display:block;
+
+}
+
+.juridica{
+    display:none;
+}
+
+.esconder{
+    display:none
+}
+
+.mostrar{
+    display: block;
+}
