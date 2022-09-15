@@ -58,16 +58,16 @@ function Login() {
   useEffect(() => {
     if (respUserLogin.token !== "") {
 
-        // Verifica os dados pelo console (Opcional)
-        console.log("Token: " + respUserLogin.token)
-        console.log("ID: " + respUserLogin.id)
+      // Verifica os dados pelo console (Opcional)
+      console.log("Token: " + respUserLogin.token)
+      console.log("ID: " + respUserLogin.id)
 
-        // Guarda as informações dentro do Redux (Store)
-        dispatch(addToken(respUserLogin.token))
-        dispatch(addId(respUserLogin.id.toString()))    // Faz uma conversão de Number para String
-        history('/home')
+      // Guarda as informações dentro do Redux (Store)
+      dispatch(addToken(respUserLogin.token))
+      dispatch(addId(respUserLogin.id.toString()))    // Faz uma conversão de Number para String
+      history('/home')
     }
-}, [respUserLogin.token])
+  }, [respUserLogin.token])
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -131,20 +131,20 @@ function Login() {
               fullWidth
               className="senha"
             />
-             <FormControlLabel
-              control={<Checkbox value="remember" color="primary" className="lembrar"/>}
+            <FormControlLabel
+              control={<Checkbox value="remember" color="primary" className="lembrar" />}
               className="lembrar" label="Me lembre"
             />
             <Box marginTop={2} textAlign="center">
               <Button type="submit" variant="contained" className="btn"> Entrar</Button>
             </Box>
-          
-          
+
+
             <Box marginTop={5} textAlign="center">
               <Typography variant="subtitle1" gutterBottom align="center" className="textos1">
                 Não tem uma conta?
               </Typography>
-              </Box>
+            </Box>
             <Link to="/cadastrousuario" className="cadastrese">
               <Typography
                 variant="subtitle1"
@@ -155,11 +155,11 @@ function Login() {
                 Cadastre-se
               </Typography>
             </Link>
-            </form>
-          </Box>
-        
+          </form>
+        </Box>
+
       </Grid>
-      
+
     </Grid>
   );
 }
