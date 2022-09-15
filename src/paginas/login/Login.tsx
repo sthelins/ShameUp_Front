@@ -1,6 +1,6 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
 import { Button, Grid, TextField, Typography } from "@material-ui/core";
-import { Box } from "@mui/material";
+import { Box, Checkbox, Fab, FormControlLabel } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../../services/Service";
 import UserLogin from "../../models/UserLogin";
@@ -8,6 +8,7 @@ import "./Login.css";
 import { useDispatch } from "react-redux";
 import { addToken } from "../../store/tokens/actions";
 import { toast } from "react-toastify";
+
 
 function Login() {
   let history = useNavigate();
@@ -84,41 +85,45 @@ function Login() {
               value={userLogin.email}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="email"
-              label="e-mail"
+              label="E-mail"
               name="email"
               variant="outlined"
               margin="normal"
+              className="email"
               fullWidth
             />
             <TextField
               value={userLogin.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="senha"
-              label="senha"
+              label="Senha"
               name="senha"
               variant="outlined"
               margin="normal"
               type="password"
               fullWidth
+              className="senha"
+            />
+             <FormControlLabel
+              control={<Checkbox value="remember" color="primary" className="lembrar"/>}
+              className="lembrar" label="Me lembre"
             />
             <Box marginTop={2} textAlign="center">
-              <Button type="submit" variant="contained" color="primary">
-                Entrar
-              </Button>
+              <Button type="submit" variant="contained" className="btn"> Entrar</Button>
             </Box>
           
           
             <Box marginTop={5} textAlign="center">
-              <Typography variant="subtitle1" gutterBottom align="center">
+              <Typography variant="subtitle1" gutterBottom align="center" className="textos1">
                 Não tem uma conta?
               </Typography>
               </Box>
-            <Link to="/cadastrousuario" className="text-decorator-none">
+            <Link to="/cadastrousuario" className="cadastrese">
               <Typography
                 variant="subtitle1"
                 gutterBottom
                 align="center"
-                className="textos1"
+                className="textos"
               >
                 Cadastre-se
               </Typography>
