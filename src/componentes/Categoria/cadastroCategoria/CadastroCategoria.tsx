@@ -5,13 +5,13 @@ import categoria from "../../../models/Categoria";
 import { ChangeEvent, useEffect, useState } from "react";
 import { Container, Typography, TextField, Button } from "@material-ui/core";
 import { useSelector } from "react-redux";
-import { TokenState } from "../../../store/tokens/tokensReducer";
+import { UserState } from "../../../store/tokens/userReducer";
 import { toast } from "react-toastify";
 
 function CadastroCategoria() {
   let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
   const [categoria, setCategoria] = useState<categoria>({
