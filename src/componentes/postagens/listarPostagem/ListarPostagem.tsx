@@ -17,6 +17,8 @@ import { TokenState } from "../../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
 import ComentarioPostagem from "../comentarioPostagem/ComentarioPostagem";
 
+
+
 function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([]);
   let navigate = useNavigate();
