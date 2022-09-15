@@ -2,15 +2,41 @@
     font-weight: bold !important;
 }
 
-.imagem{
-    background-image: url(https://i.imgur.com/u9RkTCj_d.jpg?maxwidth=520&shape=thumb&fidelity=high);
-    background-repeat: no-repeat;
-    width: 100vw;
-    min-height: 100vh;
+.titulo{
+    background-image: url(https://media.discordapp.net/attachments/1016308515167543417/1019948015945011290/5-removebg-preview.png);
+    background-repeat: 'no-repeat';
+    width: 300px;
+    min-height: 300px;
     background-size: cover;
     background-position: center;
+    margin: auto;
+}
+
+.background{
+    background: rgb(118,44,173);
+    background: radial-gradient(circle, rgba(118,44,173,1) 0%, rgba(136,67,171,1) 50%, rgba(254,225,0,1) 100%);
+    background-size: 100%;
+    padding-bottom: 4.4rem
 }
 
 .text-decorator-none{
     text-decoration: none;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 60px;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    position: relative;
+
 }

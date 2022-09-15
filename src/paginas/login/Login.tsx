@@ -75,20 +75,11 @@ function Login() {
   }
 
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="center">
-      <Grid alignItems="center" sm={6}>
-        <Box paddingX={20}>
+    <Grid container direction="row" justifyContent="center" alignItems="center" className="background">
+      <Grid alignItems="center" sm={6} >
+        <Box paddingX={20} className="container">
           <form onSubmit={onSubmit}>
-            <Typography
-              variant="h3"
-              gutterBottom
-              color="textPrimary"
-              component="h3"
-              align="center"
-              className="textos1"
-            >
-              Entrar
-            </Typography>
+            <Box display="flex" justifyContent="center" marginTop={2} className="titulo"></Box>
             <TextField
               value={userLogin.email}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
@@ -112,17 +103,17 @@ function Login() {
             />
             <Box marginTop={2} textAlign="center">
               <Button type="submit" variant="contained" color="primary">
-                Logar
+                Entrar
               </Button>
             </Box>
-          </form>
-          <Box display="flex" justifyContent={"center"} marginTop={2}>
-            <Box marginRight={1}>
+          
+          
+            <Box marginTop={5} textAlign="center">
               <Typography variant="subtitle1" gutterBottom align="center">
-                Não tem conta?
+                Não tem uma conta?
               </Typography>
-            </Box>
-            <Link to="/cadastrousuario">
+              </Box>
+            <Link to="/cadastrousuario" className="text-decorator-none">
               <Typography
                 variant="subtitle1"
                 gutterBottom
@@ -132,10 +123,11 @@ function Login() {
                 Cadastre-se
               </Typography>
             </Link>
+            </form>
           </Box>
-        </Box>
+        
       </Grid>
-      <Grid sm={6} className="imagem"></Grid>
+      
     </Grid>
   );
 }
