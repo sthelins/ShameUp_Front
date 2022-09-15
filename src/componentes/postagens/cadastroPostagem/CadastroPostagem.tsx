@@ -203,13 +203,13 @@ function CadastroPostagem() {
           component="h1"
           align="center"
         >
-          Formulário de cadastro postagem
+          Faça o seu relato!
         </Typography>
         <TextField
           value={postagem.titulo}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
           id="titulo"
-          label="titulo"
+          label="Titulo"
           variant="outlined"
           name="titulo"
           margin="normal"
@@ -220,7 +220,7 @@ function CadastroPostagem() {
           multiline
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
           id="texto"
-          label="texto"
+          label="Texto"
           name="texto"
           variant="outlined"
           margin="normal"
