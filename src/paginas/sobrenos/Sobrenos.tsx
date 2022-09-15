@@ -2,13 +2,13 @@ import React, { useEffect } from "react";
 import { Typography, Grid } from "@material-ui/core";
 import "./Sobrenos.css";
 import { useSelector } from "react-redux";
-import { TokenState } from "../../store/tokens/tokensReducer";
+import { UserState } from "../../store/tokens/userReducer";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 function Sobrenos() {
   let navigate = useNavigate();
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
 
