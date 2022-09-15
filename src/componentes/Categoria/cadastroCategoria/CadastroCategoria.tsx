@@ -140,7 +140,7 @@ function CadastroCategoria() {
           component="h1"
           align="center"
         >
-          Cadastro de Categoria:
+          Cadastre uma nova categoria para a sua reclamação:
         </Typography>
         <TextField
           value={categoria.nome}
