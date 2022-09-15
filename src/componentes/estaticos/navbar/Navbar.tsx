@@ -6,12 +6,12 @@ import Box from "@mui/material/Box";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useDispatch, useSelector } from "react-redux";
-import { TokenState } from "../../../store/tokens/tokensReducer";
+import { UserState } from "../../../store/tokens/userReducer";
 import { addToken } from "../../../store/tokens/actions";
 import { toast } from "react-toastify";
 
 function Navbar() {
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
   let navigate = useNavigate();
@@ -64,7 +64,7 @@ function Navbar() {
               <Box mx={2} className="cursor">
                 <Link to="/formularioCategoria" className="text-decorator">
                   <Typography variant="h6" color="inherit">
-                    Cadastrar Tema
+                    Nova Categoria
                   </Typography>
                 </Link>
               </Box>
@@ -72,7 +72,7 @@ function Navbar() {
               <Box mx={2} className="cursor">
                 <Link to="/categorias" className="text-decorator">
                   <Typography variant="h6" color="inherit">
-                    Temas
+                    Categorias
                   </Typography>
                 </Link>
               </Box>
