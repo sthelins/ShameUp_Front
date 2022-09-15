@@ -6,6 +6,8 @@ import ModalPostagem from "../../componentes/postagens/modalPostagem/ModalPostag
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
+import TabPostagem from "../../componentes/postagens/tabPostagem/TabPostagem";
+
 
 function Home() {
   let navigate = useNavigate();
@@ -39,18 +41,9 @@ function Home() {
         alignItems="center"
         className="caixa"
       >
-        <Grid alignItems="center" item xs={12}>
-          <Box>
-            <img
-              src="https://media.discordapp.net/attachments/988429116711772190/1014536579433369630/SHAME_up.png"
-              alt="Logo do Projeto Integrador Shame Up"
-              width="20"
-              height="100"
-            />
-          </Box>
-        </Grid>
-        <Grid alignItems="center" item xs={6}>
-          <Box paddingX={20}>
+        
+        <Grid alignItems="center" item xs={4} className="margin-bottom" >
+          <Box paddingX={0}>
             <Typography
               variant="h3"
               gutterBottom
@@ -83,17 +76,14 @@ function Home() {
             </Link>
           </Box>
         </Grid>
-        <Grid item xs={6}>
-          <img
-            src="https://media.discordapp.net/attachments/988429116711772190/1014536579433369630/SHAME_up.png"
-            alt="Logo do Projeto Integrador Shame Up"
-            width="100%"
-            height="100%"
-          />
+                <Grid xs={8} className="postagens">
+        <TabPostagem />
+          
         </Grid>
 
-        <Grid xs={12} className="postagens"></Grid>
-      </Grid>
+        
+        </Grid>
+       
     </>
   );
 }
