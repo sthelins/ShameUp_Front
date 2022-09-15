@@ -4,13 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 import ModalPostagem from "../../componentes/postagens/modalPostagem/ModalPostagem";
 import { useSelector } from "react-redux";
-import { TokenState } from "../../store/tokens/tokensReducer";
+import { UserState } from "../../store/tokens/userReducer";
 import { toast } from "react-toastify";
 
 function Home() {
   let navigate = useNavigate();
 
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
 
