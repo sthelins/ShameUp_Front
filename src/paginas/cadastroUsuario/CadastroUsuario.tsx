@@ -1,11 +1,13 @@
-import React, { useState, useEffect, ChangeEvent } from "react";
+import React, { useState, useEffect, ChangeEvent, SyntheticEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import User from "../../models/User";
 import { cadastroUsuario } from "../../services/Service";
-import { Grid, Box, Typography, Button, TextField } from "@mui/material";
+import { Grid, Box, Typography, Button, TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./CadastroUsuario.css";
 import { toast } from "react-toastify";
+import { makeStyles } from "@material-ui/styles";
+
 
 function CadastroUsuario() {
   let navigate = useNavigate();
@@ -48,10 +50,12 @@ function CadastroUsuario() {
     setUser({
       ...user,
       [e.target.name]: e.target.value,
+      tipo: category
     });
   }
   async function cadastrar(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
+    console.log(user)
 
     // Estrutura Condicional que verifica se as senhas batem e se a Senha tem mais de 8 caracteres
     if (confirmarSenha === user.senha && user.senha.length >= 8) {
@@ -102,14 +106,34 @@ function CadastroUsuario() {
       setConfirmarSenha(""); // Reinicia o campo de Confirmar Senha
     }
   }
-
+  var category1 = '';
   const [dataNascimento, setDataNascimento] = useState("");
+
+  const [category, setCategory] = useState('fisica');
+  if (category == 'fisica'){
+    category1 = 'esconder' 
+  }else{
+    category1 = 'mostrar'
+  }
+
+  const useStyles = makeStyles({
+    field: {
+      marginTop: 20,
+      marginBottom: 20,
+      display: 'block'
+    }
+  })
+
+  const tipos = useStyles()
 
   function getDate(e: ChangeEvent<HTMLInputElement>) {
     setDataNascimento(e.target.value);
   }
 
   user.data_nascimento = dataNascimento + " 00:00:00";
+
+  
+
 
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
@@ -127,17 +151,15 @@ function CadastroUsuario() {
             >
               Cadastrar
             </Typography>
-            <TextField
-              value={user.tipo}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="tipo"
-              label="tipo"
-              variant="outlined"
-              name="tipo"
-              margin="normal"
-              type="normal"
-              fullWidth
-            />
+
+            <FormControl className={tipos.field}>
+              <FormLabel>Tipo</FormLabel>
+              <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
+                <FormControlLabel value="fisica" control={<Radio />} label="Pessoa Física" />
+                <FormControlLabel value="juridica" control={<Radio />} label="Pessoa Jurídica" />
+              </RadioGroup>
+            </FormControl>
+
             <TextField
               value={user.nome}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
@@ -162,7 +184,7 @@ function CadastroUsuario() {
               fullWidth
               required
             />
-
+            <div className={category}>
             <TextField
               value={user.cpf}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
@@ -173,6 +195,8 @@ function CadastroUsuario() {
               margin="normal"
               fullWidth
             />
+            </div>
+            <div className={category1}>
             <TextField
               value={user.cnpj}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
@@ -183,6 +207,7 @@ function CadastroUsuario() {
               margin="normal"
               fullWidth
             />
+            </div>
             <TextField
               value={user.email}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
@@ -240,3 +265,4 @@ function CadastroUsuario() {
 }
 
 export default CadastroUsuario;
+
