@@ -1,18 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Grid, Box, Paper, Button, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 import ModalPostagem from "../../componentes/postagens/modalPostagem/ModalPostagem";
 import { useSelector } from "react-redux";
-import { TokenState } from "../../store/tokens/tokensReducer";
+import { UserState } from "../../store/tokens/userReducer";
 import { toast } from "react-toastify";
+import User from "../../models/User";
+import { buscaId } from "../../services/Service";
 
 function Home() {
   let navigate = useNavigate();
 
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
+
+  const id = useSelector<UserState, UserState["id"]>(
+    (state) => state.id
+  );
+
+  const [user, setUser] = useState<User>({
+    id: 0,
+    nome: "",
+    data_nascimento: "",
+    cpf: "",
+    email: "",
+    foto: "",
+    cnpj: "",
+    senha: "",
+    tipo: "",
+  });
+
 
   useEffect(() => {
     if (token == "") {
@@ -29,6 +48,18 @@ function Home() {
       navigate("/login");
     }
   }, [token]);
+
+  async function getUsuarioById() {
+    await buscaId(`usuarios/${id}`, setUser, {
+      headers: {
+        Authorization: token,
+      },
+    });
+  }
+  useEffect(() => {
+    getUsuarioById();
+  }, [user]);
+
 
   return (
     <>
@@ -50,6 +81,11 @@ function Home() {
           </Box>
         </Grid>
         <Grid alignItems="center" item xs={6}>
+          <Box>
+            <img src={user.foto}  alt="Foto de perfil do usuário" />
+            <Typography> {user.nome} </Typography>
+            <Typography> {user.email} </Typography>
+          </Box>
           <Box paddingX={20}>
             <Typography
               variant="h3"

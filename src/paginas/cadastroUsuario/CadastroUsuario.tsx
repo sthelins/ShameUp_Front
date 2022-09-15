@@ -164,7 +164,7 @@ function CadastroUsuario() {
               value={user.nome}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="nome"
-              label="nome"
+              label="Nome"
               variant="outlined"
               name="nome"
               margin="normal"
@@ -189,7 +189,7 @@ function CadastroUsuario() {
               value={user.cpf}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="cpf"
-              label="cpf"
+              label="CPF"
               variant="outlined"
               name="cpf"
               margin="normal"
@@ -201,7 +201,7 @@ function CadastroUsuario() {
               value={user.cnpj}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="cnpj"
-              label="cnpj"
+              label="CNPJ"
               variant="outlined"
               name="cnpj"
               margin="normal"
@@ -212,7 +212,7 @@ function CadastroUsuario() {
               value={user.email}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="email"
-              label="email"
+              label="Email"
               variant="outlined"
               name="email"
               margin="normal"
@@ -222,7 +222,7 @@ function CadastroUsuario() {
               value={user.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="senha"
-              label="senha"
+              label="Senha"
               variant="outlined"
               name="senha"
               margin="normal"
