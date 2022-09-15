@@ -1,3 +1,18 @@
-.titulo{
-    font-weight: bold;
- }
+.titulo {
+  font-weight: bold;
+}
+
+.bgtab {
+  background-color: #fee100 !important;
+}
+
+.corletra {
+  color: #000 !important;
+  font-weight: bold !important;
+}
+
+.bgpainel {
+  background-color: #ded6d4 !important;
+}
+
+/*#fcfeee*/

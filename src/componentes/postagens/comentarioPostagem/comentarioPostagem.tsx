@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 
-import './ComentarioPostagem.css'
+import "./comentarioPostagem.css";
 
 interface ComentarioProps {
-    conteudo: string
+  conteudo: string;
 }
 
-function ComentarioPostagem({conteudo}: ComentarioProps) {
-  return (
-    <p>{conteudo}</p>
-  )
+function ComentarioPostagem({ conteudo }: ComentarioProps) {
+  return <p>{conteudo}</p>;
 }
 
-export default ComentarioPostagem
+export default ComentarioPostagem;

@@ -3,7 +3,7 @@
 }
 
 .bgListaP {
-  background-color: #f3f3f5 !important;
+  background: #fff !important;
 }
 
 .fonteListaP {
@@ -21,4 +21,33 @@
 
 .bgListaPB2 {
   background-color: #d63031 !important;
+}
+
+.feedback {
+  display: flex !important;
+  align-items: left !important;
+  justify-content: left !important;
+  margin-top: 10px !important;
+  margin-left: 15px !important;
+  margin-bottom: 0% !important;
+}
+
+.feedback2 {
+  margin-top: 50px !important ;
+  margin-left: 14px !important;
+}
+
+.buttonfeedback {
+  margin-top: 10px !important;
+}
+
+.pad {
+  margin-left: 14px !important;
+  align-items: center !important;
+}
+
+.cont {
+  margin-left: 14px !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }

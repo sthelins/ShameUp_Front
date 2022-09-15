@@ -8,7 +8,6 @@ import { TokenState } from "../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
 import TabPostagem from "../../componentes/postagens/tabPostagem/TabPostagem";
 
-
 function Home() {
   let navigate = useNavigate();
 
@@ -41,8 +40,7 @@ function Home() {
         alignItems="center"
         className="caixa"
       >
-        
-        <Grid alignItems="center" item xs={4} className="margin-bottom" >
+        <Grid alignItems="center" item xs={4} className="margin-bottom">
           <Box paddingX={0}>
             <Typography
               variant="h3"
@@ -76,14 +74,10 @@ function Home() {
             </Link>
           </Box>
         </Grid>
-                <Grid xs={8} className="postagens">
-        <TabPostagem />
-          
+        <Grid xs={8} className="postagens">
+          <TabPostagem />
         </Grid>
-
-        
-        </Grid>
-       
+      </Grid>
     </>
   );
 }

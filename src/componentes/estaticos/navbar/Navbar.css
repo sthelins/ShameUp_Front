@@ -30,7 +30,6 @@
 
 .appBar {
   background-color: var(--first--color) !important;
-  padding: 0.3rem;
 }
 
 .options {
@@ -42,6 +41,7 @@
 .content {
   display: flex;
   justify-content: space-between;
+  background-color: #762cad !important;
   /*overflow-x: hidden;*/
   /*overflow: hidden;*/
 }
