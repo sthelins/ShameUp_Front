@@ -64,7 +64,7 @@ function Navbar() {
               <Box mx={2} className="cursor">
                 <Link to="/formularioCategoria" className="text-decorator">
                   <Typography variant="h6" color="inherit">
-                    Cadastrar Tema
+                    Nova Categoria
                   </Typography>
                 </Link>
               </Box>
@@ -72,7 +72,7 @@ function Navbar() {
               <Box mx={2} className="cursor">
                 <Link to="/categorias" className="text-decorator">
                   <Typography variant="h6" color="inherit">
-                    Temas
+                    Categorias
                   </Typography>
                 </Link>
               </Box>
