@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './comentarioPostagem.css'
+import './ComentarioPostagem.css'
 
 interface ComentarioProps {
     conteudo: string
