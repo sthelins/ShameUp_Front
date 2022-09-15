@@ -12,12 +12,12 @@ import "./ListaCategoria.css";
 import { busca } from "../../../services/Service";
 import Categoria from "../../../models/Categoria";
 import { useSelector } from "react-redux";
-import { TokenState } from "../../../store/tokens/tokensReducer";
+import { UserState } from "../../../store/tokens/userReducer";
 import { toast } from "react-toastify";
 
 function ListaCategoria() {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
   let navigate = useNavigate();
