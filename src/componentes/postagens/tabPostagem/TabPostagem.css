@@ -3,16 +3,21 @@
 }
 
 .bgtab {
-  background-color: #fee100 !important;
+  background-color: #f0e9e6 !important;
 }
 
 .corletra {
   color: #000 !important;
   font-weight: bold !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .bgpainel {
-  background-color: #ded6d4 !important;
+  background-color: #ded6d4c2 !important;
+}
+
+.tab {
+  border-radius: 100% !important;
 }
 
 /*#fcfeee*/
