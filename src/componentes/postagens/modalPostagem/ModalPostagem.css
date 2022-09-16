@@ -1,8 +1,11 @@
-.cursor{
-    cursor: pointer;
+.cursor {
+  cursor: pointer;
 }
 
-.btnModal{
-    border-color: white !important;
-    background-color: white !important;
+.btnModal {
+  color: #fff !important;
+  border-color: white !important;
+  font-family: "Poppins", sans-serif !important;
+  margin-left: 75% !important;
+  width: 100% !important;
 }
