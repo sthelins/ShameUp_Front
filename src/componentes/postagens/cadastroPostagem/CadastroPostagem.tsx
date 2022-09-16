@@ -195,13 +195,14 @@ function CadastroPostagem() {
   }
 
   return (
-    <Container maxWidth="sm" className="topo">
+    <Container maxWidth="sm">
       <form onSubmit={onSubmit}>
         <Typography
           variant="h3"
           color="textSecondary"
           component="h1"
           align="center"
+          className="topo"
         >
           Faça o seu relato!
         </Typography>
@@ -246,8 +247,15 @@ function CadastroPostagem() {
               <MenuItem value={categoria.id}>{categoria.descricao}</MenuItem>
             ))}
           </Select>
-          <FormHelperText>Escolha uma Categoria para a postagem</FormHelperText>
-          <Button type="submit" variant="contained" color="primary">
+          <FormHelperText className="cadastro">
+            Escolha uma categoria para a postagem
+          </FormHelperText>
+          <Button
+            className="botaomodal"
+            type="submit"
+            variant="contained"
+            color="primary"
+          >
             Finalizar
           </Button>
         </FormControl>
