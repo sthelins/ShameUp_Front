@@ -67,55 +67,48 @@ function Home() {
         alignItems="center"
         className="caixa"
       >
-        <Grid alignItems="center" item xs={12}>
-          <Box>
-            <img
-              src="https://media.discordapp.net/attachments/988429116711772190/1014536579433369630/SHAME_up.png"
-              alt="Logo do Projeto Integrador Shame Up"
-              width="20"
-              height="100"
-            />
-          </Box>
-        </Grid>
-        <Grid alignItems="center" item xs={6}>
-          <Box>
-            <img src={user.foto} alt="Foto de perfil do usuário" />
-            <Typography> {user.nome} </Typography>
-            <Typography> {user.email} </Typography>
-          </Box>
-          <Box paddingX={20}>
-            <Typography
-              variant="h3"
-              gutterBottom
-              color="textPrimary"
-              component="h3"
-              align="center"
-              className="titulo"
-            >
-              Olá!
-            </Typography>
-            <Typography
-              variant="h5"
-              gutterBottom
-              color="textPrimary"
-              component="h5"
-              align="center"
-              className="titulo"
-            >
-              Aqui é o seu lugar de fala
-            </Typography>
-          </Box>
-          <Box display="flex" justifyContent="center">
-            <Box marginRight={1}>
-              <ModalPostagem />
+        <Grid alignItems="center" item xs={4}>
+          <div className="divhome">
+            <Box>
+              <img src={user.foto} alt="Foto de perfil do usuário" />
+              <Typography> {user.nome} </Typography>
+              <Typography> {user.email} </Typography>
             </Box>
-            <Link to="/postagens" className="text-decorator-none">
-              <Button variant="outlined" className="botao">
-                Ver Postagens
-              </Button>
-            </Link>
-          </Box>
+            <Box className="boxhome">
+              <Typography
+                variant="h3"
+                gutterBottom
+                color="textPrimary"
+                component="h3"
+                align="center"
+                className="titulohome"
+              >
+                Olá!
+              </Typography>
+              <Typography
+                variant="h5"
+                gutterBottom
+                color="textPrimary"
+                component="h5"
+                align="center"
+                className="titulohome"
+              >
+                Aqui é o seu lugar de fala
+              </Typography>
+            </Box>
+            <Box display="flex" className="boxhome">
+              <Box marginRight={1}>
+                <ModalPostagem />
+              </Box>
+              <Link to="/postagens" className="text-decorator-none">
+                <Button variant="outlined" className="botaohome">
+                  Ver Postagens
+                </Button>
+              </Link>
+            </Box>
+          </div>
         </Grid>
+
         <Grid xs={8} className="postagens">
           <TabPostagem />
         </Grid>

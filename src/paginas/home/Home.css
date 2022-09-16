@@ -1,31 +1,42 @@
 .caixa {
   background: linear-gradient(
-    90deg,
-    rgba(58, 155, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
+    45deg,
+    rgba(60, 0, 97, 1) 0%,
+    rgba(118, 44, 173, 1) 50%,
+    rgba(136, 67, 171, 1) 100%
   );
-  font: small-caps bold 24px/1 sans-serif;
-  width: 100%;
 }
 
-.titulo {
+.titulohome {
   color: white !important;
-  font: small-caps bold 24px/1 sans-serif;
+  font-family: "Poppins", sans-serif !important;
+  width: 450px;
+  height: 90px;
+  padding: 10px;
+  margin-bottom: 0%;
+  box-sizing: border-box;
 }
 
-.botao {
+.botaohome {
   border-color: white !important;
-  background-color: #3f51b5;
   color: white !important;
-  font: small-caps bold 24px/1 sans-serif;
+  font-family: "Poppins", sans-serif !important;
+  margin-left: 75% !important;
+  width: 100% !important;
 }
 
 .postagens {
   background-color: white;
   font: small-caps bold 24px/1 sans-serif;
   color: white !important;
+  justify-items: right !important;
 }
 .margin-bottom {
   margin-bottom: 40% !important;
+}
+
+.divhome {
+  top: 25%;
+  left: 0%;
+  position: fixed !important;
 }
