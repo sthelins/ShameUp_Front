@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./ComentarioPostagem.css";
 
 interface ComentarioProps {

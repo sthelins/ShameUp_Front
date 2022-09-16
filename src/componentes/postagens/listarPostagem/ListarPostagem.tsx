@@ -13,14 +13,14 @@ import { Box } from "@mui/material";
 import "./ListarPostagem.css";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { TokenState } from "../../../store/tokens/tokensReducer";
+import { UserState } from "../../../store/tokens/userReducer";
 import { toast } from "react-toastify";
 import ComentarioPostagem from "../comentarioPostagem/ComentarioPostagem";
 
 function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([]);
   let navigate = useNavigate();
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
 
