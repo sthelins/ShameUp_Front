@@ -8,6 +8,7 @@ import {
   CardContent,
   Button,
   Typography,
+  TextField,
 } from "@material-ui/core";
 import { Box } from "@mui/material";
 import "./ListarPostagem.css";
@@ -72,7 +73,7 @@ function ListaPostagem() {
     <>
       {posts.map((post) => (
         <Box m={2}>
-          <Card variant="outlined" className="bgListaP fonteListaP">
+          <Card variant="outlined" className="bgListaP fonteListaPe">
             <CardContent>
               <Typography color="textSecondary" gutterBottom>
                 Postagens
@@ -101,7 +102,7 @@ function ListaPostagem() {
                       variant="contained"
                       size="small"
                       color="primary"
-                      className="marginLeftListaP fonteListaP bgListaPB"
+                      className="marginLeftListaP fonteListaPe bgListaPB"
                     >
                       atualizar
                     </Button>
@@ -116,7 +117,7 @@ function ListaPostagem() {
                       variant="contained"
                       size="small"
                       color="secondary"
-                      className="marginLeftListaP fonteListaP bgListaPB2"
+                      className="marginLeftListaP fonteListaPe bgbotaolista"
                     >
                       deletar
                     </Button>
@@ -126,6 +127,7 @@ function ListaPostagem() {
             </CardActions>
             <form onSubmit={handleCreateNewComment}>
               <strong className="feedback2">Deixe seu feedback</strong>
+
               <div className="feedback">
                 <textarea
                   name="comment"
