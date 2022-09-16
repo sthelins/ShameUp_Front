@@ -1,0 +1,21 @@
+.fontefooter {
+  background-color: #ded6d4c2 !important;
+  color: #000 !important;
+  height: 120px;
+}
+
+.bgdofooter {
+  background-color: #ded6d444 !important;
+  height: 60px;
+  color: #000 !important;
+  padding-top: 1% !important;
+}
+
+.esti {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.text {
+  text-decoration: none !important;
+  color: #000 !important;
+}

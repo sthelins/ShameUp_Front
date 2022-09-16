@@ -46,6 +46,14 @@
   /*overflow: hidden;*/
 }
 
+.modo {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.peso {
+  font-weight: 500 !important;
+}
+
 /*.icon-menu {
   background-color: aqua !important;
 }*/
