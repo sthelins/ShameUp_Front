@@ -1,16 +1,91 @@
-.textos1{
+.textos{
     font-weight: bold !important;
+    font-family: "Poppins", sans-serif !important;
 }
 
-.imagem{
-    background-image: url(https://i.imgur.com/u9RkTCj_d.jpg?maxwidth=520&shape=thumb&fidelity=high);
-    background-repeat: no-repeat;
-    width: 100vw;
-    min-height: 100vh;
+.textos1{
+    font-weight: bold !important;
+    font-family: "Poppins", sans-serif !important;
+    color: white;
+}
+
+.titulo{
+    background-image: url(https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png);
+    background-repeat: 'no-repeat';
+    width: 500px;
+    min-height: 100px;
     background-size: cover;
     background-position: center;
+    margin: auto;
+}
+
+.btn{
+  background-color: rgba(60,0,97,1)!important;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: white !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.background{
+    background: rgb(118,44,173);
+    background: linear-gradient(45deg, rgba(60,0,97,1) 0%, rgba(118,44,173,1) 50%, rgba(136,67,171,1) 100%);
+    background-size: 100%;
+    padding-bottom: 4.3rem
 }
 
 .text-decorator-none{
     text-decoration: none;
+    font-family: "Poppins", sans-serif !important;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 60px;
+    padding: 0;
+    box-sizing:content-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    position: relative;
+
+}
+
+.cadastrese{
+    text-decoration: none;
+    color: rgba(60,0,97,1);
+    font-size: 70px !important;
+    font-family: "Poppins", sans-serif !important;
+}
+
+.email{
+    background-color: rgba(248, 244, 250, 0.2) !important;
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    text-decoration: none;
+
+}
+
+.senha{
+    background-color: rgba(248, 244, 250, 0.2) !important;
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    text-decoration: none;
+
+}
+
+.lembrar{
+    font-weight: bold !important;
+    font-family: "Poppins", sans-serif !important;
+    color: white !important;
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
 import { Button, Grid, TextField, Typography } from "@material-ui/core";
-import { Box } from "@mui/material";
+import { Box, Checkbox, Fab, FormControlLabel } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../../services/Service";
 import UserLogin from "../../models/UserLogin";
@@ -8,6 +8,7 @@ import "./Login.css";
 import { useDispatch } from "react-redux";
 import { addId, addToken } from "../../store/tokens/actions";
 import { toast } from "react-toastify";
+
 
 function Login() {
   let history = useNavigate();
@@ -102,67 +103,63 @@ function Login() {
   }
 
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="center">
-      <Grid alignItems="center" sm={6}>
-        <Box paddingX={20}>
+    <Grid container direction="row" justifyContent="center" alignItems="center" className="background">
+      <Grid alignItems="center" sm={6} >
+        <Box paddingX={20} className="container">
           <form onSubmit={onSubmit}>
-            <Typography
-              variant="h3"
-              gutterBottom
-              color="textPrimary"
-              component="h3"
-              align="center"
-              className="textos1"
-            >
-              Entrar
-            </Typography>
+            <Box display="flex" justifyContent="center" marginTop={2} className="titulo"></Box>
             <TextField
               value={userLogin.email}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="email"
-              label="e-mail"
+              label="E-mail"
               name="email"
               variant="outlined"
               margin="normal"
+              className="email"
               fullWidth
             />
             <TextField
               value={userLogin.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="senha"
-              label="senha"
+              label="Senha"
               name="senha"
               variant="outlined"
               margin="normal"
               type="password"
               fullWidth
+              className="senha"
+            />
+             <FormControlLabel
+              control={<Checkbox value="remember" color="primary" className="lembrar"/>}
+              className="lembrar" label="Me lembre"
             />
             <Box marginTop={2} textAlign="center">
-              <Button type="submit" variant="contained" color="primary">
-                Logar
-              </Button>
+              <Button type="submit" variant="contained" className="btn"> Entrar</Button>
             </Box>
-          </form>
-          <Box display="flex" justifyContent={"center"} marginTop={2}>
-            <Box marginRight={1}>
-              <Typography variant="subtitle1" gutterBottom align="center">
-                Não tem conta?
+          
+          
+            <Box marginTop={5} textAlign="center">
+              <Typography variant="subtitle1" gutterBottom align="center" className="textos1">
+                Não tem uma conta?
               </Typography>
-            </Box>
-            <Link to="/cadastrousuario">
+              </Box>
+            <Link to="/cadastrousuario" className="cadastrese">
               <Typography
                 variant="subtitle1"
                 gutterBottom
                 align="center"
-                className="textos1"
+                className="textos"
               >
                 Cadastre-se
               </Typography>
             </Link>
+            </form>
           </Box>
-        </Box>
+        
       </Grid>
-      <Grid sm={6} className="imagem"></Grid>
+      
     </Grid>
   );
 }
