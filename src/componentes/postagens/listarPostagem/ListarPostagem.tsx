@@ -8,6 +8,7 @@ import {
   CardContent,
   Button,
   Typography,
+  TextField,
 } from "@material-ui/core";
 import { Box } from "@mui/material";
 import "./ListarPostagem.css";
@@ -72,7 +73,7 @@ function ListaPostagem() {
     <>
       {posts.map((post) => (
         <Box m={2}>
-          <Card variant="outlined" className="bgListaP fonteListaP">
+          <Card variant="outlined" className="bgListaP fonteListaPe">
             <CardContent>
               <Typography color="textSecondary" gutterBottom>
                 Postagens
@@ -101,7 +102,7 @@ function ListaPostagem() {
                       variant="contained"
                       size="small"
                       color="primary"
-                      className="marginLeftListaP fonteListaP bgListaPB"
+                      className="marginLeftListaP fonteListaPe bgListaPB"
                     >
                       atualizar
                     </Button>
@@ -116,7 +117,7 @@ function ListaPostagem() {
                       variant="contained"
                       size="small"
                       color="secondary"
-                      className="marginLeftListaP fonteListaP bgListaPB2"
+                      className="marginLeftListaP fonteListaPe bgbotaolista"
                     >
                       deletar
                     </Button>
@@ -125,20 +126,26 @@ function ListaPostagem() {
               </Box>
             </CardActions>
             <form onSubmit={handleCreateNewComment}>
-              <strong>Deixe seu feedback</strong>
-              <textarea
-                name="comment"
-                placeholder="Deixe seu comentário"
-                value={newCommentText}
-                onChange={handleNewCommentChange}
-                required
-              />
-              <footer>
-                <button type="submit">Publicar</button>
+              <strong className="feedback2">Deixe seu feedback</strong>
+
+              <div className="feedback">
+                <textarea
+                  name="comment"
+                  placeholder="Deixe seu comentário"
+                  value={newCommentText}
+                  onChange={handleNewCommentChange}
+                  required
+                />
+              </div>
+
+              <footer className="buttonfeedback">
+                <button className="pad" type="submit">
+                  Publicar
+                </button>
               </footer>
             </form>
 
-            <div>
+            <div className="cont">
               {comments.map((comment) => {
                 return <ComentarioPostagem conteudo={comment} />;
               })}

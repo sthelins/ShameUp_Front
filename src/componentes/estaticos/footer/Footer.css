@@ -1,0 +1,38 @@
+.fontefooter {
+  /*background: linear-gradient(
+    45deg,
+    rgba(60, 0, 97, 1) 0%,
+    rgba(118, 44, 173, 1) 50%,
+    rgba(136, 67, 171, 1) 100%
+  ) !important;*/
+  background-color: rgb(156, 153, 153) !important;
+  color: #3c0061 !important;
+  height: 120px;
+}
+
+.bgdofooter {
+  /*background: linear-gradient(
+    45deg,
+    rgba(60, 0, 97, 1) 0%,
+    rgba(118, 44, 173, 1) 50%,
+    rgba(136, 67, 171, 1) 100%
+  ) !important;*/
+  background-color: rgb(156, 153, 153) !important;
+  height: 60px;
+  color: #3c0061 !important;
+  padding-top: 1% !important;
+}
+
+.esti {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.text {
+  text-decoration: none !important;
+  color: #3c0061 !important;
+}
+
+.iconesfooter {
+  font-size: 350% !important;
+  color: #3c0061 !important;
+}
