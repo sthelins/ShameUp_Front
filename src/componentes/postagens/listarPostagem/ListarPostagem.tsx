@@ -53,21 +53,20 @@ function ListaPostagem() {
   }, [posts.length]);
 
   const [comments, setComments] = useState([
-    'Sentimos muito pelo ocorrido, vamos tomar providências para que não ocorra novamente.'
-  ])
+    "Sentimos muito pelo ocorrido, vamos tomar providências para que não ocorra novamente.",
+  ]);
 
-  const [newCommentText, setNewCommentText] = useState('')
+  const [newCommentText, setNewCommentText] = useState("");
 
   function handleCreateNewComment(event: FormEvent) {
-    event.preventDefault()
-    setComments([...comments, newCommentText])
-    setNewCommentText('')
+    event.preventDefault();
+    setComments([...comments, newCommentText]);
+    setNewCommentText("");
   }
 
   function handleNewCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
-    setNewCommentText(event.target.value)
+    setNewCommentText(event.target.value);
   }
-
 
   return (
     <>
@@ -128,8 +127,8 @@ function ListaPostagem() {
             <form onSubmit={handleCreateNewComment}>
               <strong>Deixe seu feedback</strong>
               <textarea
-                name='comment'
-                placeholder='Deixe seu comentário'
+                name="comment"
+                placeholder="Deixe seu comentário"
                 value={newCommentText}
                 onChange={handleNewCommentChange}
                 required
@@ -140,10 +139,8 @@ function ListaPostagem() {
             </form>
 
             <div>
-              {comments.map(comment => {
-                return (
-                  <ComentarioPostagem conteudo={comment} />
-                )
+              {comments.map((comment) => {
+                return <ComentarioPostagem conteudo={comment} />;
               })}
             </div>
           </Card>
