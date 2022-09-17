@@ -4,7 +4,7 @@
 
 .backgroundlista{
 background: linear-gradient(45deg, rgba(60,0,97,1) 0%, rgba(118,44,173,1) 50%, rgba(136,67,171,1) 100%);
-padding: 4rem;
+padding: 2rem;
 }
 
 .boxlista{
@@ -12,7 +12,6 @@ padding: 4rem;
     padding: 0.5rem;
     border-radius: 2rem !important;
     width: 40rem !important;
-    height: 14.5rem;
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 4rem;
@@ -67,4 +66,5 @@ padding: 4rem;
 
 .txtDescricao{
     color:white !important;
+    word-break: break-all;
 }
