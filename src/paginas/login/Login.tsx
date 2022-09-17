@@ -1,6 +1,6 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
 import { Button, Grid, TextField, Typography } from "@material-ui/core";
-import { Box, Checkbox, Fab, FormControlLabel } from "@mui/material";
+import { Box, Checkbox, Fab, FormControlLabel} from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../../services/Service";
 import UserLogin from "../../models/UserLogin";
@@ -8,6 +8,7 @@ import "./Login.css";
 import { useDispatch } from "react-redux";
 import { addId, addToken } from "../../store/tokens/actions";
 import { toast } from "react-toastify";
+import { ClassNames } from "@emotion/react";
 
 
 function Login() {
@@ -102,34 +103,41 @@ function Login() {
     }
   }
 
+
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center" className="background">
       <Grid alignItems="center" sm={6} >
         <Box paddingX={20} className="container">
           <form onSubmit={onSubmit}>
-            <Box display="flex" justifyContent="center" marginTop={2} className="titulo"></Box>
+            <Box display="flex" justifyContent="center" marginTop={2} className="titulo">
+            </Box>
+            <Typography variant="subtitle1" gutterBottom align="center" className="subtitulo">
+                Aqui é o seu local de fala
+              </Typography>
             <TextField
               value={userLogin.email}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="email"
-              label="E-mail"
+              placeholder="E-mail"
               name="email"
               variant="outlined"
               margin="normal"
               className="email"
               fullWidth
+              inputProps={{ style: { fontFamily: 'Poppins', color: 'white', fontSize: '14px'}}}
             />
             <TextField
               value={userLogin.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="senha"
-              label="Senha"
+              placeholder="Senha"
               name="senha"
               variant="outlined"
               margin="normal"
               type="password"
-              fullWidth
               className="senha"
+              fullWidth
+              inputProps={{ style: { fontFamily: 'Poppins', color: 'white', fontSize: '14px'}}}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" className="lembrar" />}
