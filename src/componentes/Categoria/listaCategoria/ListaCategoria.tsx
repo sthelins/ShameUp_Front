@@ -7,7 +7,7 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, TextField } from "@mui/material";
 import "./ListaCategoria.css";
 import { busca } from "../../../services/Service";
 import Categoria from "../../../models/Categoria";
@@ -57,13 +57,10 @@ function ListaCategoria() {
           <Box m={2} key={categoria.id}>
             <Card variant="outlined" className="boxlista">
               <CardContent>
-                <Typography className="txtCategoria" color="textSecondary" gutterBottom>
-                  Categoria
-                </Typography>
                 <Typography className="txtNome">
                   {categoria.nome}
                 </Typography>
-                <Typography variant="h6" component="h6">
+                <Typography className="txtDescricao">
                   {categoria.descricao}
                 </Typography>
               </CardContent>
