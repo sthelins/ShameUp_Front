@@ -4,19 +4,26 @@
 }
 
 .textos1{
-    font-weight: bold !important;
+    
     font-family: "Poppins", sans-serif !important;
     color: white;
 }
 
 .titulo{
-    background-image: url(https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png);
-    background-repeat: 'no-repeat';
-    width: 500px;
-    min-height: 100px;
-    background-size: cover;
-    background-position: center;
+    background-image: url(https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png) !important;
+    background-repeat: 'no-repeat' !important;
+    width: 300px !important;
+    background-size: 300px 65px !important;
+    background-position: center ;
     margin: auto;
+}
+
+.subtitulo{
+    font-family: "Poppins", sans-serif !important;
+    color: white;
+    font-size: 18px !important;
+    padding-top: 8px;
+    
 }
 
 .btn{
@@ -30,6 +37,7 @@
   color: white !important;
   font-family: "Poppins", sans-serif !important;
 }
+
 
 .background{
     background: rgb(118,44,173);
@@ -50,13 +58,15 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    margin-top: 60px;
+    margin-top: 3.75rem;
+    margin-left: 6.7rem;
     padding: 0;
     box-sizing:content-box;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
+    width: 150px;
     position: relative;
 
 }
@@ -68,21 +78,35 @@
     font-family: "Poppins", sans-serif !important;
 }
 
-.email{
+.email .MuiOutlinedInput-root {
     background-color: rgba(248, 244, 250, 0.2) !important;
     border-radius: 16px;
     backdrop-filter: blur(5px);
     text-decoration: none;
-
 }
 
-.senha{
+.senha .MuiOutlinedInput-root{
     background-color: rgba(248, 244, 250, 0.2) !important;
     border-radius: 16px;
     backdrop-filter: blur(5px);
     text-decoration: none;
+}
+
+.MuiOutlinedInput-root{
+    border-color: rgb(255, 255, 255) !important;
+    border-style: ridge !important;
 
 }
+
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color:  rgba(248, 244, 250, 0)!important;
+    
+    
+}
+
+/*.MuiInputBase-root .MuiFormControl-root .MuiTextField-root
+   ------ items do Inspecionar Elemento referentes à borda */
 
 .lembrar{
     font-weight: bold !important;
