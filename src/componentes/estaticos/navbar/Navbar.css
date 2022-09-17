@@ -13,7 +13,7 @@
 /* navbar*/
 .text-decorator {
   text-decoration: none;
-  color: white;
+  color: #3c0061 !important;
 }
 
 /* 
@@ -25,7 +25,7 @@
 
 .cursor {
   cursor: pointer;
-  color: white;
+  color: #3c0061 !important;
 }
 
 .appBar {
@@ -41,7 +41,13 @@
 .content {
   display: flex;
   justify-content: space-between;
-  background-color: #762cad !important;
+  background-color: rgb(156, 153, 153) !important;
+  /*background: linear-gradient(
+    45deg,
+    rgba(60, 0, 97, 1) 0%,
+    rgba(118, 44, 173, 1) 50%,
+    rgba(136, 67, 171, 1) 100%
+  ) !important;*/
   /*overflow-x: hidden;*/
   /*overflow: hidden;*/
 }

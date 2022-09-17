@@ -41,11 +41,11 @@ function Footer() {
             </Box>
             <Box display="flex" alignItems="center" justifyContent="center">
               <a href=" " target="_blank">
-                <GitHubIcon style={{ fontSize: 60, color: "black" }} />
+                <GitHubIcon className="iconesfooter" />
               </a>
 
               <a href=" " target="_blank">
-                <FacebookIcon style={{ fontSize: 60, color: "black" }} />
+                <FacebookIcon className="iconesfooter" />
               </a>
             </Box>
           </Box>
