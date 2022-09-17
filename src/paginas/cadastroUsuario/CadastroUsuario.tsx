@@ -110,9 +110,9 @@ function CadastroUsuario() {
   const [dataNascimento, setDataNascimento] = useState("");
 
   const [category, setCategory] = useState('fisica');
-  if (category == 'fisica'){
-    category1 = 'esconder' 
-  }else{
+  if (category == 'fisica') {
+    category1 = 'esconder'
+  } else {
     category1 = 'mostrar'
   }
 
@@ -132,135 +132,13 @@ function CadastroUsuario() {
 
   user.data_nascimento = dataNascimento + " 00:00:00";
 
-  
+
 
 
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="center">
-      <Grid item xs={6} className="imagem2"></Grid>
-      <Grid item xs={6} alignItems="center">
-        <Box paddingX={10}>
-          <form onSubmit={cadastrar} noValidate autoComplete="off">
-            <Typography
-              variant="h3"
-              gutterBottom
-              color="textPrimary"
-              component="h3"
-              align="center"
-              className="textos2"
-            >
-              Cadastrar
-            </Typography>
-
-            <FormControl className={tipos.field}>
-              <FormLabel>Tipo</FormLabel>
-              <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
-                <FormControlLabel value="fisica" control={<Radio />} label="Pessoa Física" />
-                <FormControlLabel value="juridica" control={<Radio />} label="Pessoa Jurídica" />
-              </RadioGroup>
-            </FormControl>
-
-            <TextField
-              value={user.nome}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="nome"
-              label="Nome"
-              variant="outlined"
-              name="nome"
-              margin="normal"
-              fullWidth
-            />
-            <TextField
-              value={dataNascimento}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => getDate(e)}
-              id="dataNascimento"
-              label="Data de nascimento"
-              placeholder="Digite sua Data de nascimento"
-              variant="outlined"
-              name="dataNascimento"
-              margin="normal"
-              type="date"
-              InputLabelProps={{ shrink: true }}
-              fullWidth
-              required
-            />
-            <div className={category}>
-            <TextField
-              value={user.cpf}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="cpf"
-              label="CPF"
-              variant="outlined"
-              name="cpf"
-              margin="normal"
-              fullWidth
-            />
-            </div>
-            <div className={category1}>
-            <TextField
-              value={user.cnpj}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="cnpj"
-              label="CNPJ"
-              variant="outlined"
-              name="cnpj"
-              margin="normal"
-              fullWidth
-            />
-            </div>
-            <TextField
-              value={user.email}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="email"
-              label="Email"
-              variant="outlined"
-              name="email"
-              margin="normal"
-              fullWidth
-            />
-            <TextField
-              value={user.senha}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="senha"
-              label="Senha"
-              variant="outlined"
-              name="senha"
-              margin="normal"
-              type="password"
-              fullWidth
-            />
-            <TextField
-              value={confirmarSenha}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                confirmarSenhaHandle(e)
-              }
-              id="confirmarSenha"
-              label="Confirmar Senha"
-              variant="outlined"
-              name="confirmarSenha"
-              margin="normal"
-              type="password"
-              fullWidth
-            />
-
-            <Box marginTop={2} textAlign="center">
-              <Link to="/login" className="text-decorator-none">
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  className="btnCancelar"
-                >
-                  Cancelar
-                </Button>
-              </Link>
-              <Button type="submit" variant="contained" color="primary">
-                Cadastrar
-              </Button>
-            </Box>
-          </form>
-        </Box>
-      </Grid>
-    </Grid>
+    <Box className="container">
+      
+    </Box>
   );
 }
 

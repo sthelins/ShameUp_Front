@@ -1,34 +1,20 @@
-.imagem2{
-    background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
-    background-repeat: no-repeat;
-    width: 100vh;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.texto2{
-    font-weight: bold !important;
+.container {
     
 }
 
-.btnCancelar{
-    margin-right: 20px !important;
-}
-
-.fisica{
-  display:block;
+.fisica {
+    display: block;
 
 }
 
-.juridica{
-    display:none;
+.juridica {
+    display: none;
 }
 
-.esconder{
-    display:none
+.esconder {
+    display: none
 }
 
-.mostrar{
+.mostrar {
     display: block;
 }
