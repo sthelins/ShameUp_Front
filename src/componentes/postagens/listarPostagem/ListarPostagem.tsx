@@ -1,77 +1,77 @@
-import React, { useState, useEffect, FormEvent, ChangeEvent } from "react";
-import { Link } from "react-router-dom";
-import Postagem from "../../../models/Postagem";
-import { busca } from "../../../services/Service";
+import React, { useState, useEffect, FormEvent, ChangeEvent } from 'react'
+import { Link } from 'react-router-dom'
+import Postagem from '../../../models/Postagem'
+import { busca } from '../../../services/Service'
 import {
   Card,
   CardActions,
   CardContent,
   Button,
   Typography,
-  TextField,
-} from "@material-ui/core";
-import { Box } from "@mui/material";
-import "./ListarPostagem.css";
-import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { UserState } from "../../../store/tokens/userReducer";
-import { toast } from "react-toastify";
-import ComentarioPostagem from "../comentarioPostagem/ComentarioPostagem";
+  TextField
+} from '@material-ui/core'
+import { Box } from '@mui/material'
+import './ListarPostagem.css'
+import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { UserState } from '../../../store/tokens/userReducer'
+import { toast } from 'react-toastify'
+import ComentarioPostagem from '../comentarioPostagem/comentarioPostagem'
 
 function ListaPostagem() {
-  const [posts, setPosts] = useState<Postagem[]>([]);
-  let navigate = useNavigate();
-  const token = useSelector<UserState, UserState["tokens"]>(
-    (state) => state.tokens
-  );
+  const [posts, setPosts] = useState<Postagem[]>([])
+  let navigate = useNavigate()
+  const token = useSelector<UserState, UserState['tokens']>(
+    state => state.tokens
+  )
 
   useEffect(() => {
-    if (token == "") {
-      toast.info("Você precisa estar logado!", {
-        position: "top-center",
+    if (token == '') {
+      toast.info('Você precisa estar logado!', {
+        position: 'top-center',
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: false,
-        theme: "dark",
-        progress: undefined,
-      });
-      navigate("/login");
+        theme: 'dark',
+        progress: undefined
+      })
+      navigate('/login')
     }
-  }, [token]);
+  }, [token])
 
   async function getPost() {
-    await busca("/postagens", setPosts, {
+    await busca('/postagens', setPosts, {
       headers: {
-        Authorization: token,
-      },
-    });
+        Authorization: token
+      }
+    })
   }
 
   useEffect(() => {
-    getPost();
-  }, [posts.length]);
+    getPost()
+  }, [posts.length])
 
   const [comments, setComments] = useState([
-    "Sentimos muito pelo ocorrido, vamos tomar providências para que não ocorra novamente.",
-  ]);
+    'Sentimos muito pelo ocorrido, vamos tomar providências para que não ocorra novamente.'
+  ])
 
-  const [newCommentText, setNewCommentText] = useState("");
+  const [newCommentText, setNewCommentText] = useState('')
 
   function handleCreateNewComment(event: FormEvent) {
-    event.preventDefault();
-    setComments([...comments, newCommentText]);
-    setNewCommentText("");
+    event.preventDefault()
+    setComments([...comments, newCommentText])
+    setNewCommentText('')
   }
 
   function handleNewCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
-    setNewCommentText(event.target.value);
+    setNewCommentText(event.target.value)
   }
 
   return (
     <>
-      {posts.map((post) => (
+      {posts.map(post => (
         <Box m={2}>
           <Card variant="outlined" className="bgListaP fonteListaPe">
             <CardContent>
@@ -146,15 +146,15 @@ function ListaPostagem() {
             </form>
 
             <div className="cont">
-              {comments.map((comment) => {
-                return <ComentarioPostagem conteudo={comment} />;
+              {comments.map(comment => {
+                return <ComentarioPostagem conteudo={comment} />
               })}
             </div>
           </Card>
         </Box>
       ))}
     </>
-  );
+  )
 }
 
-export default ListaPostagem;
+export default ListaPostagem
