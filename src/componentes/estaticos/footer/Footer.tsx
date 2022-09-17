@@ -5,6 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/userReducer";
+import "./Footer.css";
 
 function Footer() {
   const token = useSelector<UserState, UserState["tokens"]>(
@@ -22,15 +23,7 @@ function Footer() {
         alignItems="center"
       >
         <Grid alignItems="center" item xs={12}>
-          <Box
-            style={{
-              backgroundColor: "#67727b",
-              height: "120px",
-              background: "#67727b",
-              color: "#F2F2F2",
-            }}
-            className="footer-container"
-          >
+          <Box className="fontefooter">
             <Box
               paddingTop={1}
               display="flex"
@@ -38,41 +31,41 @@ function Footer() {
               justifyContent="center"
             >
               <Typography
+                className="esti"
                 variant="h5"
                 align="center"
                 gutterBottom
-                style={{ color: "white" }}
               >
                 Conheça nossas Redes Sociais{" "}
               </Typography>
             </Box>
             <Box display="flex" alignItems="center" justifyContent="center">
               <a href=" " target="_blank">
-                <GitHubIcon style={{ fontSize: 60, color: "white" }} />
+                <GitHubIcon className="iconesfooter" />
               </a>
 
               <a href=" " target="_blank">
-                <FacebookIcon style={{ fontSize: 60, color: "white" }} />
+                <FacebookIcon className="iconesfooter" />
               </a>
             </Box>
           </Box>
-          <Box style={{ backgroundColor: "#4e5860", height: "60px" }}>
-            <Box paddingTop={1}>
+          <Box className="bgdofooter">
+            <Box paddingTop={0}>
               <Typography
+                className="esti"
                 variant="subtitle2"
                 align="center"
                 gutterBottom
-                style={{ color: "white" }}
               >
-                © 2020 Copyright
+                © 2022 Copyright
               </Typography>
             </Box>
             <Box>
               <a target="_blank" href="https://brasil.generation.org">
                 <Typography
+                  className="esti text"
                   variant="subtitle2"
                   gutterBottom
-                  style={{ color: "white" }}
                   align="center"
                 >
                   brasil.generation.org

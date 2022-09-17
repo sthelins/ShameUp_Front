@@ -3,7 +3,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { buscaId, post, put } from "../../../services/Service";
 import categoria from "../../../models/Categoria";
 import { ChangeEvent, useEffect, useState } from "react";
-import { Container, Typography, TextField, Button } from "@material-ui/core";
+import { Box } from "@mui/material";
+import { Container, Typography, TextField, Button, Grid, } from "@material-ui/core";
 import { useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/userReducer";
 import { toast } from "react-toastify";
@@ -132,51 +133,72 @@ function CadastroCategoria() {
   }
 
   return (
-    <Container maxWidth="sm" className="topo">
-      <form onSubmit={onSubmit}>
-        <Typography
-          variant="h3"
-          color="textSecondary"
-          component="h1"
-          align="center"
-        >
-          Cadastre uma nova categoria para a sua reclamação:
-        </Typography>
-        <TextField
-          value={categoria.nome}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
-          id="nome"
-          label="Nome"
-          variant="outlined"
-          placeholder="Insira no mínimo 3 caracteres"
-          name="nome"
-          margin="normal"
-          fullWidth
-        />
-        <TextField
-          value={categoria.descricao}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
-          id="descricao"
-          label="Descrição"
-          variant="outlined"
-          placeholder="Insira no mínimo 3 caracteres"
-          name="descricao"
-          margin="normal"
-          fullWidth
-        />
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          className="btn"
-        >
-          Finalizar
-        </Button>
-      </form>
-    </Container>
+    <Box className="backgroundcategoria" justifyContent="center" alignItems="center">
+      <div className="divform">
+       <Grid container direction="row" justifyContent="center" alignItems="center" className="backgroundform">
+        <Grid alignItems="center" item sm={6} >
+          <Box>
+            <form onSubmit={onSubmit}>
+              <Typography
+                className="titulocategoria"
+                variant="h3"
+                color="textSecondary"
+                component="h1"
+                align="center"
+              >
+                Cadastro de Categorias
+              </Typography>
+              <div className="textfield1">
+                <TextField
+                  value={categoria.nome}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
+                  id="nome"
+                  variant="outlined"
+                  placeholder="Nome - no minimo 3 caracteres"
+                  name="nome"
+                  margin="normal"
+                  className="nome"
+                  fullWidth
+                /></div>
+
+              <div className="textfield2">
+                <TextField
+                  value={categoria.descricao}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
+                  id="descricao"
+                  multiline
+                  variant="outlined"
+                  placeholder="Descrição - no minimo 3 caracteres"
+                  name="descricao"
+                  margin="normal"
+                  className="descricao"
+                  fullWidth
+
+                />
+
+
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  className="btn"
+                >
+                  Finalizar
+                </Button>
+              </div>
+            </form>
+          </Box>
+        </Grid>
+        <Grid alignItems="center" item className="imagem" sm={6} >
+
+        </Grid>
+      </Grid>
+      </div>
+    </Box>
+
   );
 }
 
-export default CadastroCategoria; 
+export default CadastroCategoria;
 
 //./categoria/cadastroCategoria/CadastroCategoria
