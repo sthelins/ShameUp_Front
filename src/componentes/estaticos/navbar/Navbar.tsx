@@ -38,7 +38,7 @@ function Navbar() {
       <AppBar position="static" className="appBar">
         <Toolbar variant="dense" className="content">
           <Box className="cursor">
-            <Typography variant="h5" color="inherit">
+            <Typography className="modo peso" variant="h5" color="inherit">
               ShameUp
             </Typography>
           </Box>
@@ -47,7 +47,7 @@ function Navbar() {
             <Box display="flex" justifyContent="end">
               <Box mx={2} className="cursor">
                 <Link to="/home" className="text-decorator">
-                  <Typography variant="h6" color="inherit">
+                  <Typography className="modo" variant="h6" color="inherit">
                     Home
                   </Typography>
                 </Link>
@@ -55,7 +55,7 @@ function Navbar() {
 
               <Box mx={2} className="cursor">
                 <Link to="/sobre" className="text-decorator">
-                  <Typography variant="h6" color="inherit">
+                  <Typography className="modo" variant="h6" color="inherit">
                     Sobre
                   </Typography>
                 </Link>
@@ -63,7 +63,7 @@ function Navbar() {
 
               <Box mx={2} className="cursor">
                 <Link to="/formularioCategoria" className="text-decorator">
-                  <Typography variant="h6" color="inherit">
+                  <Typography className="modo" variant="h6" color="inherit">
                     Nova Categoria
                   </Typography>
                 </Link>
@@ -71,23 +71,15 @@ function Navbar() {
 
               <Box mx={2} className="cursor">
                 <Link to="/categorias" className="text-decorator">
-                  <Typography variant="h6" color="inherit">
+                  <Typography className="modo" variant="h6" color="inherit">
                     Categorias
-                  </Typography>
-                </Link>
-              </Box>
-
-              <Box mx={2} className="cursor">
-                <Link to="/cadastrousuario" className="text-decorator">
-                  <Typography variant="h6" color="inherit">
-                    Cadastro
                   </Typography>
                 </Link>
               </Box>
 
               <Box mx={2} className="cursor" onClick={goLogout}>
                 <Link to="/login" className="text-decorator">
-                  <Typography variant="h6" color="inherit">
+                  <Typography className="modo" variant="h6" color="inherit">
                     logout
                   </Typography>
                 </Link>
