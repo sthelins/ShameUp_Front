@@ -14,6 +14,7 @@ import Categoria from "../../../models/Categoria";
 import { useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/userReducer";
 import { toast } from "react-toastify";
+import ModalCategoria from "../../categoria/modalCategoria/modalCategoria";
 
 function ListaCategoria() {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
@@ -83,17 +84,9 @@ function ListaCategoria() {
                         </Button>
                       </Box>
                     </Link>
-                    <Link
-                      to={`/deletarCategoria/${categoria.id}`}
-                      className="text-decorator-none"
-                    >
-                      
-                      <Box mx={1}>
-                        <Button variant="contained" size="small" color="secondary" className="btDeletar">
-                          deletar
-                        </Button>
-                      </Box>
-                    </Link>
+                      <Box marginRight={1}>
+                <ModalCategoria id={categoria.id} />
+              </Box>
                     </Box>
                   </div>
                 </Box>

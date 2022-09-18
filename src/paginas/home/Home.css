@@ -39,3 +39,28 @@
   left: 0%;
   position: fixed !important;
 }
+.imgperfil{
+  border: 5px solid white;
+  border-radius:20px ;
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+ margin-bottom: 5px;
+
+}
+.perfil{
+  
+  color: white !important;
+  font-family: "Poppins",24px/1 sans-serif !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-bottom: 20px;
+
+}
+.perfilhome {
+  color: white !important;
+  font-family: "Poppins",24px/1 sans-serif !important;
+  width: 450px;
+  height: 20px;
+  box-sizing: border-box;
+}

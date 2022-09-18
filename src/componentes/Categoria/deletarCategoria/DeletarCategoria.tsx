@@ -15,9 +15,12 @@ import { useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/userReducer";
 import { toast } from "react-toastify";
 
-function DeletarCategoria() {
+interface DeletarCategoriaProps {
+  id: number;
+}
+
+function DeletarCategoria({id}:DeletarCategoriaProps) {
   let navigate = useNavigate();
-  const { id } = useParams<{ id: string }>();
   const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
@@ -41,7 +44,7 @@ function DeletarCategoria() {
 
   useEffect(() => {
     if (id !== undefined) {
-      findById(id);
+      findById(id.toString());
     }
   }, [id]);
 
@@ -54,13 +57,13 @@ function DeletarCategoria() {
   }
 
   async function sim() {
-    navigate("/categorias");
     try {
       await deleteId(`/categorias/${id}`, {
         headers: {
           Authorization: token,
         },
       });
+      navigate("/home");
 
       toast.success("Categoria deletada com sucesso!", {
         position: "top-center",
@@ -71,9 +74,9 @@ function DeletarCategoria() {
         draggable: false,
         theme: "dark",
         progress: undefined,
+
       });
 
-      navigate("/categorias");
     } catch (error) {
       toast.error("Erro ao deletar!", {
         position: "top-center",
@@ -89,7 +92,7 @@ function DeletarCategoria() {
   }
 
   function nao() {
-    navigate("/categorias");
+    navigate("/home");
   }
 
   return (
@@ -111,7 +114,7 @@ function DeletarCategoria() {
             </Box>
           </CardContent>
           <CardActions>
-            <Box display="flex" justifyContent="start" ml={1.0} mb={2}>
+             <Box display="flex" justifyContent="start" ml={1.0} mb={2}>
               <Box mx={2}>
                 <Button
                   onClick={sim}
@@ -123,7 +126,7 @@ function DeletarCategoria() {
                   Sim
                 </Button>
               </Box>
-              <Box mx={2}>
+               <Box mx={2}>
                 <Button
                   onClick={nao}
                   variant="contained"
@@ -133,8 +136,8 @@ function DeletarCategoria() {
                 >
                   Não
                 </Button>
-              </Box>
-            </Box>
+              </Box> 
+            </Box> 
           </CardActions>
         </Card>
       </Box>
