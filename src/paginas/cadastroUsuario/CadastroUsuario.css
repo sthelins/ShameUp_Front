@@ -1,34 +1,196 @@
-.imagem2{
-    background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
-    background-repeat: no-repeat;
-    width: 100vh;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+    font-family: 'Poppins', sans-serif !important;
 }
 
-.texto2{
+/* BOX COM O BACKGROUND  */
+.container {
+    background: linear-gradient(45deg, rgba(60, 0, 97, 1) 0%, rgba(118, 44, 173, 1) 50%, rgba(136, 67, 171, 1) 100%) !important;
+    /* padding-top: 5rem;
+    padding-bottom: 15rem;
+    padding-right: 0rem;
+    padding-left: 0rem; */
+    height: 100vh;
+}
+
+.cadastro {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 850px;
+    height: 520px;
+    border-radius: 3%;
+    /* box-shadow: 5px 5px rgba(0, 0, 0, 0.763); */
+    /* box-shadow: 5px 5px rgb(78, 1, 78); */
+}
+
+
+
+.img img {
+   
+    height: 80%;
+    width: 100%;
+     /* margin-right: 80%; */
+    /* padding-bottom: 80% !important; */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-top: 3rem !important;
+}
+
+.form {
+    margin-right: 20%;
+    border-radius: 4rem !important;
+}
+
+
+.cadastro input {
+    height: 10px !important;
+    width: 250px !important;
+
+}
+
+
+.logo img {
+    width: 150px !important;
+    height: 60px !important;
+    margin-left: 130%;
+    margin-top: 25%;
+
+}
+
+.formulario {
+    width: 50px !important;
+    height: 90px !important;
+
+}
+
+
+.MuiFormControl-root {
+
+    margin-right: 10rem !important;
+    padding-right: 55%;
+}
+
+.margin-textfield {
+    margin: 6% !important;
+    margin-top: 3px !important;
+
+    /* background: rgba(0, 0, 0, 0.412) !important; */
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+    text-decoration-line: none !important;
+}
+
+.css-dmmspl-MuiFormGroup-root {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+    -webkit-box-flex-wrap: nowrap !important;
+    -webkit-flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
+    font-size: 6px !important;
+    align-items: center !important;
+    margin-left: 65%;
+}
+
+.css-ahj2mt-MuiTypography-root {
+    font-size: 13px !important;
+    display: flex;
+    align-items: center !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+    color: rgb(194, 144, 240) !important;
+}
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+    line-height: 1.0 !important;
+}
+
+.btns {
+    display: flex !important;
+
+}
+
+/* CLASSE BTN01 */
+.css-sghohy-MuiButtonBase-root-MuiButton-root {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.btn01 {
+    padding-left: 50% !important;
+    padding-top: 6% !important;
+    margin: 5px;
+  
+}
+
+.btn02 {
+    padding-top: 6% !important;
+    margin: 5px;
+}
+
+/* CLASSE BTN02 */
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* CLASSE FORM */
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    background: rgba(255, 255, 255, 0.108) !important;
+    border-radius: 4rem !important;
+}
+
+.margin-textfield .MuiOutlinedInput-root {
+    border-radius: 4rem !important;
+}
+
+.margin-textfield {
+    color: brown !important;
+}
+
+
+/* CLASSE BTN01 */
+.css-sghohy-MuiButtonBase-root-MuiButton-root {
+    background-color: rgb(194, 144, 240) !important;
     font-weight: bold !important;
-    
+    border-radius: 4rem !important;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;
 }
 
-.btnCancelar{
-    margin-right: 20px !important;
+/* CLASSE BTN02 */
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    -webkit-tap-highlight-color: purple !important;
+    background-color: purple !important;
+    color: white !important;
+    font-weight: bold !important;
+    border-radius: 4rem !important;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;
 }
 
-.fisica{
-  display:block;
+label {
+    align-items: center !important;
+}
+
+.fisica {
+    display: block;
 
 }
 
-.juridica{
-    display:none;
+.juridica {
+    display: none;
 }
 
-.esconder{
-    display:none
+.esconder {
+    display: none
 }
 
-.mostrar{
+.mostrar {
     display: block;
 }

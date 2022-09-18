@@ -1,6 +1,5 @@
-import { Typography } from "@material-ui/core";
 import React from "react";
-import "./comentarioPostagem.css";
+import "./ComentarioPostagem.css";
 
 interface ComentarioProps {
   conteudo: string;
