@@ -46,10 +46,6 @@ function App() {
               path="/formularioCategoria/:id"
               element={<CadastroCategoria />}
             />
-            <Route
-              path="/deletarCategoria/:id"
-              element={<DeletarCategoria />}
-            />
             <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
           </Routes>
         </div>
