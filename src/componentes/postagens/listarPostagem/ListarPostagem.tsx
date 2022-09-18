@@ -72,27 +72,24 @@ function ListaPostagem() {
   return (
     <>
       {posts.map((post) => (
-        <Box m={2}>
-          <Card variant="outlined" className="bgListaP fonteListaPe">
-            <CardContent>
-              <Typography color="textSecondary" gutterBottom>
-                Postagens
-              </Typography>
+        <Box m={2} key={post.id}>
+          <Card variant="outlined" className="bgListaPost fonteListaPe listaPost">
+            <CardContent className="card-postagem">
               <Typography variant="h5" component="h2">
                 {post.anonimo}
               </Typography>
-              <Typography variant="h5" component="h2">
+              <Typography variant="h6" component="h6" className="categoria-post">
+                Categoria: {post.categoria?.nome}
+              </Typography>
+              <Typography variant="h4" component="h1" className="titulo-post">
                 {post.titulo}
               </Typography>
-              <Typography variant="body2" component="p">
+              <Typography variant="body1" component="p" className="texto-postagem">
                 {post.texto}
               </Typography>
-              <Typography variant="body2" component="p">
-                {post.categoria?.nome}
-              </Typography>
             </CardContent>
-            <CardActions>
-              <Box display="flex" justifyContent="center" mb={1.5}>
+            <CardActions className="card-buttons">
+              <Box display="flex" mb={1.5}>
                 <Link
                   to={`/formularioPostagem/${post.id}`}
                   className="text-decorator-none"
@@ -125,23 +122,34 @@ function ListaPostagem() {
                 </Link>
               </Box>
             </CardActions>
-            <form onSubmit={handleCreateNewComment}>
+            <span className="before"></span>
+
+            <form onSubmit={handleCreateNewComment} className="form-comentario">
               <strong className="feedback2">Deixe seu feedback</strong>
 
               <div className="feedback">
-                <textarea
-                  name="comment"
+                <TextField
+                  className="textfield-feedback"
                   placeholder="Deixe seu comentário"
                   value={newCommentText}
                   onChange={handleNewCommentChange}
+                  variant="outlined"
+                  fullWidth
+                  multiline
                   required
                 />
               </div>
 
               <footer className="buttonfeedback">
-                <button className="pad" type="submit">
-                  Publicar
-                </button>
+              <Button
+                      variant="contained"
+                      size="small"
+                      className="botao-submit-comentario"
+                      color="secondary"
+                      type="submit"
+                    >
+                      Publicar
+                    </Button>
               </footer>
             </form>
 
