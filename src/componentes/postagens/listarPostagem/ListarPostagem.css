@@ -1,13 +1,21 @@
+
+
+
 .text-decorator-none {
   text-decoration: none;
 }
 
-.bgListaP {
-  background: #fff !important;
+.bgListaPost {
+  background-color: #cecece !important;
 }
 
 .fonteListaPe {
   font-family: "Poppins", sans-serif !important;
+  
+}
+
+.listaPost {
+  /* height: 100vh; */
 }
 
 .marginLeftListaP {
@@ -31,6 +39,9 @@
   margin-bottom: 0% !important;
 }
 
+.textfield-feedback {
+}
+
 .feedback2 {
   /* margin-top: 50px !important ;*/
   margin-left: 14px !important;
@@ -38,7 +49,13 @@
 }
 
 .buttonfeedback {
-  margin-top: 10px !important;
+  margin-top: 1.5rem !important;
+}
+
+.botao-submit-comentario {
+  background-color: #762cad !important;
+  font-family: "Poppins", sans-serif !important;
+  margin-left: 14px !important;
 }
 
 .pad {
@@ -47,7 +64,50 @@
 }
 
 .cont {
-  margin-left: 14px !important;
-  margin-top: 10px !important;
-  margin-bottom: 10px !important;
+  width: 60vw;
+  padding: 14px;
+
+}
+
+.card-postagem{
+  background-color: rgb(222, 226, 230);
+  padding: 1rem 2rem !important;
+  margin: 1.5rem;
+  border-radius: 4px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.categoria-post{
+  margin-bottom: 1rem !important;
+  font-weight: 500 !important;
+  font-size: 12px !important;
+} 
+
+.titulo-post {
+  margin-bottom: 1.5rem !important;
+}
+
+
+.texto-postagem {
+  margin-top: 1rem;
+  
+}
+
+.card-buttons{
+  justify-content: end;
+}
+
+.before:before{
+  content: '';
+  width: 45rem;
+  height: 1px;
+  background-color: #a97adf;
+  top: 25;
+  position: absolute;
+  left: 40%;
+  margin-right: -50%;
+}
+
+.form-comentario {
+  margin-top: 2rem;
 }

@@ -19,7 +19,7 @@ function TabPostagem() {
           </Tabs>
         </AppBar>
         <TabPanel value="1" className="bgpainel">
-          <Box display="flex" flexWrap="wrap" justifyContent="center">
+          <Box display="flex" flexWrap="wrap" justifyContent="center"  className="caixatabpostagem">
             <ListarPostagem />
           </Box>
         </TabPanel>
