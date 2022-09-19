@@ -1,5 +1,5 @@
 import React from "react";
-import "./ComentarioPostagem.css";
+import "./comentarioPostagem.css";
 import {Typography } from "@mui/material";
 interface ComentarioProps {
   conteudo: string;
