@@ -69,11 +69,15 @@ function Home() {
       >
         <Grid alignItems="center" item xs={4}>
           <div className="divhome">
-            <Box>
-              <img src={user.foto} alt="Foto de perfil do usuário" />
-              <Typography> {user.nome} </Typography>
-              <Typography> {user.email} </Typography>
-            </Box>
+            <Box className="perfil" >
+               <img src={user.foto} width="80px"  className="imgperfil" alt="Foto de perfil do usuário" />
+              <Typography variant="h5"
+                gutterBottom
+                color="textPrimary"
+                component="h5"
+                align="center" className="perfilhome" > {user.nome} </Typography>
+              
+             </Box>
             <Box className="boxhome">
               <Typography
                 variant="h3"

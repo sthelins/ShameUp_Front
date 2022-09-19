@@ -110,9 +110,9 @@ function CadastroUsuario() {
   const [dataNascimento, setDataNascimento] = useState("");
 
   const [category, setCategory] = useState('fisica');
-  if (category == 'fisica'){
-    category1 = 'esconder' 
-  }else{
+  if (category == 'fisica') {
+    category1 = 'esconder'
+  } else {
     category1 = 'mostrar'
   }
 
@@ -132,135 +132,146 @@ function CadastroUsuario() {
 
   user.data_nascimento = dataNascimento + " 00:00:00";
 
-  
-
-
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="center">
-      <Grid item xs={6} className="imagem2"></Grid>
-      <Grid item xs={6} alignItems="center">
-        <Box paddingX={10}>
-          <form onSubmit={cadastrar} noValidate autoComplete="off">
-            <Typography
-              variant="h3"
-              gutterBottom
-              color="textPrimary"
-              component="h3"
-              align="center"
-              className="textos2"
-            >
-              Cadastrar
-            </Typography>
+    <Box className="container-cad-usuario" display="flex" justifyContent="center" alignItems="center" >
+      <Box className="cad-usuario" display="flex" flexDirection="row-reverse" justifyContent="space-evenly" >
 
-            <FormControl className={tipos.field}>
-              <FormLabel>Tipo</FormLabel>
-              <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
-                <FormControlLabel value="fisica" control={<Radio />} label="Pessoa Física" />
-                <FormControlLabel value="juridica" control={<Radio />} label="Pessoa Jurídica" />
-              </RadioGroup>
-            </FormControl>
+        {/* <Box className="form" display="flex" flexDirection="column"  > */}
+        
+        <Box className="form-cad-usuario">
+          <Box className="formulario-cad-usuario" display="flex" flexDirection="column" >
+            <Box className="logo-cad-user">
 
-            <TextField
-              value={user.nome}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="nome"
-              label="Nome"
-              variant="outlined"
-              name="nome"
-              margin="normal"
-              fullWidth
-            />
-            <TextField
-              value={dataNascimento}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => getDate(e)}
-              id="dataNascimento"
-              label="Data de nascimento"
-              placeholder="Digite sua Data de nascimento"
-              variant="outlined"
-              name="dataNascimento"
-              margin="normal"
-              type="date"
-              InputLabelProps={{ shrink: true }}
-              fullWidth
-              required
-            />
-            <div className={category}>
-            <TextField
-              value={user.cpf}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="cpf"
-              label="CPF"
-              variant="outlined"
-              name="cpf"
-              margin="normal"
-              fullWidth
-            />
-            </div>
-            <div className={category1}>
-            <TextField
-              value={user.cnpj}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="cnpj"
-              label="CNPJ"
-              variant="outlined"
-              name="cnpj"
-              margin="normal"
-              fullWidth
-            />
-            </div>
-            <TextField
-              value={user.email}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="email"
-              label="Email"
-              variant="outlined"
-              name="email"
-              margin="normal"
-              fullWidth
-            />
-            <TextField
-              value={user.senha}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="senha"
-              label="Senha"
-              variant="outlined"
-              name="senha"
-              margin="normal"
-              type="password"
-              fullWidth
-            />
-            <TextField
-              value={confirmarSenha}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                confirmarSenhaHandle(e)
-              }
-              id="confirmarSenha"
-              label="Confirmar Senha"
-              variant="outlined"
-              name="confirmarSenha"
-              margin="normal"
-              type="password"
-              fullWidth
-            />
-
-            <Box marginTop={2} textAlign="center">
-              <Link to="/login" className="text-decorator-none">
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  className="btnCancelar"
-                >
-                  Cancelar
-                </Button>
-              </Link>
-              <Button type="submit" variant="contained" color="primary">
-                Cadastrar
-              </Button>
+            <img className="logo-cad-user" src="https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png" alt="" />
             </Box>
-          </form>
+         
+            <form onSubmit={cadastrar} noValidate autoComplete="off">
+              
+              
+              {/* <Typography className="logo" >
+                <img src="https://i.imgur.com/e3xqzO7.png" alt="" />
+              </Typography> */}
+              <FormControl className={tipos.field}>
+
+                <RadioGroup className="btn-radial" value={category} onChange={(e) => setCategory(e.target.value)}>
+                  <FormControlLabel value="fisica" control={<Radio />} label="PF" />
+                  <FormControlLabel value="juridica" control={<Radio />} label="PJ" />
+                </RadioGroup>
+              </FormControl>
+
+              <TextField
+                value={user.nome}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                id="nome"
+                placeholder="nome"
+                variant="outlined"
+                name="nome"
+                className="margin-textfield-cad"
+              />
+              <TextField
+                value={dataNascimento}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => getDate(e)}
+                id="dataNascimento"
+                placeholder="Digite sua Data de nascimento"
+                variant="outlined"
+                name="dataNascimento"
+                className="margin-textfield-cad"
+                type="date"
+                InputLabelProps={{ shrink: true }}
+                required
+              />
+
+              <TextField
+                value={user.foto}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                id="foto"
+                placeholder="url da foto"
+                variant="outlined"
+                name="foto"
+                className="margin-textfield-cad"
+              />
+
+              <div className={category}>
+                <TextField
+                  value={user.cpf}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                  id="cpf"
+                  placeholder="CPF"
+                  variant="outlined"
+                  name="cpf"
+                  className="margin-textfield-cad"
+                />
+              </div>
+              <div className={category1}>
+                <TextField
+                  value={user.cnpj}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                  id="cnpj"
+                  placeholder="CNPJ"
+                  variant="outlined"
+                  name="cnpj"
+                  className="margin-textfield-cad"
+                />
+              </div>
+              <TextField
+                value={user.email}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                id="email"
+                placeholder="e-mail"
+                variant="outlined"
+                name="email"
+                className="margin-textfield-cad"
+              />
+              <TextField
+                value={user.senha}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                id="senha"
+                placeholder="senha"
+                variant="outlined"
+                name="senha"
+                className="margin-textfield-cad"
+                type="password"
+
+              />
+              <TextField
+                value={confirmarSenha}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  confirmarSenhaHandle(e)
+                }
+                id="confirmarSenha"
+                placeholder="confirmar senha"
+                variant="outlined"
+                name="confirmarSenha"
+                className="margin-textfield-cad"
+                type="password"
+              />
+              <Box className="btns" >
+                <Box className="btn01">
+                  <Link to="/login" className="text-decorator-none">
+                    <Button
+                      variant="contained"
+
+                      className="btnCancelar"
+                    >
+                      Cancelar
+                    </Button>
+                  </Link>
+                </Box>
+                <Box className="btn02">
+                  <Button type="submit">
+                    Cadastrar
+                  </Button>
+                </Box>
+              </Box>
+            </form>
+          </Box>
         </Box>
-      </Grid>
-    </Grid>
+        <Box className="img-cad-user">
+          <img src="https://i.imgur.com/vmy7Wxs.png" alt="" />
+        </Box>
+      </Box>
+    </Box>
+
   );
 }
 

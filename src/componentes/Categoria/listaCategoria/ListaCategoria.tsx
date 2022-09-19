@@ -7,13 +7,14 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
-import { Box } from "@mui/material";
+import { Box, Grid, TextField } from "@mui/material";
 import "./ListaCategoria.css";
 import { busca } from "../../../services/Service";
 import Categoria from "../../../models/Categoria";
 import { useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/userReducer";
 import { toast } from "react-toastify";
+import ModalCategoria from "../modalCategoria/ModalCategoria";
 
 function ListaCategoria() {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
@@ -52,52 +53,48 @@ function ListaCategoria() {
 
   return (
     <>
-      {categorias.map((categoria) => (
-        <Box m={2} key={categoria.id}>
-          <Card variant="outlined">
-            <CardContent>
-              <Typography color="textSecondary" gutterBottom>
-                Categoria
-              </Typography>
-              <Typography variant="h5" component="h5">
-                {categoria.nome}
-              </Typography>
-              <Typography variant="h6" component="h6">
-                {categoria.descricao}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Box display="flex" justifyContent="center" mb={1.5}>
-                <Link
-                  to={`/formularioCategoria/${categoria.id}`}
-                  className="text-decorator-none"
-                >
-                  <Box mx={1}>
-                    <Button
-                      variant="contained"
-                      className="marginLeft"
-                      size="small"
-                      color="primary"
+      <Box className="backgroundlista" justifyContent="center" alignItems="center">
+        {categorias.map((categoria) => (
+          <Box m={2} key={categoria.id}>
+            <Card variant="outlined" className="boxlista">
+              <CardContent>
+                <Typography className="txtNome">
+                  {categoria.nome}
+                </Typography>
+                <Typography className="txtDescricao">
+                  {categoria.descricao}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Box display="flex" justifyContent="center" mb={1.5}>
+                  <div className="botaobackground">
+                  <Box className="botao">
+                    <Link
+                      to={`/formularioCategoria/${categoria.id}`}
+                      className="text-decorator-none"
                     >
-                      atualizar
-                    </Button>
-                  </Box>
-                </Link>
-                <Link
-                  to={`/deletarCategoria/${categoria.id}`}
-                  className="text-decorator-none"
-                >
-                  <Box mx={1}>
-                    <Button variant="contained" size="small" color="secondary">
-                      deletar
-                    </Button>
-                  </Box>
-                </Link>
+                      <Box mx={1}>
+                        <Button
+                          variant="contained"
+                          className="btAtualizar"
+                          size="small"
+                          color="primary"
+                        >
+                          atualizar
+                        </Button>
+                      </Box>
+                    </Link>
+                      <Box marginRight={1}>
+                <ModalCategoria id={categoria.id} />
               </Box>
-            </CardActions>
-          </Card>
-        </Box>
-      ))}
+                    </Box>
+                  </div>
+                </Box>
+              </CardActions>
+            </Card>
+          </Box>
+        ))}
+      </Box>
     </>
   );
 }

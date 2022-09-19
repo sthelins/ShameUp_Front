@@ -247,7 +247,7 @@ function CadastroPostagem() {
               <MenuItem value={categoria.id}>{categoria.descricao}</MenuItem>
             ))}
           </Select>
-          <FormHelperText className="cadastro">
+          <FormHelperText className="cadastro-postagem">
             Escolha uma categoria para a postagem
           </FormHelperText>
           <Button
