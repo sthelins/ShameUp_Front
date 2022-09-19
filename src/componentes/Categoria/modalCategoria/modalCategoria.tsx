@@ -3,9 +3,9 @@ import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Modal from "@mui/material/Modal";
 import { Button } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
-import "./modalCategoria.css";
+import "./ModalCategoria.css";
 import { Box } from "@mui/material";
-import DeletarCategoria from "../../categoria/deletarCategoria/DeletarCategoria";
+import DeletarCategoria from "../deletarCategoria/DeletarCategoria";
 
 interface DeletarCategoriaProps {
   id: number;

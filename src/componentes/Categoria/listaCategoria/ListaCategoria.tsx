@@ -14,7 +14,7 @@ import Categoria from "../../../models/Categoria";
 import { useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/userReducer";
 import { toast } from "react-toastify";
-import ModalCategoria from "../../categoria/modalCategoria/modalCategoria";
+import ModalCategoria from "../modalCategoria/ModalCategoria";
 
 function ListaCategoria() {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
