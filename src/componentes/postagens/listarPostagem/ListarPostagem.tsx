@@ -16,7 +16,7 @@ import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { UserState } from '../../../store/tokens/userReducer'
 import { toast } from 'react-toastify'
-import ComentarioPostagem from '../comentarioPostagem/comentarioPostagem'
+import ComentarioPostagem from '../comentarioPostagem/ComentarioPostagem'
 
 function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([])
