@@ -111,6 +111,7 @@ function CadastroUsuario() {
 
   const [category, setCategory] = useState('fisica');
   if (category == 'fisica') {
+    
     category1 = 'esconder'
   } else {
     category1 = 'mostrar'
