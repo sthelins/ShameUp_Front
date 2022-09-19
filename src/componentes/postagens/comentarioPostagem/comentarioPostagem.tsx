@@ -9,4 +9,5 @@ function ComentarioPostagem({ conteudo }: ComentarioProps) {
   return <p className="conteudo-comentario">{conteudo}</p>;
 }
 
+
 export default ComentarioPostagem;

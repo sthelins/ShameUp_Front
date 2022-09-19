@@ -3,7 +3,7 @@
 }
 
 /* BOX COM O BACKGROUND  */
-.container {
+.container-cad-usuario {
     background: linear-gradient(45deg, rgba(60, 0, 97, 1) 0%, rgba(118, 44, 173, 1) 50%, rgba(136, 67, 171, 1) 100%) !important;
     /* padding-top: 5rem;
     padding-bottom: 15rem;
@@ -12,33 +12,31 @@
     height: 100vh;
 }
 
-.cadastro {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    width: 850px;
-    height: 520px;
-    border-radius: 3%;
+.cad-usuario {
+    background: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+    width: 850px !important;
+    height: 520px !important;
+    border-radius: 3% !important;
     /* box-shadow: 5px 5px rgba(0, 0, 0, 0.763); */
     /* box-shadow: 5px 5px rgb(78, 1, 78); */
 }
 
-
-
-.img img {
-   
+.img-cad-user img {  
     height: 80%;
     width: 100%;
      /* margin-right: 80%; */
     /* padding-bottom: 80% !important; */
-    display: flex !important;
+    display: block !important;
+    margin: 0 auto !important;
     justify-content: center !important;
     align-items: center !important;
     text-align: center !important;
     margin-top: 3rem !important;
 }
 
-.form {
-    margin-right: 20%;
+.form-cad-usuario {
+    margin-right: 20% !important;
     border-radius: 4rem !important;
 }
 
@@ -50,7 +48,7 @@
 }
 
 
-.logo img {
+.logo-cad-user img {
     width: 150px !important;
     height: 60px !important;
     margin-left: 130%;
@@ -58,7 +56,7 @@
 
 }
 
-.formulario {
+.formulario-cad-usuario {
     width: 50px !important;
     height: 90px !important;
 
@@ -68,10 +66,10 @@
 .MuiFormControl-root {
 
     margin-right: 10rem !important;
-    padding-right: 55%;
+    padding-right: 55% !important;
 }
 
-.margin-textfield {
+.margin-textfield-cad {
     margin: 6% !important;
     margin-top: 3px !important;
 
@@ -144,17 +142,28 @@
 /* CLASSE FORM */
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
     background: rgba(255, 255, 255, 0.108) !important;
-    border-radius: 4rem !important;
+    border-radius: 3rem !important;
+    padding: 7px !important;
+    width: 15rem !important;
 }
 
-.margin-textfield .MuiOutlinedInput-root {
-    border-radius: 4rem !important;
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+    border-radius: 1rem !important;
 }
 
-.margin-textfield {
-    color: brown !important;
+
+.margin-textfield-cad .MuiOutlinedInput-root {
+    background-color: rgba(248, 244, 250, 0.2) !important;
+    border-radius: 16px !important;
+    backdrop-filter: blur(5px) !important;
+    text-decoration: none !important;
 }
 
+.MuiOutlinedInput-root{
+    border-color: rgb(255, 255, 255) !important;
+    border-style: ridge !important;
+
+}
 
 /* CLASSE BTN01 */
 .css-sghohy-MuiButtonBase-root-MuiButton-root {

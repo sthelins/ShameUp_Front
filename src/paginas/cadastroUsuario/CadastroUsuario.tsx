@@ -133,16 +133,16 @@ function CadastroUsuario() {
   user.data_nascimento = dataNascimento + " 00:00:00";
 
   return (
-    <Box className="container" display="flex" justifyContent="center" alignItems="center" >
-      <Box className="cadastro" display="flex" flexDirection="row-reverse" justifyContent="space-evenly" >
+    <Box className="container-cad-usuario" display="flex" justifyContent="center" alignItems="center" >
+      <Box className="cad-usuario" display="flex" flexDirection="row-reverse" justifyContent="space-evenly" >
 
         {/* <Box className="form" display="flex" flexDirection="column"  > */}
         
-        <Box className="form">
-          <Box className="formulario" display="flex" flexDirection="column" >
-            <Box className="logo">
+        <Box className="form-cad-usuario">
+          <Box className="formulario-cad-usuario" display="flex" flexDirection="column" >
+            <Box className="logo-cad-user">
 
-            <img className="logo" src="https://i.imgur.com/e3xqzO7.png" alt="" />
+            <img className="logo-cad-user" src="https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png" alt="" />
             </Box>
          
             <form onSubmit={cadastrar} noValidate autoComplete="off">
@@ -159,30 +159,25 @@ function CadastroUsuario() {
                 </RadioGroup>
               </FormControl>
 
-
-
               <TextField
                 value={user.nome}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                 id="nome"
-                label="Nome"
+                placeholder="nome"
                 variant="outlined"
                 name="nome"
-                className="margin-textfield"
-
+                className="margin-textfield-cad"
               />
               <TextField
                 value={dataNascimento}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => getDate(e)}
                 id="dataNascimento"
-                label="Data de nascimento"
                 placeholder="Digite sua Data de nascimento"
                 variant="outlined"
                 name="dataNascimento"
-                className="margin-textfield"
+                className="margin-textfield-cad"
                 type="date"
                 InputLabelProps={{ shrink: true }}
-
                 required
               />
 
@@ -190,10 +185,10 @@ function CadastroUsuario() {
                 value={user.foto}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                 id="foto"
-                label="URL da Foto"
+                placeholder="url da foto"
                 variant="outlined"
                 name="foto"
-                className="margin-textfield"
+                className="margin-textfield-cad"
               />
 
               <div className={category}>
@@ -201,10 +196,10 @@ function CadastroUsuario() {
                   value={user.cpf}
                   onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                   id="cpf"
-                  label="CPF"
+                  placeholder="CPF"
                   variant="outlined"
                   name="cpf"
-                  className="margin-textfield"
+                  className="margin-textfield-cad"
                 />
               </div>
               <div className={category1}>
@@ -212,29 +207,29 @@ function CadastroUsuario() {
                   value={user.cnpj}
                   onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                   id="cnpj"
-                  label="CNPJ"
+                  placeholder="CNPJ"
                   variant="outlined"
                   name="cnpj"
-                  className="margin-textfield"
+                  className="margin-textfield-cad"
                 />
               </div>
               <TextField
                 value={user.email}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                 id="email"
-                label="Email"
+                placeholder="e-mail"
                 variant="outlined"
                 name="email"
-                className="margin-textfield"
+                className="margin-textfield-cad"
               />
               <TextField
                 value={user.senha}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                 id="senha"
-                label="Senha"
+                placeholder="senha"
                 variant="outlined"
                 name="senha"
-                className="margin-textfield"
+                className="margin-textfield-cad"
                 type="password"
 
               />
@@ -244,12 +239,11 @@ function CadastroUsuario() {
                   confirmarSenhaHandle(e)
                 }
                 id="confirmarSenha"
-                label="Confirmar Senha"
+                placeholder="confirmar senha"
                 variant="outlined"
                 name="confirmarSenha"
-                className="margin-textfield"
+                className="margin-textfield-cad"
                 type="password"
-
               />
               <Box className="btns" >
                 <Box className="btn01">
@@ -272,7 +266,7 @@ function CadastroUsuario() {
             </form>
           </Box>
         </Box>
-        <Box className="img">
+        <Box className="img-cad-user">
           <img src="https://i.imgur.com/vmy7Wxs.png" alt="" />
         </Box>
       </Box>
