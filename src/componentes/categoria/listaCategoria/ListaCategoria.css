@@ -1,0 +1,70 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.backgroundlista{
+background: linear-gradient(45deg, rgba(60,0,97,1) 0%, rgba(118,44,173,1) 50%, rgba(136,67,171,1) 100%);
+padding: 2rem;
+}
+
+.boxlista{
+    background: #8F54BA !important;
+    padding: 0.5rem;
+    border-radius: 2rem !important;
+    width: 40rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 4rem;
+}
+
+.botaobackground{
+    background:#704292 !important;
+    padding: 0.5rem;
+    border-radius: 2rem !important;
+    width: 16rem !important;
+    height: 2.5rem;
+    margin-left: 22rem !important;
+    margin-top: 4.5rem !important;
+    margin-right: auto !important;
+    line-height: 2rem;
+
+}
+
+.botao{
+   display: flex;
+   
+}
+
+.btAtualizar{
+    color: #360c58 !important;
+    font-weight: bold !important;
+    background-color: #D5B2EF !important;
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 5rem !important;
+}
+
+.btDeletar{
+    color: #360c58 !important;
+    font-weight: bold !important;   
+    background-color: #D5B2EF !important;
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 5rem !important;
+}
+
+.txtCategoria{
+    color:rgb(236, 236, 236) !important;
+    font-size: 1.2rem !important;
+}
+
+.txtNome{
+    color:rgb(236, 236, 236);
+    font-weight: bold !important;
+    font-size: 1.3rem !important;
+}
+
+.txtDescricao{
+    color:white !important;
+    word-break: break-all;
+}
