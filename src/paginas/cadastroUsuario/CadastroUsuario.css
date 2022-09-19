@@ -1,5 +1,5 @@
-.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
-    font-family: 'Poppins', sans-serif !important;
+.MuiInputBase-root{
+    font-family: 'Poppins', sans-serif!important;
     
 }
 
@@ -63,13 +63,6 @@
 
 }
 
-
-.MuiFormControl-root {
-
-    margin-right: 10rem !important;
-    padding-right: 55% !important;
-}
-
 .margin-textfield-cad {
     margin: 6% !important;
     margin-top: 3px !important;
@@ -77,11 +70,9 @@
     /* background: rgba(0, 0, 0, 0.412) !important; */
 }
 
-.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
-    text-decoration-line: none !important;
-}
 
-.css-dmmspl-MuiFormGroup-root {
+
+.MuiFormGroup-root {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -98,18 +89,18 @@
     margin-left: 65%;
 }
 
-.css-ahj2mt-MuiTypography-root {
-    font-size: 13px !important;
+.MuiTypography-root .typography-cad-user{
+    font-size: 14px!important;
     display: flex;
     align-items: center !important;
     font-family: 'Poppins', sans-serif !important;
 }
 
-.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+.MuiRadio-root.Mui-checked {
     color: rgb(194, 144, 240) !important;
 }
 
-.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+.MuiInputLabel-root {
     line-height: 1.0 !important;
 }
 
@@ -119,7 +110,7 @@
 }
 
 /* CLASSE BTN01 */
-.css-sghohy-MuiButtonBase-root-MuiButton-root {
+.MuiButton-root {
     font-family: 'Poppins', sans-serif !important;
 }
 
@@ -136,49 +127,45 @@
 }
 
 /* CLASSE BTN02 */
-.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
-    font-family: 'Poppins', sans-serif !important;
-}
 
 /* CLASSE FORM */
-.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-    background: rgba(255, 255, 255, 0.108) !important;
-    border-radius: 3rem !important;
-    padding: 7px !important;
-    width: 15rem !important;
+.typography-cad-user {
+    /* background: rgba(255, 255, 255, 0.108) !important; */
+    /* border-radius: 3rem !important; */
+    /* padding: 7px !important; */
+    /* height: 2rem !important; */
+    /* backdrop-filter: blur(5px) !important; */
+
 }
 
-.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
-    border-radius: 1rem !important;
-}
 
-
-.margin-textfield-cad .MuiOutlinedInput-root {
+.typography-cad-user .MuiOutlinedInput-root {
     background-color: rgba(248, 244, 250, 0.2) !important;
-    border-radius: 16px !important;
-    backdrop-filter: blur(5px) !important;
-    text-decoration: none !important;
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    text-decoration: none;
+    width: 15rem !important;
+    height: 2.5rem!important;
+    margin-left: 1rem;
 }
 
-.MuiOutlinedInput-root{
-    border-color: rgb(255, 255, 255) !important;
-    border-style: ridge !important;
 
-}
+
 
 /* CLASSE BTN01 */
-.css-sghohy-MuiButtonBase-root-MuiButton-root {
-    background-color: rgb(194, 144, 240) !important;
+
+/* CLASSE BTN02 */
+.MuiButton-root {
+    -webkit-tap-highlight-color: purple !important;
+    background-color: purple !important;
+    color: white !important;
     font-weight: bold !important;
     border-radius: 4rem !important;
     box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;
 }
 
-/* CLASSE BTN02 */
-.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
-    -webkit-tap-highlight-color: purple !important;
-    background-color: purple !important;
-    color: white !important;
+.btnCancelar{
+    background-color: rgb(194, 144, 240) !important;
     font-weight: bold !important;
     border-radius: 4rem !important;
     box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;

@@ -146,7 +146,7 @@ function CadastroUsuario() {
             <img className="logo-cad-user" src="https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png" alt="" />
             </Box>
          
-            <form onSubmit={cadastrar} noValidate autoComplete="off">
+            <form onSubmit={cadastrar} noValidate autoComplete="off" className="form-cadastro-usuario">
               
               
               {/* <Typography className="logo" >
@@ -167,7 +167,7 @@ function CadastroUsuario() {
                 placeholder="nome"
                 variant="outlined"
                 name="nome"
-                className="margin-textfield-cad"
+                className="typography-cad-user"
               />
               <TextField
                 value={dataNascimento}
@@ -176,7 +176,7 @@ function CadastroUsuario() {
                 placeholder="Digite sua Data de nascimento"
                 variant="outlined"
                 name="dataNascimento"
-                className="margin-textfield-cad"
+                className="margin-textfield-cad  typography-cad-user"
                 type="date"
                 InputLabelProps={{ shrink: true }}
                 required
@@ -189,7 +189,7 @@ function CadastroUsuario() {
                 placeholder="url da foto"
                 variant="outlined"
                 name="foto"
-                className="margin-textfield-cad"
+                className="margin-textfield-cad typography-cad-user"
               />
 
               <div className={category}>
@@ -200,7 +200,7 @@ function CadastroUsuario() {
                   placeholder="CPF"
                   variant="outlined"
                   name="cpf"
-                  className="margin-textfield-cad"
+                  className="margin-textfield-cad typography-cad-user"
                 />
               </div>
               <div className={category1}>
@@ -211,7 +211,7 @@ function CadastroUsuario() {
                   placeholder="CNPJ"
                   variant="outlined"
                   name="cnpj"
-                  className="margin-textfield-cad"
+                  className="margin-textfield-cad typography-cad-user"
                 />
               </div>
               <TextField
@@ -221,7 +221,7 @@ function CadastroUsuario() {
                 placeholder="e-mail"
                 variant="outlined"
                 name="email"
-                className="margin-textfield-cad"
+                className="margin-textfield-cad typography-cad-user"
               />
               <TextField
                 value={user.senha}
@@ -230,7 +230,7 @@ function CadastroUsuario() {
                 placeholder="senha"
                 variant="outlined"
                 name="senha"
-                className="margin-textfield-cad"
+                className="margin-textfield-cad typography-cad-user"
                 type="password"
 
               />
@@ -243,7 +243,7 @@ function CadastroUsuario() {
                 placeholder="confirmar senha"
                 variant="outlined"
                 name="confirmarSenha"
-                className="margin-textfield-cad"
+                className="margin-textfield-cad typography-cad-user"
                 type="password"
               />
               <Box className="btns" >
