@@ -2,13 +2,14 @@ import React from "react";
 import "./Navbar.css";
 import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 import { Link, useNavigate } from "react-router-dom";
-import Box from "@mui/material/Box";
+import { Box } from "@mui/material";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useDispatch, useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/userReducer";
 import { addToken } from "../../../store/tokens/actions";
 import { toast } from "react-toastify";
+import ModalPostagem from "../../postagens/modalPostagem/ModalPostagem";
 
 function Navbar() {
   const token = useSelector<UserState, UserState["tokens"]>(
@@ -45,6 +46,9 @@ function Navbar() {
 
           <div className="options">
             <Box display="flex" justifyContent="end">
+              <Box display="flex" className="botaomodal2">
+                <ModalPostagem />
+              </Box>
               <Box mx={2} className="cursor">
                 <Link to="/home" className="text-decorator">
                   <Typography className="modo" variant="h6" color="inherit">
