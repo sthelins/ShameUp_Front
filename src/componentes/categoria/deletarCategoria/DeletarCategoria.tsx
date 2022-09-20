@@ -109,7 +109,7 @@ function DeletarCategoria({id}:DeletarCategoriaProps) {
                 Deseja deletar a categoria:
               </Typography>
               <Typography color="textSecondary">
-                {categoria?.descricao}
+                {categoria?.nome}
               </Typography>
             </Box>
           </CardContent>
