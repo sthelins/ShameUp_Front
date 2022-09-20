@@ -56,7 +56,7 @@ function Home() {
   }
   useEffect(() => {
     getUsuarioById();
-  }, [user]);
+  }, [user.id]);
 
   return (
     <>
