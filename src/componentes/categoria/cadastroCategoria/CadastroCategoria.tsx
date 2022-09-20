@@ -55,11 +55,13 @@ function CadastroCategoria() {
     setCategoria({
       ...categoria,
       [e.target.name]: e.target.value,
+      postagens: null
     });
   }
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
+
 
     if (id !== undefined) {
       try {
@@ -81,6 +83,7 @@ function CadastroCategoria() {
 
         back();
       } catch (error) {
+
         console.log(`Error: ${error}`);
         toast.error("Por favor verifique a quantidade mínima de caracteres.", {
           position: "top-center",
@@ -135,64 +138,64 @@ function CadastroCategoria() {
   return (
     <Box className="backgroundcategoria" justifyContent="center" alignItems="center">
       <div className="divform">
-       <Grid container direction="row" justifyContent="center" alignItems="center" className="backgroundform">
-        <Grid alignItems="center" item sm={6} >
-          <Box>
-            <form onSubmit={onSubmit}>
-              <Typography
-                className="titulocategoria"
-                variant="h3"
-                color="textSecondary"
-                component="h1"
-                align="center"
-              >
-                Cadastro de Categorias
-              </Typography>
-              <div className="textfield1">
-                <TextField
-                  value={categoria.nome}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
-                  id="nome"
-                  variant="outlined"
-                  placeholder="Nome - no minimo 3 caracteres"
-                  name="nome"
-                  margin="normal"
-                  className="nome"
-                  fullWidth
-                /></div>
-
-              <div className="textfield2">
-                <TextField
-                  value={categoria.descricao}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
-                  id="descricao"
-                  multiline
-                  variant="outlined"
-                  placeholder="Descrição - no minimo 3 caracteres"
-                  name="descricao"
-                  margin="normal"
-                  className="descricao"
-                  fullWidth
-
-                />
-
-
-                <Button
-                  type="submit"
-                  variant="contained"
-                  color="primary"
-                  className="btn"
+        <Grid container direction="row" justifyContent="center" alignItems="center" className="backgroundform">
+          <Grid alignItems="center" item sm={6} >
+            <Box>
+              <form onSubmit={onSubmit}>
+                <Typography
+                  className="titulocategoria"
+                  variant="h3"
+                  color="textSecondary"
+                  component="h1"
+                  align="center"
                 >
-                  Finalizar
-                </Button>
-              </div>
-            </form>
-          </Box>
-        </Grid>
-        <Grid alignItems="center" item className="imagem" sm={6} >
+                  Cadastro de Categorias
+                </Typography>
+                <div className="textfield1">
+                  <TextField
+                    value={categoria.nome}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
+                    id="nome"
+                    variant="outlined"
+                    placeholder="Nome - no minimo 3 caracteres"
+                    name="nome"
+                    margin="normal"
+                    className="nome"
+                    fullWidth
+                  /></div>
 
+                <div className="textfield2">
+                  <TextField
+                    value={categoria.descricao}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
+                    id="descricao"
+                    multiline
+                    variant="outlined"
+                    placeholder="Descrição - no minimo 3 caracteres"
+                    name="descricao"
+                    margin="normal"
+                    className="descricao"
+                    fullWidth
+
+                  />
+
+
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    color="primary"
+                    className="btn"
+                  >
+                    Finalizar
+                  </Button>
+                </div>
+              </form>
+            </Box>
+          </Grid>
+          <Grid alignItems="center" item className="imagem" sm={6} >
+
+          </Grid>
         </Grid>
-      </Grid>
       </div>
     </Box>
 
