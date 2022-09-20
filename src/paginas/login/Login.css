@@ -12,10 +12,9 @@
 .titulo{
     background-image: url(https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png) !important;
     background-repeat: 'no-repeat' !important;
-    width: 300px !important;
-    background-size: 300px 65px !important;
-    background-position: center ;
-    margin: auto;
+    width: 18.75rem !important;
+    background-size: 18.75rem 4rem !important;
+    background-position: center;
 }
 
 .subtitulo{
@@ -26,8 +25,8 @@
     
 }
 
-.btn{
-  background-color: rgba(60,0,97,1)!important;
+.btnEntrar{
+  background-color: rgb(97, 0, 0) !important;
   border: none;
   padding: 15px 32px;
   text-align: center;
@@ -42,8 +41,7 @@
 .background{
     background: rgb(118,44,173);
     background: linear-gradient(45deg, rgba(60,0,97,1) 0%, rgba(118,44,173,1) 50%, rgba(136,67,171,1) 100%);
-    background-size: 100%;
-    padding-bottom: 4.3rem
+    height: 100vh; /*importante para deixar o fundo responsivo*/
 }
 
 .text-decorator-none{
@@ -58,16 +56,14 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    margin-top: 3.75rem;
-    margin-left: 6.7rem;
-    padding: 0;
-    box-sizing:content-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    width: 150px;
+    display: block;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    height: 73vh;
+    width: 22vw;
     position: relative;
+    padding-left: 30px;
 
 }
 
@@ -112,4 +108,21 @@
     font-weight: bold !important;
     font-family: "Poppins", sans-serif !important;
     color: white !important;
+}
+
+.MuiFormGroup-root {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+    -webkit-box-flex-wrap: nowrap !important;
+    -webkit-flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
+    font-size: 6px !important;
+    align-items: center !important;
+    
 }
