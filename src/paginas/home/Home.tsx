@@ -69,15 +69,25 @@ function Home() {
       >
         <Grid alignItems="center" item xs={4}>
           <div className="divhome">
-            <Box className="perfil" >
-               <img src={user.foto} width="80px"  className="imgperfil" alt="Foto de perfil do usuário" />
-              <Typography variant="h5"
+            <Box className="perfil">
+              <img
+                src={user.foto}
+                width="80px"
+                className="imgperfil"
+                alt="Foto de perfil do usuário"
+              />
+              <Typography
+                variant="h5"
                 gutterBottom
                 color="textPrimary"
                 component="h5"
-                align="center" className="perfilhome" > {user.nome} </Typography>
-              
-             </Box>
+                align="center"
+                className="perfilhome"
+              >
+                {" "}
+                {user.nome}{" "}
+              </Typography>
+            </Box>
             <Box className="boxhome">
               <Typography
                 variant="h3"
@@ -99,16 +109,6 @@ function Home() {
               >
                 Aqui é o seu lugar de fala
               </Typography>
-            </Box>
-            <Box display="flex" className="boxhome">
-              <Box marginRight={1}>
-                <ModalPostagem />
-              </Box>
-              <Link to="/postagens" className="text-decorator-none">
-                <Button variant="outlined" className="botaohome">
-                  Ver Postagens
-                </Button>
-              </Link>
             </Box>
           </div>
         </Grid>
