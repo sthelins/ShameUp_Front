@@ -32,6 +32,7 @@ function Footer() {
             >
               <Typography
                 className="esti"
+                id="redes"
                 variant="h5"
                 align="center"
                 gutterBottom
