@@ -1,11 +1,10 @@
 .cursor {
   cursor: pointer;
 }
-
-.btnModal {
-  color: #fff !important;
-  border-color: white !important;
+.botaomodal2 {
   font-family: "Poppins", sans-serif !important;
-  margin-left: 75% !important;
-  width: 100% !important;
+  font-weight: 100 !important;
+  background-color: rgb(156, 153, 153) !important;
+  border: 0rem !important;
+  border-radius: 0rem !important;
 }
