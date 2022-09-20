@@ -22,9 +22,23 @@
   margin-bottom: 4rem;
 }
 
+<<<<<<< HEAD
 .txtCategoria {
   color: rgb(236, 236, 236) !important;
   font-size: 1.2rem !important;
+=======
+.botaobackground{
+    background:#704292 !important;
+    padding: 0.5rem;
+    border-radius: 2rem !important;
+    width: 16rem !important;
+    height: 2.5rem;
+    margin-left: 22rem !important;
+    margin-top: 4.5rem !important;
+    margin-right: auto !important;
+    line-height: 2rem;
+    
+>>>>>>> cecd59602841c7715e0df32fff8fb838e5a5d9d4
 }
 
 .titleCategorias {

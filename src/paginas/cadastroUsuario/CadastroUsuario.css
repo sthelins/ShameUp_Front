@@ -19,47 +19,46 @@
     width: 850px !important;
     height: 520px !important;
     border-radius: 3% !important;
-    /* box-shadow: 5px 5px rgba(0, 0, 0, 0.763); */
-    /* box-shadow: 5px 5px rgb(78, 1, 78); */
 }
 
-.img-cad-user img {  
-    height: 80%;
-    width: 100%;
-     /* margin-right: 80%; */
-    /* padding-bottom: 80% !important; */
-    display: block !important;
-    margin: 0 auto !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    margin-top: 3rem !important;
+.img-cad-user{  
+    margin-top: 4rem !important;
+    background-image: url(https://i.imgur.com/vmy7Wxs.png) !important;
+    background-repeat: no-repeat !important;
+    width: 300px !important;
+    background-size: 90%!important;
+    padding-left: 4rem;
+
 }
 
 .form-cad-usuario {
-    margin-right: 20% !important;
+    /* margin-right: 20% !important; */
     border-radius: 4rem !important;
+    margin-right: 55rem;
 }
 
 
-.cadastro input {
+/* .cadastro input {
     height: 10px !important;
-    width: 250px !important;
+    width: 20px !important;
+    align-items: center !important;
+    justify-content: center !important;
+} */
 
-}
 
-
-.logo-cad-user img {
-    width: 150px !important;
-    height: 60px !important;
-    margin-left: 130%;
-    margin-top: 25%;
-
+.form-cad-usuario-logo {
+    background-image: url(https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png) !important;
+    background-repeat: no-repeat !important;
+    width: 300px !important;
+    background-size: 300px 65px !important;
+    margin-left: -3rem;
+    margin-top: 1rem;
 }
 
 .formulario-cad-usuario {
     width: 50px !important;
     height: 90px !important;
+    margin-top: 4rem;
 
 }
 
@@ -155,7 +154,7 @@
 /* CLASSE BTN01 */
 
 /* CLASSE BTN02 */
-.MuiButton-root {
+.btn02 {
     -webkit-tap-highlight-color: purple !important;
     background-color: purple !important;
     color: white !important;
