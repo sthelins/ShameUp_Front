@@ -106,9 +106,10 @@ function Login() {
     <Grid container direction="row" justifyContent="center" alignItems="center" className="background">
       <Grid alignItems="center" sm={6} >
         <Box paddingX={20} className="container">
-          <form onSubmit={onSubmit}>
-            <Box display="block" justifyContent="center" marginTop={2} className="titulo">
+        <Box marginTop={2} className="titulo">
             </Box>
+          <form onSubmit={onSubmit} className="formlogin">
+            
             <Typography variant="subtitle1" gutterBottom align="center" className="subtitulo">
                 Aqui é o seu local de fala
               </Typography>

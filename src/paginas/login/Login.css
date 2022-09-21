@@ -14,8 +14,11 @@
     background-repeat: 'no-repeat' !important;
     width: 18.75rem !important;
     background-size: 18.75rem 4rem !important;
-    background-position: center;
-    padding-top: 8px !important;
+    background-position: center !important;
+    display: block !important;
+    justify-content: center !important;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .subtitulo{
@@ -61,10 +64,10 @@
     justify-content: center !important;
     align-items: center !important;
     text-align: center !important;
-    height: 73vh;
     width: 22vw;
-    position: relative;
-    padding-left: 30px;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -111,3 +114,14 @@
     color: white !important;
 }
 
+.MuiBox-root.css-1yuhvjn  {
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.formlogin{
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
