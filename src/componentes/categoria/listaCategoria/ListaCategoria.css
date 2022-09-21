@@ -39,9 +39,14 @@
   font-size: 1.3rem !important;
 }
 
-.txtDescricao {
-  color: white !important;
-  word-break: break-all;
+.btDeletar{
+    color: #360c58 !important;
+    font-weight: bold !important;   
+    background-color: #D5B2EF !important;
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 5rem !important;
+    margin-left: 9px !important;
 }
 
 .caixaTitleEBtn {

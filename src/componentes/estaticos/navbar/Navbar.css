@@ -41,7 +41,7 @@
 .content {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(156, 153, 153) !important;
+  background-color: rgb(206, 206, 206) !important;
   /*background: linear-gradient(
     45deg,
     rgba(60, 0, 97, 1) 0%,
