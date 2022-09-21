@@ -15,6 +15,7 @@
     width: 18.75rem !important;
     background-size: 18.75rem 4rem !important;
     background-position: center;
+    padding-top: 8px !important;
 }
 
 .subtitulo{
@@ -26,7 +27,7 @@
 }
 
 .btnEntrar{
-  background-color: rgb(97, 0, 0) !important;
+  background-color: rgb(60,0,97) !important;
   border: none;
   padding: 15px 32px;
   text-align: center;
@@ -110,19 +111,3 @@
     color: white !important;
 }
 
-.MuiFormGroup-root {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row !important;
-    -ms-flex-direction: row !important;
-    flex-direction: row !important;
-    -webkit-box-flex-wrap: nowrap !important;
-    -webkit-flex-wrap: wrap !important;
-    -ms-flex-wrap: wrap !important;
-    flex-wrap: nowrap !important;
-    font-size: 6px !important;
-    align-items: center !important;
-    
-}

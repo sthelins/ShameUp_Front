@@ -107,7 +107,7 @@ function Login() {
       <Grid alignItems="center" sm={6} >
         <Box paddingX={20} className="container">
           <form onSubmit={onSubmit}>
-            <Box display="block" justifyContent="center" marginTop={6} className="titulo">
+            <Box display="block" justifyContent="center" marginTop={2} className="titulo">
             </Box>
             <Typography variant="subtitle1" gutterBottom align="center" className="subtitulo">
                 Aqui é o seu local de fala
