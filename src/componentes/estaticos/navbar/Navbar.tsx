@@ -46,7 +46,7 @@ function Navbar() {
 
           <div className="options">
             <Box display="flex" justifyContent="end">
-              <Box display="flex" className="botaomodal2">
+              <Box display="flex">
                 <ModalPostagem />
               </Box>
               <Box mx={2} className="cursor">

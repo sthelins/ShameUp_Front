@@ -41,6 +41,7 @@
 .divhome {
   top: 8rem;
   left: 0rem;
+  position: fixed;
 }
 .imgperfil {
   border: 0.313rem solid white;
