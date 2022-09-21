@@ -64,7 +64,7 @@ function Footer() {
             <Box>
               <a target="_blank" href="https://brasil.generation.org">
                 <Typography
-                  className="esti text"
+                  className="esti textFooter"
                   variant="subtitle2"
                   gutterBottom
                   align="center"
