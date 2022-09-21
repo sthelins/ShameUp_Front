@@ -5,9 +5,9 @@
     rgba(118, 44, 173, 1) 50%,
     rgba(136, 67, 171, 1) 100%
   ) !important;*/
-  background-color: rgb(156, 153, 153) !important;
+  background-color: rgb(206, 206, 206) !important;
   color: #3c0061 !important;
-  height: 120px;
+  height: 70px;
 }
 
 .bgdofooter {
@@ -17,22 +17,29 @@
     rgba(118, 44, 173, 1) 50%,
     rgba(136, 67, 171, 1) 100%
   ) !important;*/
-  background-color: rgb(156, 153, 153) !important;
+  background-color: rgb(206, 206, 206) !important;
   height: 60px;
   color: #3c0061 !important;
   padding-top: 1% !important;
 }
 
 .esti {
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Comfortaa", sans-serif !important;
+  font-size: 100% !important;
 }
 
-.text {
+.textFooter {
   text-decoration: none !important;
   color: #3c0061 !important;
 }
 
 .iconesfooter {
-  font-size: 350% !important;
+  font-size: 225% !important;
   color: #3c0061 !important;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#redes{
+font-weight: bold;
+font-size: 115% !important; 
 }

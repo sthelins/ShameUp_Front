@@ -29,6 +29,8 @@ function CadastroPostagem() {
     (state) => state.tokens
   );
 
+  const userId = useSelector<UserState, UserState["id"]>((state) => state.id);
+
   useEffect(() => {
     if (token == "") {
       toast.info("Você precisa estar logado!", {
@@ -61,7 +63,7 @@ function CadastroPostagem() {
     titulo: "",
     categoria: null,
     usuario: {
-      id: 1,
+      id: parseInt(userId),
       nome: "",
       data_nascimento: "",
       cpf: "",

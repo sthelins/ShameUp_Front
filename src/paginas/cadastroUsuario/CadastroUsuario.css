@@ -116,18 +116,17 @@
 }
 
 .fisica {
-    display: block;
-
+  display: block;
 }
 
 .juridica {
-    display: none;
+  display: none;
 }
 
 .esconder {
-    display: none
+  display: none;
 }
 
 .mostrar {
-    display: block;
+  display: block;
 }
