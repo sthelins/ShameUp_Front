@@ -12,12 +12,16 @@
 }
 
 .bgtab {
-  background-color: #f0e9e6 !important;
-  margin-top: 3.3rem !important;
+  background: linear-gradient(
+    90deg,
+    rgba(124, 51, 172, 1) 0%,
+    rgba(118, 44, 173, 1) 50%,
+    rgba(136, 67, 171, 1) 100%
+  );
 }
 
 .corletra {
-  color: #000 !important;
+  color: rgb(255, 255, 255) !important;
   font-weight: bold !important;
   font-family: "Poppins", sans-serif !important;
 }
