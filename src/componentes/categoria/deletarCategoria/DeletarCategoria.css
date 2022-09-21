@@ -1,16 +1,17 @@
 .fonteCadastroP {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .bgCadastroP {
-  background-color: #000 !important;
+  background-color: #762cad !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .bgListaPB2 {
-  background-color: #d63031 !important;
+  background-color: #762cad !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .bgListaP {
-  background-color: #f3f3f5 !important;
+  background-color: white !important;
 }
