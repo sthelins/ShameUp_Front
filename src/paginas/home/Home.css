@@ -5,15 +5,17 @@
     rgba(118, 44, 173, 1) 50%,
     rgba(136, 67, 171, 1) 100%
   );
+  padding-bottom: 0%;
 }
 
 .titulohome {
   color: white !important;
   font-family: "Poppins", sans-serif !important;
-  width: 450px;
-  height: 85px;
-  padding: 10px;
-  margin-bottom: 0%;
+  width: 28.125rem;
+  height: 5.625rem;
+  padding-bottom: 0rem;
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
   box-sizing: border-box;
 }
 
@@ -21,8 +23,10 @@
   border-color: white !important;
   color: white !important;
   font-family: "Poppins", sans-serif !important;
-  margin-left: 75% !important;
-  width: 100% !important;
+  margin-left: 3.125rem !important;
+  width: 90% !important;
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
 }
 
 .postagens {
@@ -31,36 +35,33 @@
   justify-items: right !important;
 }
 .margin-bottom {
-  margin-bottom: 40% !important;
+  margin-bottom: 2.5rem !important;
 }
 
 .divhome {
-  top: 25%;
-  left: 0%;
-  position: fixed !important;
+  top: 8rem;
+  left: 0rem;
+  position: fixed;
 }
-.imgperfil{
-  border: 5px solid white;
-  border-radius:20px ;
+.imgperfil {
+  border: 0.313rem solid white;
+  border-radius: 1.25rem;
   display: block;
- margin-left: auto;
- margin-right: auto;
- margin-bottom: 5px;
-
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.313rem;
 }
-.perfil{
-  
+.perfil {
   color: white !important;
-  font-family: "Poppins",24px/1 sans-serif !important;
+  font-family: "Poppins", 1.25rem/1 sans-serif !important;
   align-items: center !important;
   justify-content: center !important;
-  padding-bottom: 20px;
-
+  padding-bottom: 1.25rem;
 }
 .perfilhome {
   color: white !important;
-  font-family: "Poppins",24px/1 sans-serif !important;
-  width: 450px;
-  height: 20px;
+  font-family: "Poppins", 1.25rem/1 sans-serif !important;
+  width: 28.125rem;
+  height: 1.25rem;
   box-sizing: border-box;
 }

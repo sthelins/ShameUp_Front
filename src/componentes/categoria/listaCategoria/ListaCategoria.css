@@ -9,7 +9,8 @@
     rgba(118, 44, 173, 1) 50%,
     rgba(136, 67, 171, 1) 100%
   );
-  padding: 2rem;
+  padding: 3rem;
+  padding-top: 4rem !important;
 }
 
 .boxlista {
@@ -39,14 +40,14 @@
   font-size: 1.3rem !important;
 }
 
-.btDeletar{
-    color: #360c58 !important;
-    font-weight: bold !important;   
-    background-color: #D5B2EF !important;
-    width: 7rem;
-    height: 2.5rem;
-    border-radius: 5rem !important;
-    margin-left: 9px !important;
+.btDeletar {
+  color: #360c58 !important;
+  font-weight: bold !important;
+  background-color: #d5b2ef !important;
+  width: 7rem;
+  height: 2.5rem;
+  border-radius: 5rem !important;
+  margin-left: 9px !important;
 }
 
 .caixaTitleEBtn {
