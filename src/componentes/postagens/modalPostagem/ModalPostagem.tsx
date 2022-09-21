@@ -56,8 +56,8 @@ function ModalPostagem() {
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleOpen}>
-        <Typography className="botaomodal2">Fale aqui</Typography>
+      <Button variant="outlined" className="botaomodal2 " onClick={handleOpen}>
+        <Typography className="fontefale ">Fale Aqui</Typography>
       </Button>
 
       <Modal

@@ -2,9 +2,16 @@
   cursor: pointer;
 }
 .botaomodal2 {
+  background-color: rgb(206, 206, 206) !important;
+  border: 0rem solid white !important;
+  color: #3c0061 !important;
+  padding: 0rem !important;
+  margin-right: 0.9rem !important;
+}
+
+.fontefale {
   font-family: "Poppins", sans-serif !important;
-  font-weight: 100 !important;
-  background-color: rgb(156, 153, 153) !important;
-  border: 0rem !important;
-  border-radius: 0rem !important;
+  font-weight: 500 !important;
+  font-size: 1.25rem !important;
+  text-transform: initial !important;
 }
