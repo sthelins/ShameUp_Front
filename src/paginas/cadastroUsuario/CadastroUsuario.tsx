@@ -138,20 +138,14 @@ function CadastroUsuario() {
       <Box className="cad-usuario" display="flex" flexDirection="row-reverse" justifyContent="space-evenly" >
 
         {/* <Box className="form" display="flex" flexDirection="column"  > */}
+        <Box className="form-cad-usuario-logo">
         
         <Box className="form-cad-usuario">
           <Box className="formulario-cad-usuario" display="flex" flexDirection="column" >
-            <Box className="logo-cad-user">
-
-            <img className="logo-cad-user" src="https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png" alt="" />
-            </Box>
-         
             <form onSubmit={cadastrar} noValidate autoComplete="off" className="form-cadastro-usuario">
               
               
-              {/* <Typography className="logo" >
-                <img src="https://i.imgur.com/e3xqzO7.png" alt="" />
-              </Typography> */}
+
               <FormControl className={tipos.field}>
 
                 <RadioGroup className="btn-radial" value={category} onChange={(e) => setCategory(e.target.value)}>
@@ -267,8 +261,9 @@ function CadastroUsuario() {
             </form>
           </Box>
         </Box>
+        </Box>
         <Box className="img-cad-user">
-          <img src="https://i.imgur.com/vmy7Wxs.png" alt="" />
+
         </Box>
       </Box>
     </Box>

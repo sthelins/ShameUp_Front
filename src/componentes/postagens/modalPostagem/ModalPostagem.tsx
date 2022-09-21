@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Modal from "@mui/material/Modal";
-import { Button } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import "./ModalPostagem.css";
 import { Box } from "@mui/material";
@@ -56,9 +56,10 @@ function ModalPostagem() {
 
   return (
     <div>
-      <Button variant="outlined" className="btnModal" onClick={handleOpen}>
-        Fale aqui
+      <Button variant="outlined" className="botaomodal2 " onClick={handleOpen}>
+        <Typography className="fontefale ">Fale Aqui</Typography>
       </Button>
+
       <Modal
         open={open}
         onClose={handleClose}

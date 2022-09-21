@@ -1,193 +1,184 @@
-.MuiInputBase-root{
-    font-family: 'Poppins', sans-serif!important;
-    
+.MuiInputBase-root {
+  font-family: "Poppins", sans-serif !important;
 }
 
 /* BOX COM O BACKGROUND  */
 .container-cad-usuario {
-    background: linear-gradient(45deg, rgba(60, 0, 97, 1) 0%, rgba(118, 44, 173, 1) 50%, rgba(136, 67, 171, 1) 100%) !important;
-    /* padding-top: 5rem;
+  background: linear-gradient(
+    45deg,
+    rgba(60, 0, 97, 1) 0%,
+    rgba(118, 44, 173, 1) 50%,
+    rgba(136, 67, 171, 1) 100%
+  ) !important;
+  /* padding-top: 5rem;
     padding-bottom: 15rem;
     padding-right: 0rem;
     padding-left: 0rem; */
-    height: 100vh;
+  height: 100vh;
 }
 
 .cad-usuario {
-    background: rgba(255, 255, 255, 0.2) !important;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
-    width: 850px !important;
-    height: 520px !important;
-    border-radius: 3% !important;
-    /* box-shadow: 5px 5px rgba(0, 0, 0, 0.763); */
-    /* box-shadow: 5px 5px rgb(78, 1, 78); */
+  background: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  width: 850px !important;
+  height: 520px !important;
+  border-radius: 3% !important;
 }
 
-.img-cad-user img {  
-    height: 80%;
-    width: 100%;
-     /* margin-right: 80%; */
-    /* padding-bottom: 80% !important; */
-    display: block !important;
-    margin: 0 auto !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    margin-top: 3rem !important;
+.img-cad-user {
+  margin-top: 4rem !important;
+  background-image: url(https://i.imgur.com/vmy7Wxs.png) !important;
+  background-repeat: no-repeat !important;
+  width: 300px !important;
+  background-size: 90% !important;
+  padding-left: 4rem;
 }
 
 .form-cad-usuario {
-    margin-right: 20% !important;
-    border-radius: 4rem !important;
+  /* margin-right: 20% !important; */
+  border-radius: 4rem !important;
+  margin-right: 55rem;
 }
 
-
-.cadastro input {
+/* .cadastro input {
     height: 10px !important;
-    width: 250px !important;
+    width: 20px !important;
+    align-items: center !important;
+    justify-content: center !important;
+} */
 
-}
-
-
-.logo-cad-user img {
-    width: 150px !important;
-    height: 60px !important;
-    margin-left: 130%;
-    margin-top: 25%;
-
+.form-cad-usuario-logo {
+  background-image: url(https://media.discordapp.net/attachments/1016308515167543417/1020017214809718877/2-removebg-preview.png) !important;
+  background-repeat: no-repeat !important;
+  width: 300px !important;
+  background-size: 300px 65px !important;
+  margin-left: -3rem;
+  margin-top: 1rem;
 }
 
 .formulario-cad-usuario {
-    width: 50px !important;
-    height: 90px !important;
-
+  width: 50px !important;
+  height: 90px !important;
+  margin-top: 4rem;
 }
 
 .margin-textfield-cad {
-    margin: 6% !important;
-    margin-top: 3px !important;
+  margin: 6% !important;
+  margin-top: 3px !important;
 
-    /* background: rgba(0, 0, 0, 0.412) !important; */
+  /* background: rgba(0, 0, 0, 0.412) !important; */
 }
-
-
 
 .MuiFormGroup-root {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row !important;
-    -ms-flex-direction: row !important;
-    flex-direction: row !important;
-    -webkit-box-flex-wrap: nowrap !important;
-    -webkit-flex-wrap: wrap !important;
-    -ms-flex-wrap: wrap !important;
-    flex-wrap: nowrap !important;
-    font-size: 6px !important;
-    align-items: center !important;
-    margin-left: 65%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row !important;
+  -ms-flex-direction: row !important;
+  flex-direction: row !important;
+  -webkit-box-flex-wrap: nowrap !important;
+  -webkit-flex-wrap: wrap !important;
+  -ms-flex-wrap: wrap !important;
+  flex-wrap: nowrap !important;
+  font-size: 6px !important;
+  align-items: center !important;
+  margin-left: 65%;
 }
 
-.MuiTypography-root .typography-cad-user{
-    font-size: 14px!important;
-    display: flex;
-    align-items: center !important;
-    font-family: 'Poppins', sans-serif !important;
+.MuiTypography-root .typography-cad-user {
+  font-size: 14px !important;
+  display: flex;
+  align-items: center !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .MuiRadio-root.Mui-checked {
-    color: rgb(194, 144, 240) !important;
+  color: rgb(194, 144, 240) !important;
 }
 
 .MuiInputLabel-root {
-    line-height: 1.0 !important;
+  line-height: 1 !important;
 }
 
 .btns {
-    display: flex !important;
-
+  display: flex !important;
 }
 
 /* CLASSE BTN01 */
 .MuiButton-root {
-    font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .btn01 {
-    padding-left: 50% !important;
-    padding-top: 6% !important;
-    margin: 5px;
-  
+  padding-left: 50% !important;
+  padding-top: 6% !important;
+  margin: 5px;
 }
 
 .btn02 {
-    padding-top: 6% !important;
-    margin: 5px;
+  padding-top: 6% !important;
+  margin: 5px;
 }
 
 /* CLASSE BTN02 */
 
 /* CLASSE FORM */
 .typography-cad-user {
-    /* background: rgba(255, 255, 255, 0.108) !important; */
-    /* border-radius: 3rem !important; */
-    /* padding: 7px !important; */
-    /* height: 2rem !important; */
-    /* backdrop-filter: blur(5px) !important; */
-
+  /* background: rgba(255, 255, 255, 0.108) !important; */
+  /* border-radius: 3rem !important; */
+  /* padding: 7px !important; */
+  /* height: 2rem !important; */
+  /* backdrop-filter: blur(5px) !important; */
 }
-
 
 .typography-cad-user .MuiOutlinedInput-root {
-    background-color: rgba(248, 244, 250, 0.2) !important;
-    border-radius: 16px;
-    backdrop-filter: blur(5px);
-    text-decoration: none;
-    width: 15rem !important;
-    height: 2.5rem!important;
-    margin-left: 1rem;
+  background-color: rgba(248, 244, 250, 0.2) !important;
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  text-decoration: none;
+  width: 15rem !important;
+  height: 2.5rem !important;
+  margin-left: 1rem;
 }
-
-
-
 
 /* CLASSE BTN01 */
 
-/* CLASSE BTN02 
-.MuiButton-root {
-    -webkit-tap-highlight-color: purple !important;
-    background-color: purple !important;
-    color: white !important;
-    font-weight: bold !important;
-    border-radius: 4rem !important;
-    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;
-}*/
+/* CLASSE BTN02 */
+.btn02 {
+  -webkit-tap-highlight-color: purple !important;
+  background-color: purple !important;
+  color: white !important;
+  font-weight: bold !important;
+  border-radius: 4rem !important;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+    0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;
+}
 
-.btnCancelar{
-    background-color: rgb(194, 144, 240) !important;
-    font-weight: bold !important;
-    border-radius: 4rem !important;
-    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;
+.btnCancelar {
+  background-color: rgb(194, 144, 240) !important;
+  font-weight: bold !important;
+  border-radius: 4rem !important;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+    0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%) !important;
 }
 
 label {
-    align-items: center !important;
+  align-items: center !important;
 }
 
 .fisica {
-    display: block;
-
+  display: block;
 }
 
 .juridica {
-    display: none;
+  display: none;
 }
 
 .esconder {
-    display: none
+  display: none;
 }
 
 .mostrar {
-    display: block;
+  display: block;
 }

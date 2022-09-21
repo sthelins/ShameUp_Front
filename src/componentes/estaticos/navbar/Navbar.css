@@ -16,13 +16,6 @@
   color: #3c0061 !important;
 }
 
-/* 
-.text-decorator:hover {
-  text-decoration: underline;
-  transition: 2ms;
-  padin
-}  */
-
 .cursor {
   cursor: pointer;
   color: #3c0061 !important;
@@ -30,6 +23,7 @@
 
 .appBar {
   background-color: var(--first--color) !important;
+  position: fixed !important;
 }
 
 .options {
@@ -41,7 +35,7 @@
 .content {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(156, 153, 153) !important;
+  background-color: rgb(206, 206, 206) !important;
   /*background: linear-gradient(
     45deg,
     rgba(60, 0, 97, 1) 0%,
