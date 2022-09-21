@@ -140,7 +140,7 @@ function CadastroCategoria() {
       <div className="divform">
         <Grid container direction="row" justifyContent="center" alignItems="center" className="backgroundform">
           <Grid alignItems="center" item sm={6} >
-            <Box>
+            <Box className="form">
               <form onSubmit={onSubmit}>
                 <Typography
                   className="titulocategoria"
@@ -192,9 +192,7 @@ function CadastroCategoria() {
               </form>
             </Box>
           </Grid>
-          <Grid alignItems="center" item className="imagem" sm={6} >
-
-          </Grid>
+          <Grid alignItems="center" item className="imagem" sm={6} ></Grid>
         </Grid>
       </div>
     </Box>

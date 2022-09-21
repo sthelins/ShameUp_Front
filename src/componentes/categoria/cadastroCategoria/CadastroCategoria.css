@@ -1,27 +1,28 @@
   .backgroundform{
     border-radius: 2rem;
-    height: 63vh;
-    width: 70% !important;
+    height:55%   !important;
+    width: 65% !important;
     padding: 5rem;
     background-color: #8F54BA;
-    text-align: right;
-    margin-left: auto !important;
-    margin-right: auto !important; 
-    margin-bottom: 0!important;
+    text-align: right !important;
+    margin: auto !important;
     
 
   }
 
   .divform{
-    padding-top: 8%;
+    display: block !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
+
 
   .backgroundcategoria{
     background: linear-gradient(45deg, rgba(60,0,97,1) 0%, rgba(118,44,173,1) 50%, rgba(136,67,171,1) 100%);
     height: 100vh;
-    width: 100vw;
-    justify-content: center !important;
-    align-items: center !important;
+    width: 100%;
+ 
+
     
 }
 
@@ -66,10 +67,11 @@
   background-image: url(https://cdn.discordapp.com/attachments/988429116711772190/1020396560598696038/fundo.png);
   background-size: cover;
   justify-content: center !important;
-  width: 28rem !important;
-  height: 25rem !important;
+  width: 70%!important;
+  height: 80% !important;
   border-radius: 0% !important;
 }
+
 
 .textfield1{
   width: 38rem; 
@@ -78,3 +80,4 @@
 .textfield2{
   width: 38rem;
 }
+
