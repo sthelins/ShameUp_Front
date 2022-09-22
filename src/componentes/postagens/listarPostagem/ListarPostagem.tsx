@@ -72,22 +72,22 @@ function ListaPostagem() {
     setNewCommentText(event.target.value)
   }
 
-  function getData(data: string){
+  function getData(data: string) {
 
-      let dataString = data.split("T")[0]
-      let horaString = data.split("T")[1]
-      horaString = horaString.split(".")[0]
+    let dataString = data.split("T")[0]
+    let horaString = data.split("T")[1]
+    horaString = horaString.split(".")[0]
 
-      let dia = dataString.split("-")[2]
-      let mes = dataString.split("-")[1]
-      let ano = dataString.split("-")[0]
+    let dia = dataString.split("-")[2]
+    let mes = dataString.split("-")[1]
+    let ano = dataString.split("-")[0]
 
-      let hora = horaString.split(":")[0]
-      let minuto = horaString.split(":")[1]
-      let segundo = horaString.split(":")[2]
-      
-      return `${dia}-${mes}-${ano} ${hora}:${minuto}:${segundo}`
-  } 
+    let hora = horaString.split(":")[0]
+    let minuto = horaString.split(":")[1]
+    let segundo = horaString.split(":")[2]
+
+    return `${dia}-${mes}-${ano} ${hora}:${minuto}:${segundo}`
+  }
 
   return (
     <>
@@ -99,16 +99,30 @@ function ListaPostagem() {
             className="bgListaPost fonteListaPe listaPost"
           >
             <CardContent className="card-postagem">
-              <Box className="info-usuario-postagem">
-                <img src={post.usuario?.foto} alt="Imagem do usuário" className="img-usuario-postagem" />
-                <Box className="info-postagem">
-                  <Typography className='nome-usuario-postagem'>{post.usuario?.nome}</Typography>
-                  <Typography className='data-postagem-listar'>{post.data}</Typography>
+
+              {!post.anonimo ?
+                <Box className="info-usuario-postagem">
+                  <img src="https://i.imgur.com/mULO3ga.jpg" alt="Imagem do usuário anônimo" className="img-usuario-postagem" />
+                  <Box className="info-postagem">
+                    <Typography className='nome-usuario-postagem'>Usuário Anônimo</Typography>
+                    <Typography className='data-postagem-listar'>{getData(post.data)}</Typography>
+                  </Box>
                 </Box>
-              </Box>
-              <Typography variant="h5" component="h2">
-                {post.anonimo}
-              </Typography>
+                :
+                <Box className="info-usuario-postagem">
+                  {post.usuario?.foto ?
+                    <img src={post.usuario?.foto} alt="Imagem do usuário" className="img-usuario-postagem" />
+                    :
+                    <img src="https://i.imgur.com/mULO3ga.jpg" alt="Imagem do usuário sem foto" className="img-usuario-postagem" />
+                  }
+                  <Box className="info-postagem">
+                    <Typography className='nome-usuario-postagem'>{post.usuario?.nome}</Typography>
+                    <Typography className='data-postagem-listar'>{getData(post.data)}</Typography>
+                  </Box>
+                </Box>
+
+
+              }
               <Typography
                 variant="h6"
                 component="h6"
