@@ -1,22 +1,10 @@
 .fontefooter {
-  /*background: linear-gradient(
-    45deg,
-    rgba(60, 0, 97, 1) 0%,
-    rgba(118, 44, 173, 1) 50%,
-    rgba(136, 67, 171, 1) 100%
-  ) !important;*/
   background-color: rgb(206, 206, 206) !important;
   color: #3c0061 !important;
   height: 70px;
 }
 
 .bgdofooter {
-  /*background: linear-gradient(
-    45deg,
-    rgba(60, 0, 97, 1) 0%,
-    rgba(118, 44, 173, 1) 50%,
-    rgba(136, 67, 171, 1) 100%
-  ) !important;*/
   background-color: rgb(206, 206, 206) !important;
   height: 60px;
   color: #3c0061 !important;
@@ -24,7 +12,7 @@
 }
 
 .esti {
-  font-family: "Comfortaa", sans-serif !important;
+  font-family: 'Comfortaa', sans-serif !important;
   font-size: 100% !important;
 }
 
@@ -39,7 +27,7 @@
   margin-left: 10px;
   margin-right: 10px;
 }
-#redes{
-font-weight: bold;
-font-size: 115% !important; 
+#redes {
+  font-weight: bold;
+  font-size: 115% !important;
 }
