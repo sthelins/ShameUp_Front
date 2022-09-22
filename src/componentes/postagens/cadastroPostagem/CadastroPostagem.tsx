@@ -246,7 +246,7 @@ function CadastroPostagem() {
             }
           >
             {categorias.map((categoria) => (
-              <MenuItem value={categoria.id}>{categoria.descricao}</MenuItem>
+              <MenuItem value={categoria.id}>{categoria.nome}</MenuItem>
             ))}
           </Select>
           <FormHelperText className="cadastro-postagem">
