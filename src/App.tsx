@@ -7,7 +7,7 @@ import Sobrenos from "./paginas/sobrenos/Sobrenos";
 import Footer from "./componentes/estaticos/footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CadastroUsuario from "./paginas/cadastroUsuario/CadastroUsuario";
-import ListaCategoria from "./componentes/categoria/listaCategoria/ListaCategoria"; 
+import ListaCategoria from "./componentes/categoria/listaCategoria/ListaCategoria";
 import CadastroCategoria from "./componentes/categoria/cadastroCategoria/CadastroCategoria";
 import DeletarCategoria from "./componentes/categoria/deletarCategoria/DeletarCategoria";
 import CadastroPostagem from "./componentes/postagens/cadastroPostagem/CadastroPostagem";
@@ -15,7 +15,7 @@ import ListarPostagem from "./componentes/postagens/listarPostagem/ListarPostage
 import DeletarPostagem from "./componentes/postagens/deletarPostagem/DeletarPostagem";
 import { Provider } from "react-redux";
 import store from "./store/store";
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
@@ -46,7 +46,6 @@ function App() {
               path="/formularioCategoria/:id"
               element={<CadastroCategoria />}
             />
-            <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
           </Routes>
         </div>
         <Footer />
