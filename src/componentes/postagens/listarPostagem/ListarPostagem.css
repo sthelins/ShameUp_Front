@@ -30,6 +30,33 @@
   background-color: #5e0d4c !important;
 }
 
+.info-usuario-postagem {
+  display: flex;
+  align-items: center;
+
+}
+
+.info-postagem {
+  margin-left: 1rem ;
+}
+
+
+.img-usuario-postagem {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 16px;
+}
+
+.nome-usuario-postagem{
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 500 !important;
+}
+
+.data-postagem-listar{
+  font-family: 'Poppins', sans-serif !important;
+  font-size: .8rem !important;
+}
+
 .feedback {
   display: flex !important;
   align-items: left !important;

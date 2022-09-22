@@ -1,7 +1,7 @@
 import React, { useState, useEffect, FormEvent, ChangeEvent } from 'react'
 import { Link } from 'react-router-dom'
 import Postagem from '../../../models/Postagem'
-import { busca } from '../../../services/Service'
+import { busca, post } from '../../../services/Service'
 import {
   Card,
   CardActions,
@@ -17,6 +17,7 @@ import { useSelector } from 'react-redux'
 import { UserState } from '../../../store/tokens/userReducer'
 import { toast } from 'react-toastify'
 import ComentarioPostagem from '../comentarioPostagem/ComentarioPostagem'
+import { PostAddRounded } from '@mui/icons-material'
 
 function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([])
@@ -24,6 +25,8 @@ function ListaPostagem() {
   const token = useSelector<UserState, UserState['tokens']>(
     state => state.tokens
   )
+
+  var dataCompelta;
 
   useEffect(() => {
     if (token == '') {
@@ -69,15 +72,40 @@ function ListaPostagem() {
     setNewCommentText(event.target.value)
   }
 
+  function getData(data: string){
+
+      let dataString = data.split("T")[0]
+      let horaString = data.split("T")[1]
+      horaString = horaString.split(".")[0]
+
+      let dia = dataString.split("-")[2]
+      let mes = dataString.split("-")[1]
+      let ano = dataString.split("-")[0]
+
+      let hora = horaString.split(":")[0]
+      let minuto = horaString.split(":")[1]
+      let segundo = horaString.split(":")[2]
+      
+      return `${dia}-${mes}-${ano} ${hora}:${minuto}:${segundo}`
+  } 
+
   return (
     <>
       {posts.map(post => (
         <Box m={2} key={post.id}>
+
           <Card
             variant="outlined"
             className="bgListaPost fonteListaPe listaPost"
           >
             <CardContent className="card-postagem">
+              <Box className="info-usuario-postagem">
+                <img src={post.usuario?.foto} alt="Imagem do usuário" className="img-usuario-postagem" />
+                <Box className="info-postagem">
+                  <Typography className='nome-usuario-postagem'>{post.usuario?.nome}</Typography>
+                  <Typography className='data-postagem-listar'>{post.data}</Typography>
+                </Box>
+              </Box>
               <Typography variant="h5" component="h2">
                 {post.anonimo}
               </Typography>
