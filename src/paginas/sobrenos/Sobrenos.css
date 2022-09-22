@@ -21,13 +21,13 @@
   );
   margin-bottom: 0px !important;
   margin-top: 0% !important;
-  padding-top: 50px !important;
 }
 
 .fontesobre {
   font-family: "Poppins", sans-serif !important;
   font-size: 400% !important;
   color: #fff !important;
+  margin-top: 2rem !important;
 }
 
 .imagem {
