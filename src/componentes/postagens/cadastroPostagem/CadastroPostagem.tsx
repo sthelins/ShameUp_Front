@@ -206,8 +206,8 @@ function CadastroPostagem() {
       alignItems="center"
       display="flex"
     >
-      <Grid container className="backgroundform-postagem">
-        <Grid item sm={6}>
+      <Box className="backgroundform-postagem" display="flex" flexDirection="row-reverse" justifyContent="space-evenly">
+        <Box display="flex" flexDirection="column">
           <form onSubmit={onSubmit} className="form-cad-postagem">
             <Typography
               variant="h3"
@@ -277,9 +277,9 @@ function CadastroPostagem() {
               </FormControl>
             </Box>
           </form>
-        </Grid>
-        <Grid item sm={6} className="imagemFormularioPostagem"></Grid>
-      </Grid>
+        </Box>
+      <Box className='imagemFormularioPostagem'></Box>
+      </Box>
     </Box>
   );
 }
