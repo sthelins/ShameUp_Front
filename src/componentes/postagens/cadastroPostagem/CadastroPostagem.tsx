@@ -13,7 +13,7 @@ import {
   MenuItem,
   FormControl,
   FormHelperText,
-  Grid
+  Grid,
 } from "@material-ui/core";
 
 import { useNavigate, useParams } from "react-router-dom";
@@ -196,14 +196,19 @@ function CadastroPostagem() {
   }
 
   function back() {
-    navigate("/postagens");
+    navigate("/usuario/postagens");
   }
 
   return (
-    <Box className='backgroundpostagem' justifyContent="center" alignItems="center" display="flex">
-      <Grid container className='backgroundform-postagem'>
+    <Box
+      className="backgroundpostagem"
+      justifyContent="center"
+      alignItems="center"
+      display="flex"
+    >
+      <Grid container className="backgroundform-postagem">
         <Grid item sm={6}>
-          <form onSubmit={onSubmit} className='form-cad-postagem' >
+          <form onSubmit={onSubmit} className="form-cad-postagem">
             <Typography
               variant="h3"
               color="textSecondary"
@@ -215,7 +220,9 @@ function CadastroPostagem() {
             </Typography>
             <TextField
               value={postagem.titulo}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                updatedPostagem(e)
+              }
               id="titulo"
               variant="outlined"
               name="titulo"
@@ -226,7 +233,9 @@ function CadastroPostagem() {
             <TextField
               value={postagem.texto}
               multiline
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                updatedPostagem(e)
+              }
               id="texto"
               name="texto"
               variant="outlined"
@@ -235,42 +244,41 @@ function CadastroPostagem() {
               fullWidth
             />
             <Box className="centralizar-form">
-            <FormControl>
-              <InputLabel id="form-postagem-categoria-txt">
-                Categoria{" "}
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-helper-label"
-                id="demo-simple-select-helper"
-                onChange={(e) =>
-                  buscaId(`/categorias/${e.target.value}`, setCategoria, {
-                    headers: {
-                      Authorization: token,
-                    },
-                  })
-                }
-              >
-                {categorias.map((categoria) => (
-                  <MenuItem value={categoria.id}>{categoria.nome}</MenuItem>
-                ))}
-              </Select>
-              <FormHelperText className="cadastro-postagem-txt">
-                Escolha uma categoria para a postagem
-              </FormHelperText>
-              <Button
-                className="button-cad-postagem"
-                type="submit"
-                variant="contained"
-                color="primary"
-              >
-                Finalizar
-              </Button>
-            </FormControl>
+              <FormControl>
+                <InputLabel id="form-postagem-categoria-txt">
+                  Categoria{" "}
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-helper-label"
+                  id="demo-simple-select-helper"
+                  onChange={(e) =>
+                    buscaId(`/categorias/${e.target.value}`, setCategoria, {
+                      headers: {
+                        Authorization: token,
+                      },
+                    })
+                  }
+                >
+                  {categorias.map((categoria) => (
+                    <MenuItem value={categoria.id}>{categoria.nome}</MenuItem>
+                  ))}
+                </Select>
+                <FormHelperText className="cadastro-postagem-txt">
+                  Escolha uma categoria para a postagem
+                </FormHelperText>
+                <Button
+                  className="button-cad-postagem"
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                >
+                  Finalizar
+                </Button>
+              </FormControl>
             </Box>
           </form>
         </Grid>
-        <Grid item sm={6} className="imagemFormularioPostagem" >
-        </Grid>
+        <Grid item sm={6} className="imagemFormularioPostagem"></Grid>
       </Grid>
     </Box>
   );
