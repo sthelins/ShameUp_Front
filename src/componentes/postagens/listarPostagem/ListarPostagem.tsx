@@ -20,14 +20,12 @@ import ComentarioPostagem from "../comentarioPostagem/ComentarioPostagem";
 import { PostAddRounded } from "@mui/icons-material";
 import ModalDeletarPostagem from "../modalDeletarPostagem/ModalDeletarPostagem";
 
-function ListaPostagem() {
+function ListarPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([]);
   let navigate = useNavigate();
   const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
-
-  var dataCompelta;
 
   useEffect(() => {
     if (token == "") {
@@ -223,4 +221,4 @@ function ListaPostagem() {
   );
 }
 
-export default ListaPostagem;
+export default ListarPostagem;
