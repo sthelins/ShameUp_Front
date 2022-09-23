@@ -184,8 +184,8 @@ function CadastroCategoria() {
             </Button>
           </form>
         </Grid>
-        <Grid item sm={6} className="imagemFormularioCategoria" >
-        </Grid>
+        <Box className="imagemFormularioCategoria">
+        </Box>
       </Grid>
     </Box>
 
