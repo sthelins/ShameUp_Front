@@ -1,13 +1,81 @@
-.botaomodal {
-  background-color: #762cad !important;
-  font-family: "Poppins", sans-serif !important;
-  margin-top: 1rem !important;
+.backgroundpostagem {
+  background: linear-gradient(45deg,
+      rgba(60, 0, 97, 1) 0%,
+      rgba(118, 44, 173, 1) 50%,
+      rgba(136, 67, 171, 1) 100%) !important;
+  height: 100vh !important;
 }
 
-.cadastro-postagem {
-  font-family: "Poppins", sans-serif !important;
+.backgroundform-postagem {
+  border-radius: 2rem;
+  width: 80% !important;
+  height: 80% !important;
+  background-color: #8f54ba;
+  text-align: right;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.3) !important;
+  margin-top: 2rem;
 }
 
-.topo {
+.form-cad-postagem {
+  padding: 1rem;
+  padding-left: 2.5rem;
+}
+
+.enunciado-postagem-cad {
+  font-weight: bold !important;
   font-family: "Poppins", sans-serif !important;
+  color: rgb(243, 243, 243) !important;
+  padding-bottom: 1rem;
+}
+
+#texto {
+  height: 9rem !important;
+}
+
+.titulo-postagem-cad {
+  background-color: #d5b2ef !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(5px);
+  text-decoration: none;
+}
+
+.txt-field-cad-postagem {
+  background-color: #d5b2ef !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(5px);
+  text-decoration: none;
+}
+
+.titulo-postagem-cad .MuiOutlinedInput-root {
+  border-radius: 16px;
+}
+
+.txt-field-cad-postagem .MuiOutlinedInput-root {
+  border-radius: 16px;
+}
+
+.centralizar-form {
+  margin-right: 26%;
+}
+
+
+.imagemFormularioPostagem {
+  background-image: url(https://cdn.discordapp.com/attachments/988429116518850603/1022611684319301693/business-3d-young-women-looking-at-smartphone.png);
+  background-repeat: no-repeat !important;
+  background-size: 40% !important;
+  background-position: center !important;
+  height: 31rem !important;
+  border-radius: 0% !important;
+}
+
+#form-postagem-categoria-txt{
+  color: white !;
+}
+
+.cadastro-postagem-txt{
+  color: white !important;
+}
+
+.button-cad-postagem {
+  background-color: rgba(60, 0, 97, 1) !important;
 }
