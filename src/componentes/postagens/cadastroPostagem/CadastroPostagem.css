@@ -1,24 +1,25 @@
 .backgroundpostagem {
-  background: linear-gradient(45deg,
-      rgba(60, 0, 97, 1) 0%,
-      rgba(118, 44, 173, 1) 50%,
-      rgba(136, 67, 171, 1) 100%) !important;
+  background: linear-gradient(45deg, rgba(60, 0, 97, 1) 0%, rgba(118, 44, 173, 1) 50%, rgba(136, 67, 171, 1) 100%) !important;
   height: 100vh !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .backgroundform-postagem {
   border-radius: 2rem;
-  width: 80% !important;
-  height: 80% !important;
+  width: 63rem!important;
+  height: 33rem !important;
   background-color: #8f54ba;
-  text-align: right;
   border: 0.0625rem solid rgba(255, 255, 255, 0.3) !important;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  
 }
 
 .form-cad-postagem {
-  padding: 1rem;
-  padding-left: 2.5rem;
+  width: 30rem;
+  margin-top: 2rem;
+  margin-left: -15rem;
+  padding-right: 5rem;
 }
 
 .enunciado-postagem-cad {
@@ -55,21 +56,25 @@
 }
 
 .centralizar-form {
-  margin-right: 26%;
+  margin-left: 7rem;
 }
 
 
 .imagemFormularioPostagem {
   background-image: url(https://cdn.discordapp.com/attachments/988429116518850603/1022611684319301693/business-3d-young-women-looking-at-smartphone.png);
   background-repeat: no-repeat !important;
-  background-size: 40% !important;
-  background-position: center !important;
-  height: 31rem !important;
-  border-radius: 0% !important;
+  background-size: 15rem;
+  width: 5rem;
+  height: 27rem;
+  margin-top: 3.5rem;
+  margin-right: -74rem;
+  padding-right: 12rem;
+  padding-left: 3rem;
+  margin-left: 16rem;
 }
 
 #form-postagem-categoria-txt{
-  color: white !;
+  color: white !important;
 }
 
 .cadastro-postagem-txt{
