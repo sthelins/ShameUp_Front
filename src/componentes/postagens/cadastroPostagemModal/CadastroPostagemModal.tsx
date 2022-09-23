@@ -193,7 +193,7 @@ function CadastroPostagem() {
   }
 
   function back() {
-    navigate("/postagens");
+    navigate("/usuario/postagens");
   }
 
   return (
