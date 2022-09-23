@@ -1,11 +1,15 @@
 import React from "react";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Modal from "@mui/material/Modal";
-import { Button, Typography } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
-import "./ModalPostagem.css";
+import "./ModalDeletarPostagem.css";
 import { Box } from "@mui/material";
-import CadastroPostagemModal from "../cadastroPostagemModal/CadastroPostagemModal";
+import DeletarPostagem from "../deletarPostagem/DeletarPostagem";
+
+interface DeletarPostagemProps {
+  idPostagem: number;
+}
 
 function getModalStyle() {
   const top = 50;
@@ -31,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-function ModalPostagem() {
+function ModalDeletarPostagem({ idPostagem }: DeletarPostagemProps) {
   const classes = useStyles();
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
@@ -50,16 +54,21 @@ function ModalPostagem() {
         <CloseIcon onClick={handleClose} />
       </Box>
 
-      <CadastroPostagemModal />
+      <DeletarPostagem idPostagem={idPostagem} />
     </div>
   );
 
   return (
     <div>
-      <Button variant="outlined" className="botaomodal2 " onClick={handleOpen}>
-        <Typography className="fontefale ">Fale Aqui</Typography>
+      <Button
+        variant="contained"
+        size="small"
+        color="secondary"
+        className="btDeletar"
+        onClick={handleOpen}
+      >
+        deletar
       </Button>
-
       <Modal
         open={open}
         onClose={handleClose}
@@ -72,4 +81,4 @@ function ModalPostagem() {
     </div>
   );
 }
-export default ModalPostagem;
+export default ModalDeletarPostagem;

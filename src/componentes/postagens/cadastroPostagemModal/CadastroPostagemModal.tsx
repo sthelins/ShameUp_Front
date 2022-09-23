@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
-import "./CadastroPostagem.css";
+import "./CadastroPostagemModal.css";
 import Categoria from "../../../models/Categoria";
 import Postagem from "../../../models/Postagem";
 
@@ -13,15 +13,12 @@ import {
   MenuItem,
   FormControl,
   FormHelperText,
-  Grid
 } from "@material-ui/core";
-
 import { useNavigate, useParams } from "react-router-dom";
 import { busca, buscaId, post, put } from "../../../services/Service";
 import { useSelector } from "react-redux";
 import { UserState } from "../../../store/tokens/userReducer";
 import { toast } from "react-toastify";
-import { Box } from "@mui/material";
 
 function CadastroPostagem() {
   let navigate = useNavigate();
@@ -200,79 +197,72 @@ function CadastroPostagem() {
   }
 
   return (
-    <Box className='backgroundpostagem' justifyContent="center" alignItems="center" display="flex">
-      <Grid container className='backgroundform-postagem'>
-        <Grid item sm={6}>
-          <form onSubmit={onSubmit} className='form-cad-postagem' >
-            <Typography
-              variant="h3"
-              color="textSecondary"
-              component="h1"
-              align="center"
-              className="enunciado-postagem-cad"
-            >
-              Faça o seu relato!
-            </Typography>
-            <TextField
-              value={postagem.titulo}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
-              id="titulo"
-              variant="outlined"
-              name="titulo"
-              margin="normal"
-              className="titulo-postagem-cad"
-              fullWidth
-            />
-            <TextField
-              value={postagem.texto}
-              multiline
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
-              id="texto"
-              name="texto"
-              variant="outlined"
-              margin="normal"
-              className="txt-field-cad-postagem"
-              fullWidth
-            />
-            <Box className="centralizar-form">
-            <FormControl>
-              <InputLabel id="form-postagem-categoria-txt">
-                Categoria{" "}
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-helper-label"
-                id="demo-simple-select-helper"
-                onChange={(e) =>
-                  buscaId(`/categorias/${e.target.value}`, setCategoria, {
-                    headers: {
-                      Authorization: token,
-                    },
-                  })
-                }
-              >
-                {categorias.map((categoria) => (
-                  <MenuItem value={categoria.id}>{categoria.nome}</MenuItem>
-                ))}
-              </Select>
-              <FormHelperText className="cadastro-postagem-txt">
-                Escolha uma categoria para a postagem
-              </FormHelperText>
-              <Button
-                className="button-cad-postagem"
-                type="submit"
-                variant="contained"
-                color="primary"
-              >
-                Finalizar
-              </Button>
-            </FormControl>
-            </Box>
-          </form>
-        </Grid>
-        <Grid item sm={6} className="imagemFormularioPostagem" >
-        </Grid>
-      </Grid>
-    </Box>
+    <Container maxWidth="sm">
+      <form onSubmit={onSubmit}>
+        <Typography
+          variant="h3"
+          color="textSecondary"
+          component="h1"
+          align="center"
+          className="topo"
+        >
+          Faça o seu relato!
+        </Typography>
+        <TextField
+          value={postagem.titulo}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+          id="titulo"
+          label="Titulo"
+          variant="outlined"
+          name="titulo"
+          margin="normal"
+          fullWidth
+        />
+        <TextField
+          value={postagem.texto}
+          multiline
+          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+          id="texto"
+          label="Texto"
+          name="texto"
+          variant="outlined"
+          margin="normal"
+          fullWidth
+        />
+
+        <FormControl>
+          <InputLabel id="demo-simple-select-helper-label">
+            Categoria{" "}
+          </InputLabel>
+          <Select
+            labelId="demo-simple-select-helper-label"
+            id="demo-simple-select-helper"
+            onChange={(e) =>
+              buscaId(`/categorias/${e.target.value}`, setCategoria, {
+                headers: {
+                  Authorization: token,
+                },
+              })
+            }
+          >
+            {categorias.map((categoria) => (
+              <MenuItem value={categoria.id}>{categoria.nome}</MenuItem>
+            ))}
+          </Select>
+          <FormHelperText className="cadastro-postagem">
+            Escolha uma categoria para a postagem
+          </FormHelperText>
+          <Button
+            className="botaomodal"
+            type="submit"
+            variant="contained"
+            color="primary"
+          >
+            Finalizar
+          </Button>
+        </FormControl>
+      </form>
+    </Container>
   );
 }
 export default CadastroPostagem;
