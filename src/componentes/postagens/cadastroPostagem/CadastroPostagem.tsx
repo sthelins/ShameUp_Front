@@ -223,7 +223,7 @@ function CadastroPostagem() {
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 updatedPostagem(e)
               }
-              id="titulo"
+              id="titulo-postagemcad-txt"
               variant="outlined"
               name="titulo"
               margin="normal"
@@ -236,7 +236,7 @@ function CadastroPostagem() {
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 updatedPostagem(e)
               }
-              id="texto"
+              id="txt-att-postagem"
               name="texto"
               variant="outlined"
               margin="normal"
