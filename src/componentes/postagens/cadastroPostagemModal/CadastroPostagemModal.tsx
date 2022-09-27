@@ -204,80 +204,88 @@ function CadastroPostagem() {
   }
 
   return (
-    <Container maxWidth="sm">
-      <form onSubmit={onSubmit}>
-        <Typography
-          variant="h4"
-          color="textSecondary"
-          align="center"
-          className="topo"
-        >
-          Faça o seu relato!
-        </Typography>
-        <TextField
-          value={postagem.titulo}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
-          id="titulo"
-          label="Titulo"
-          variant="outlined"
-          name="titulo"
-          margin="normal"
-          fullWidth
-        />
-        <TextField
-          value={postagem.texto}
-          multiline
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
-          id="texto"
-          label="Texto"
-          name="texto"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-        />
-
-        <FormControl>
-          <InputLabel id="demo-simple-select-helper-label">
-            Categoria{" "}
-          </InputLabel>
-          <Select
-            labelId="demo-simple-select-helper-label"
-            id="demo-simple-select-helper"
-            onChange={(e) =>
-              buscaId(`/categorias/${e.target.value}`, setCategoria, {
-                headers: {
-                  Authorization: token,
-                },
-              })
-            }
+    <Box className='backgroundform-modal-postagem' maxWidth="sm">
+      <Box>
+        <form className='form-cad-modal-postagem' onSubmit={onSubmit}>
+          <Typography
+            variant="h4"
+            color="textSecondary"
+            align="center"
+            className="enunciado-modal-postagem"
           >
-            {categorias.map((categoria) => (
-              <MenuItem value={categoria.id}>{categoria.nome}</MenuItem>
-            ))}
-          </Select>
-          <FormHelperText className="cadastro-postagem">
-            Escolha uma categoria para a postagem
-          </FormHelperText>
+            Faça o seu relato!
+          </Typography>
+          <TextField
+            value={postagem.titulo}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+            id="titulocad-modal-postagem"
+            placeholder="Titulo"
+            variant="outlined"
+            name="titulo"
+            margin="normal"
+            className='textifield-modal-postagem'
+            fullWidth
+          />
+          <TextField
+            value={postagem.texto}
+            multiline
+            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+            id="txtcad-modal-postagem"
+            placeholder="Texto"
+            name="texto"
+            variant="outlined"
+            margin="normal"
+            className='textifield-modal-postagem'
+            fullWidth
+          />
 
-        </FormControl>
-        <Box className="checkbox-container-modal-cadastro-postagem">
+          <Box className='centralizar-modal-postagem'>
+            <FormControl>
+              <InputLabel id="form-modal-cad-postagem-categoria-txt">
+                Categoria{" "}
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-helper-label"
+                id="demo-simple-select-helper"
+                onChange={(e) =>
+                  buscaId(`/categorias/${e.target.value}`, setCategoria, {
+                    headers: {
+                      Authorization: token,
+                    },
+                  })
+                }
+              >
+                {categorias.map((categoria) => (
+                  <MenuItem value={categoria.id}>{categoria.nome}</MenuItem>
+                ))}
+              </Select>
+              <FormHelperText className="cadastro-modal-postagem-txt">
+                Escolha uma categoria para a postagem
+              </FormHelperText>
 
-        <FormControlLabel className="checkbox-anonimo-modal"
-          control={<Checkbox checked={postagem.anonimo} onChange={handleChange} name="anonimo" id="anonimo" />}
-          label="Anônimo"
-        />
-        </Box>
+            </FormControl>
+            <Box className="checkbox-container-modal-cadastro-postagem">
 
-        <Button
-          className="botaomodal"
-          type="submit"
-          variant="contained"
-          color="primary"
-        >
-          Finalizar
-        </Button>
-      </form>
-    </Container>
+              <FormControlLabel className="checkbox-anonimo-modal"
+                control={<Checkbox checked={postagem.anonimo} onChange={handleChange} name="anonimo" id="anonimo" />}
+                label="Anônimo"
+              />
+            </Box>
+
+            <Button
+              className="botaomodal-postagem"
+              type="submit"
+              variant="contained"
+              color="primary"
+            >
+              Finalizar
+            </Button>
+
+          </Box>
+
+        </form>
+      </Box>
+    </Box>
   );
 }
 export default CadastroPostagem;

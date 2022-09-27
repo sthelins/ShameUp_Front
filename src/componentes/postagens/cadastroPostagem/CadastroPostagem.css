@@ -29,8 +29,9 @@
   padding-bottom: 1rem;
 }
 
-#texto {
+#txt-att-postagem {
   height: 9rem !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .titulo-postagem-cad {
@@ -38,6 +39,10 @@
   border-radius: 16px !important;
   backdrop-filter: blur(5px);
   text-decoration: none;
+}
+
+#titulo-postagemcad-txt {
+  font-family: "Poppins", sans-serif !important;
 }
 
 .txt-field-cad-postagem {
@@ -75,12 +80,18 @@
 
 #form-postagem-categoria-txt{
   color: white !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .cadastro-postagem-txt{
   color: white !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .button-cad-postagem {
   background-color: rgba(60, 0, 97, 1) !important;
+  font-family: "Poppins", sans-serif !important;
+  width: 5rem !important;
+  margin-left: 5rem !important;
+  margin-top: 0.7rem !important;
 }
