@@ -55,6 +55,11 @@ ReactJS
 Typesscript
 <div/>
 
+<br><br>
+IDE: Eclipse <br>
+Editor de texto: Visual Studio Code <br>
+Teste de API REST: Insomnia
+
 ## Instalação
 
 Clonar o repositório:
